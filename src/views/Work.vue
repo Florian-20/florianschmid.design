@@ -1,7 +1,6 @@
 <template>
   <div id="work">
-    <h2>This is Work page</h2>
-    <projectitem/>
+    <router-link to="/Citrus&Packus"><projectitem/></router-link>
   </div>
 </template>
 
@@ -20,6 +19,7 @@ export default {
 #work {
   margin-left: 2.5vw;
   margin-right: 2.5vw;
+  margin-top: 5vh;
   width: auto;
   height: 100%;
   display: flex;

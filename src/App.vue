@@ -12,15 +12,23 @@
 </template>
 
 <script>
-
+export default {
+  
+}
 </script>
 
 <style lang="scss">
+// --- Colours --- //
+
+$Black: #151515;
+$Lightgrey: #F5F5F5;
 
 html,
 body {
   margin: 0;
   padding: 0;
+  background-color: $Lightgrey;
+  color: $Black;
 }
 
 #app {
@@ -50,10 +58,6 @@ body {
   font-display: auto;
 }
 
-// --- Colours --- //
-
-$Black: #151515;
-$Lightgrey: #F5F5F5;
 
 // --- Headers --- // 
 
@@ -62,7 +66,6 @@ h1 {
   font-size: 210px;
   line-height: 170px;
   text-align: left;
-  color: $Black;
   text-transform: uppercase;
   margin: 0;
 }
@@ -73,7 +76,6 @@ h2 {
   line-height: 41px;
   margin: 0;
   text-align: left;
-  color: $Black;
   text-transform: uppercase;
 }
 
@@ -83,7 +85,6 @@ h3 {
   line-height: 22px;
   text-align: left;
   margin: 0;
-  color: $Black;
   text-transform: uppercase;
 }
 
@@ -91,7 +92,6 @@ p {
   font-family: "Neue Machina Regular";
   font-size: 18px;
   line-height: 17px;
-  color: $Black;
   margin: 0;
 }
 
@@ -105,10 +105,18 @@ a {
   text-transform: uppercase;
 }
 
+marquee {
+  margin: 0;
+  font-family: "Neue Machina Regular";
+  font-size: 18px;
+  line-height: 17px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 // --- Page style --- //
 
 #nav {
-  background-color: yellow;
   margin-top: 4.5vh;
   margin-left: 2.5vw;
   margin-right: 2.5vw;
@@ -120,10 +128,9 @@ a {
   a {
     margin-left: 3%;
     font-weight: bold;
-    color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #31b3ff;
+      text-decoration-line: underline;
     }
   }
 }
