@@ -1,37 +1,18 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <h3>Florian Schmid</h3>
-      <span></span>
-      <router-link to="/">Work</router-link>
-      <router-link to="/about&contact">About&<br>Contact</router-link>
-      <div id="mode"></div>
-    </div>
     <router-view/>
   </div>
 </template>
 
-<script>
-export default {
-  
-}
-</script>
+
 
 <style lang="scss">
 // --- Colours --- //
 
-$Black: #151515;
-$Lightgrey: #F5F5F5;
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background-color: $Lightgrey;
-  color: $Black;
-}
 
 #app {
+  margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -60,6 +41,22 @@ body {
 
 
 // --- Headers --- // 
+
+:root {
+  --dark: #151515;
+  --light: #F5F5F5;
+}
+
+html,
+body {
+  background-color: var(--light);
+  margin: 0;
+  padding: 0;
+  font-family: "Neue Machina Regular";
+  font-size: 18px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
 
 h1 {
   font-family: "Neue Machina Ultrabold";
@@ -96,49 +93,44 @@ p {
 }
 
 a {
+  color: var(--dark);
   margin: 0;
   font-family: "Neue Machina Regular";
   font-size: 18px;
   line-height: 17px;
-  color: $Black;
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 0.2px;
 }
 
-marquee {
-  margin: 0;
-  font-family: "Neue Machina Regular";
-  font-size: 18px;
-  line-height: 17px;
-  text-decoration: none;
-  text-transform: uppercase;
+@media screen and(max-width: 1400px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 170px;
+  }
+
+  h2 {
+    font-size: 37px;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
 }
 
 // --- Page style --- //
 
-#nav {
-  margin-top: 4.5vh;
-  margin-left: 2.5vw;
-  margin-right: 2.5vw;
-  display: flex;
-  align-items: start;
-  span {
-    flex-grow: 1;
-  }
-  a {
-    margin-left: 3%;
-    font-weight: bold;
-
-    &.router-link-exact-active {
-      text-decoration-line: underline;
-    }
-  }
-}
-
-#mode {
-  margin-left: 3%;
-  width: 30px;
-  height: 30px;
-  background: $Black;
-}
 </style>

@@ -1,13 +1,13 @@
 <template>
-    <div class="project_item" @mouseover="hover = true" @mouseleave="hover = false">
+    <div class="project_item" v-bind:style='{"background-color" : (hover? project.color : "var(--light)" )}' @mouseover="hover = true" @mouseleave="hover = false">
         <h3 id="counter">&#10102;</h3>
-        <img src="../assets/vectors/Citrus_Black.svg" alt="">
+        <img :src="project.path" alt="">
         <div class="project_title">
-            <p v-if="!hover">Citrus&packus</p>
-            <p v-if="!hover">2018</p>
-            <div v-if="hover" class="marquee" style="--tw: 33vw; --ad: 7s;">
+            <p v-if="!hover">{{ project.name }}</p>
+            <p v-if="!hover">{{ project.date }}</p>
+            <div v-if="hover" class="marquee" style="--tw: 23rem; --ad: 7s;">
                 <span>
-                    Fictive campagne against the overuse of packages. 
+                    {{ project.desc }} 
                 </span>
             </div>
         </div>
@@ -17,12 +17,10 @@
 <script>
     export default {
         name: 'projectitem',
+        props: ['project', 'mode'],
         data () {
             return {
                 hover: false,
-                projects: [
-                    {name: 'Citrus-Packus', date: '2018', color: '#EECC2E', info: 'Fictiv campaign against the overuse of packages.'}
-                ]
             }
         }
     }
@@ -30,58 +28,55 @@
 
 <style lang="scss" scoped>
 
-$Black: #151515;
-$Lightgrey: #F5F5F5;
-
 p {
     text-transform: uppercase;
 }
 
 #counter {
-    margin-top: 4%;
-    margin-left: 4%;
-    position: relative;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    position: absolute;
 }
 
 .project_item {
-  width: 400px;
-  height: 350px;
-  border: 1px solid;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  img {
-      height: 70%;
-  }
-}
-
-.project_item:hover {
-    background-color: #EECC2E;
+    color: var(--dark);
+    height: 350px;
+    border-right: 1px solid var(--dark);
+    border-bottom: 1px solid var(--dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    img {
+        mix-blend-mode: multiply;
+        position: relative;
+        height: 70%;
+        align-self: center;
+        margin-top: 30px;
+    }
 }
 
 .project_title {
-    align-self: flex-end;
     width: 100%;
     height: 50px;
-    border-top: solid 1px $Black;
+    border-top: solid 1px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    p {
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
 }
 
 // --- marquee --- 
 
-marquee {
-   margin: 2vw 0;
-   overflow: hidden;
-}
+
 
 
 .marquee span {
     display: inline-block;
     white-space: nowrap;
-    color: #00112C;
     width: var(--tw);
     text-shadow: var(--tw) 0 currentColor, 
                  calc(var(--tw) * 2) 0 currentColor, 
