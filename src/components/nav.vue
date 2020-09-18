@@ -28,7 +28,7 @@
     flex-grow: 1;
   }
   a {
-    margin-left: 3%;
+    margin-left: 3rem;
     font-weight: bold;
 
     &.router-link-exact-active {
@@ -36,5 +36,6 @@
     }
   }
 }
+
 
 </style>

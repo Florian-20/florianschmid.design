@@ -102,7 +102,6 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.2px;
 }
-
 @media screen and(max-width: 1400px) {
   html,
   body {
