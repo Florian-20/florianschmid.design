@@ -23,12 +23,12 @@ export default {
     return {
       mode: 'white',
       projects: [
-        {name: 'citrus&packus', date: '2017', color: '#EECC2E', desc: 'Fictiv campaign against littering', path: require('../assets/vectors/Citrus_Black.svg')},
-        {name: 'sunsetfloat', date: '2017', color: '#EEAA3C', desc: 'Won competition for Migros', path:require( '../assets/vectors/Migros_Black.svg')},
-        {name: 'super8', date: '2018', color:  '#CCCCCC', desc: 'Short film for the photo days in Biel', path: require('../assets/vectors/Super8_Black.svg')},
-        {name: 'edicion19', date: '2019', color: '#ea0e0e', desc: 'Identity for a small book forum', path: require('../assets/vectors/Edicion_Black.svg')},
-        {name: 'mat-scanner', date: '2000-2020', color: '#A0A0A0', desc: 'texture Scanner for 3D materials', path: require('../assets/vectors/MatS_Black.svg')},
-        {name: 'archive', date: '2000-2020', color: '#A0A0A0', desc: 'random stuff which landet here', path: require('../assets/vectors/Archive_Black.svg')}
+        {name: 'citrus&packus', date: '2017', color: '#EECC2E', counter: '❶', desc: 'Fictiv campaign against littering', path: require('../assets/vectors/Citrus_Black.svg')},
+        {name: 'sunsetfloat', date: '2017', color: '#EEAA3C', counter: '❷', desc: 'Won competition for Migros', path:require( '../assets/vectors/Migros_Black.svg')},
+        {name: 'super8', date: '2018', color:  '#CCCCCC', counter: '❸', desc: 'Short film for the photo days in Biel', path: require('../assets/vectors/Super8_Black.svg')},
+        {name: 'edicion19', date: '2019', color: '#ea0e0e', counter: '❹', desc: 'Identity for a small book forum', path: require('../assets/vectors/Edicion_Black.svg')},
+        {name: 'mat-scanner', date: '2000-2020', color: '#A0A0A0', counter: '❺', desc: 'texture Scanner for 3D materials', path: require('../assets/vectors/MatS_Black.svg')},
+        {name: 'archive', date: '2000-2020', color: '#A0A0A0', counter: '❻', desc: 'random stuff which landet here', path: require('../assets/vectors/Archive_Black.svg')}
       ]
     }
   }

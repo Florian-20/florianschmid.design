@@ -1,6 +1,6 @@
 <template>
     <div class="project_item" v-bind:style='{"background-color" : (hover? project.color : "var(--light)" )}' @mouseover="hover = true" @mouseleave="hover = false">
-        <h3 id="counter">&#10102;</h3>
+        <h3 id="counter">{{ project.counter }}</h3>
         <img :src="project.path" alt="">
         <div class="project_title">
             <p v-if="!hover">{{ project.name }}</p>

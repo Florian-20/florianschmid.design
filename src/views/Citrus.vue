@@ -12,6 +12,7 @@
                 <div id="fix">
                     <router-link to="/">Work</router-link>
                     <router-link to="/about&contact">About&<br>Contact</router-link>
+                    <img @click="$router.go(-1)" src="../assets/vectors/Backwords.svg" alt="">
                 </div>
             </div>
             <div class="top-page-container">
@@ -81,6 +82,10 @@
     right: 2vw;
     a {
         margin-left: 3rem;
+    }
+    img {
+        margin-left: 3rem;
+        cursor: pointer;
     }
 }
 

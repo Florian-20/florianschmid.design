@@ -4,13 +4,19 @@
       <span></span>
       <router-link to="/">Work</router-link>
       <router-link to="/about&contact">About&<br>Contact</router-link>
+      <img src="../assets/vectors/Vimeo.svg" @click="vimeotab()">
       <div id="mode"></div>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'topnav'
+      name: 'topnav',
+      methods: {
+        vimeotab: function () {
+          window.open("https://vimeo.com/user102848625", "_blank");
+        }
+      }
     }
 </script>
 
@@ -34,6 +40,10 @@
     &.router-link-exact-active {
       text-decoration-line: underline;
     }
+  }
+  img {
+    cursor: pointer;
+    margin-left: 3rem;
   }
 }
 
