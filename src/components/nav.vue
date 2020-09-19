@@ -38,7 +38,7 @@
     font-weight: bold;
 
     &.router-link-exact-active {
-      text-decoration-line: underline;
+      text-decoration: underline;
     }
   }
   img {

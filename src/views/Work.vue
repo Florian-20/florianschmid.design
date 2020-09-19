@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="grain">
     <topnav></topnav>
+    <h1 id="toptitle">Work</h1>
     <div id="work">
       <router-link class="workitems" :to="project.name" v-for="project in projects" v-bind:key="project.name">
         <projectitem v-bind:project="project" :mode="mode"></projectitem>
@@ -23,8 +24,8 @@ export default {
     return {
       mode: 'white',
       projects: [
-        {name: 'citrus&packus', date: '2017', color: '#EECC2E', counter: '❶', desc: 'Fictiv campaign against littering', path: require('../assets/vectors/Citrus_Black.svg')},
-        {name: 'sunsetfloat', date: '2017', color: '#EEAA3C', counter: '❷', desc: 'Won competition for Migros', path:require( '../assets/vectors/Migros_Black.svg')},
+        {name: 'citrus&packus', date: '2017', color: '#ffcc00', counter: '❶', desc: 'Fictiv campaign against littering', path: require('../assets/vectors/Citrus_Black.svg')},
+        {name: 'sunsetfloat', date: '2017', color: '#f99007', counter: '❷', desc: 'Won competition for Migros', path:require( '../assets/vectors/Migros_Black.svg')},
         {name: 'super8', date: '2018', color:  '#CCCCCC', counter: '❸', desc: 'Short film for the photo days in Biel', path: require('../assets/vectors/Super8_Black.svg')},
         {name: 'edicion19', date: '2019', color: '#ea0e0e', counter: '❹', desc: 'Identity for a small book forum', path: require('../assets/vectors/Edicion_Black.svg')},
         {name: 'mat-scanner', date: '2000-2020', color: '#A0A0A0', counter: '❺', desc: 'texture Scanner for 3D materials', path: require('../assets/vectors/MatS_Black.svg')},
@@ -36,10 +37,20 @@ export default {
 </script>
 
 <style lang="scss">
+
+#toptitle {
+  color: var(--dark);
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 7rem;
+  font-size: 120pt;
+}
+
 #work {
   margin-left: 2vw;
   margin-right: 2vw;
   margin-top: 5vh;
+  margin-bottom: 5vh;
   width: auto;
   height: auto;
   display: flex;
@@ -54,4 +65,5 @@ export default {
   width: auto;
   min-width: 375px;
 }
+
 </style>

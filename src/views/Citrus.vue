@@ -1,5 +1,5 @@
 <template>
-    <div id="citrus">
+    <div id="citrus" class="grain">
         <div class="container">
             <div id="head">
                 <div class="type">
@@ -45,7 +45,11 @@
     position: absolute;
     height: 100vh;
     width: 100%;
-    background-color: yellow;
+    background-image: url('../assets/images/Back-grain.jpg');
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: center;
+    background-color: #ffcc00;
 }
 
 .container {
@@ -103,8 +107,8 @@
 }
 
 .child-right {
-    width: 23rem;
-    height: 23rem;
+    width: 26rem;
+    height: 26rem;
     mix-blend-mode: darken;
 }
 

@@ -4,11 +4,7 @@
   </div>
 </template>
 
-
-
 <style lang="scss">
-// --- Colours --- //
-
 
 #app {
   margin: 0;
@@ -44,12 +40,14 @@
 
 :root {
   --dark: #151515;
-  --light: #F5F5F5;
+  --light: #f5f5f5;
+  cursor: default;
 }
 
 html,
 body {
   background-color: var(--light);
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: "Neue Machina Regular";
@@ -102,6 +100,9 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.2px;
 }
+
+// --- Responsiv --- //
+
 @media screen and(max-width: 1400px) {
   html,
   body {
@@ -130,6 +131,63 @@ a {
 
 }
 
-// --- Page style --- //
+// ---- General Style --- //
+
+.grain {
+  position: absolute;
+  height: auto;
+  z-index:300;
+}
+
+.grain:before {
+ content:"";
+ top:-10rem;
+ left:-10rem;
+ width: 200%;
+ height: 200%;
+ z-index:9999;
+ position:fixed;
+ background-image:url("./assets/images/noise.png");
+ opacity: .2;
+ pointer-events:none;
+ -webkit-animation:noise 1s steps(2) infinite;
+ animation:noise 1s steps(2) infinite
+}
+
+@keyframes noise {
+ 0% {
+  transform:translate3d(0,9rem,0)
+ }
+ 10% {
+  transform:translate3d(-1rem,-4rem,0)
+ }
+ 20% {
+  transform:translate3d(-8rem,2rem,0)
+ }
+ 30% {
+  transform:translate3d(9rem,-9rem,0)
+ }
+ 40% {
+  transform:translate3d(-2rem,7rem,0)
+ }
+ 50% {
+  transform:translate3d(-9rem,-4rem,0)
+ }
+ 60% {
+  transform:translate3d(2rem,6rem,0)
+ }
+ 70% {
+  transform:translate3d(7rem,-8rem,0)
+ }
+ 80% {
+  transform:translate3d(-9rem,1rem,0)
+ }
+ 90% {
+  transform:translate3d(6rem,-5rem,0)
+ }
+ to {
+  transform:translate3d(-7rem,0,0)
+ }
+}
 
 </style>
