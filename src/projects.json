@@ -1,0 +1,86 @@
+[
+    {
+        "name": "citruspackus",
+        "date": "2017",
+        "colour": "#ffcc00",
+        "counter": "❶",
+        "type": "poster campaign& animation",
+        "client": "schoolp.",
+        "credits": "-",
+        "mindesc": "A campaign against littering",
+        "max-desc": "A campaign against the overuse of packages",
+        "filename":"Citrus_Black.svg"
+    },
+    {
+        "name": "migros",
+        "date": "2017",
+        "colour": "#f99007",
+        "counter": "❷",
+        "type": "won competition& bag design",
+        "client": "Migros",
+        "credits": "img",
+        "mindesc": "Won Migros competition",
+        "max-desc": "Won competiton for Migros new bag design",
+        "filename":"Migros_Black.svg"
+    },
+    {
+        "name": "Bildsprache",
+        "date": "2019",
+        "colour": "#09ef7c",
+        "counter": "❸",
+        "type": "exhibition",
+        "client": "-",
+        "credits": "-",
+        "mindesc": "-",
+        "max-desc": "-",
+        "filename":"Migros_Black.svg"
+    },
+    {
+        "name": "edicion19",
+        "date": "2019",
+        "colour": "#ea0e0e",
+        "counter": "❹",
+        "type": "corporate design",
+        "client": "edicion",
+        "credits": "-",
+        "mindesc": "Identity for a small book forum",
+        "max-desc": "Corporate design for a small boob forum in biel",
+        "filename":"Edicion_Black.svg"
+    },
+    {
+        "name": "3d&typo",
+        "date": "2018",
+        "colour": "#0930f4",
+        "counter": "5",
+        "type": "poster creation",
+        "client": "schoolp.",
+        "credits": "-",
+        "mindesc": "3d and typo poster creation",
+        "max-desc": "A poster creation with 3d typowork and graphics",
+        "filename":"3D&Typo.svg"
+    },
+    {
+        "name": "mat-scanner",
+        "date": "2019",
+        "colour": "#A0A0A0",
+        "counter": "6",
+        "type": "DIY Project",
+        "client": "-",
+        "credits": "-",
+        "mindesc": "Texture scanner for 3d materials",
+        "max-desc": "Half automatic texture scanner, to generate 3d materials",
+        "filename":"MatS_Black.svg"
+    },
+    {
+        "name": "archive",
+        "date": "2000-2020",
+        "colour": "#a0a0a0",
+        "counter": "7",
+        "type": "all types",
+        "client": "-",
+        "credits": "-",
+        "mindesc": "A design fundus",
+        "max-desc": "A design fundus",
+        "filename":"Archive_Black.svg"
+    }
+]

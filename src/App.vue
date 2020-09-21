@@ -48,6 +48,7 @@ html,
 body {
   background-color: var(--light);
   width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Neue Machina Regular";
@@ -188,6 +189,15 @@ a {
  to {
   transform:translate3d(-7rem,0,0)
  }
+}
+
+// ---- Project rules --- //
+
+.container {
+    margin-top: 4.5vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    height: auto;
 }
 
 </style>

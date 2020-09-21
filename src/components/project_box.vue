@@ -1,13 +1,13 @@
 <template>
-    <div class="project_item" v-bind:style='{"background-color" : (hover? project.color : "var(--light)" )}' @mouseover="hover = true" @mouseleave="hover = false">
+    <div class="project_item" v-bind:style='{"background-color" : (hover? project.colour : "var(--light)" )}' @mouseover="hover = true" @mouseleave="hover = false">
         <h3 id="counter">{{ project.counter }}</h3>
-        <img :src="project.path" alt="">
+        <img :src="filesrc" alt="">
         <div class="project_title">
             <p v-if="!hover">{{ project.name }}</p>
             <p v-if="!hover">{{ project.date }}</p>
             <div v-if="hover" class="marquee" style="--tw: 23rem; --ad: 7s;">
                 <span>
-                    {{ project.desc }} 
+                    {{ project.mindesc }}
                 </span>
             </div>
         </div>
@@ -17,10 +17,11 @@
 <script>
     export default {
         name: 'projectitem',
-        props: ['project', 'mode'],
+        props: ['project'],
         data () {
             return {
                 hover: false,
+                filesrc: require("../assets/vectors/" + this.project.filename) 
             }
         }
     }

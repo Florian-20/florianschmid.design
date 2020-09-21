@@ -19,9 +19,15 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About-Contact.vue')
   },
   {
-    path: '/Citrus&Packus',
+    path: '/citruspackus',
     name: 'Citrus',
     component: () => import(/* webpackChunkName: "Citrus" */ '../views/Citrus.vue')
+  },
+  {
+    path: '/archive',
+    name: 'Archive',
+    component: () => import(/*webpackChunkName: "Archive" */ '../views/Archive.vue')
+
   }
 ]
 

@@ -1,8 +1,8 @@
 <template>
-    <div id="citrus" class="grain">
+    <div id="archive" class="grain">
         <div class="container">
             <projecttop v-bind:txt = 'txt'></projecttop>
-            <div class="project"></div>
+            <gallery></gallery>
         </div>
     </div>
 </template>
@@ -10,31 +10,32 @@
 <script>
 
 import projecttop from '@/components/projecttop.vue'
+import gallery from '@/components/gallery.vue'
 
 export default {
     components: {
-        projecttop
+        projecttop,
+        gallery
     },
     data() {
         return {
             txt: {
-                name: 'citruspackus',
+                name: 'archive',
                 date: '2000',
                 counter: '❶',
-                type: 'poster campaign& Animation',
-                desc: 'A campaign against the overuse of packages',
+                type: 'All type',
+                desc: 'A design fundus on a floppydisk',
                 client: 'NONE',
                 credits: '-',
-                path: require('../assets/vectors/Citrus_Black.svg')
+                path: require('../assets/vectors/Archive_Black.svg')
                 }
         }
     },
 }
 </script>
-
 <style lang="scss" scoped>
 
-#citrus {
+#archive {
     position: absolute;
     height: 100vh;
     width: 100%;
@@ -42,10 +43,7 @@ export default {
     background-blend-mode: screen;
     background-size: cover;
     background-position: center;
-    background-color: #ffcc00;
+    background-color: #e4e4e4;
 }
 
-.project {
-    height: 200vh;
-}
 </style>

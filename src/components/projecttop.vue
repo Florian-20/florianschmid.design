@@ -2,11 +2,8 @@
     <div id="mainpage">
         <div id="head">
             <div class="type">
-                    <h3>
-                        CORPORATE IDENTITY&<br>
-                        PACKAGE DESIGN
-                    </h3>
-                    <h3>2018</h3>
+                    <h3>{{ txt.type }}</h3>
+                    <h3>{{ txt.date }}</h3>
                 </div>
                 <div id="fix">
                     <router-link to="/">Work</router-link>
@@ -16,28 +13,26 @@
             </div>
             <div class="top-page-container">
                 <div class="child-left">
-                    <h2>
-                        Fictive campagne<br>
-                         against the overuse of packages.
-                    </h2>
+                    <h2>{{ txt.desc }}</h2>
                     <div id="infobox">
-                        <div class="flexitem"><h2 id="world">②</h2></div>
+                        <div class="flexitem"><h2 id="world">{{ txt.counter }}</h2></div>
                         <div class="credits">
-                            <p>Clien Hello World</p>
+                            <p>client<span/>{{ txt.client }}</p>
                             <div></div>
-                            <p>Clien Hello World</p>
+                            <p>credits<span/>{{ txt.credits }}</p>
                         </div>
                     </div>
                 </div>
-                <img class="child-right" src="../assets/vectors/Citrus_Black.svg" alt="">
+                <img class="child-right" :src="txt.path" alt="">
             </div>
-            <h1>CitrusPackus</h1>
+            <h1>{{ txt.name }}</h1>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'projecttop'
+        name: 'projecttop',
+        props: ['txt']
     }
 </script>
 
@@ -61,7 +56,8 @@
 }
 
 .type {
-    width: 30vw;
+    width: auto;
+    max-width: 20vw;
     display: flex;
     h3 {
         margin-right: 2rem;
@@ -87,9 +83,11 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    min-height: 100%;
 }
 
 .child-left {
+    width: 40vw;
     display: flex;
     flex-direction: column;
 }
@@ -98,6 +96,8 @@
     width: 26rem;
     height: 26rem;
     mix-blend-mode: darken;
+    margin-top: 5rem;
+    margin-right: 1.5rem;
 }
 
 #infobox {
@@ -138,7 +138,12 @@
     }
 
     p {
+        display: flex;
         margin-left: .3rem;
+        margin-right: .3rem;
+    }
+    span {
+        flex-grow: 1;
     }
 }
 </style>
