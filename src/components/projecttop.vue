@@ -39,6 +39,7 @@
 <style lang="scss" scoped>
 
 #mainpage {
+    min-height: 100vh;
     h1 {
         position: absolute;
         float: bottom;
@@ -93,10 +94,10 @@
 }
 
 .child-right {
-    width: 26rem;
-    height: 26rem;
+    width: auto;
+    height: 50vh;
     mix-blend-mode: darken;
-    margin-top: 5rem;
+    margin-top: 2rem;
     margin-right: 1.5rem;
 }
 
