@@ -54,7 +54,6 @@ body {
   font-family: "Neue Machina Regular";
   font-size: 18px;
   line-height: 17px;
-  text-transform: uppercase;
 }
 
 h1 {
@@ -89,6 +88,7 @@ p {
   font-size: 18px;
   line-height: 17px;
   margin: 0;
+  text-transform: uppercase;
 }
 
 a {
@@ -194,10 +194,10 @@ a {
 // ---- Project rules --- //
 
 .container {
-    margin-top: 4.5vh;
-    margin-left: 2vw;
-    margin-right: 2vw;
-    height: auto;
+  margin-top: 4.5vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  height: auto;
 }
 
 </style>

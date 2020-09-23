@@ -21,12 +21,12 @@ const routes = [
   {
     path: '/citruspackus',
     name: 'Citrus',
-    component: () => import(/* webpackChunkName: "Citrus" */ '../views/Citrus.vue')
+    component: () => import(/* webpackChunkName: "citrus" */ '../views/Citrus.vue')
   },
   {
     path: '/archive',
     name: 'Archive',
-    component: () => import(/*webpackChunkName: "Archive" */ '../views/Archive.vue')
+    component: () => import(/*webpackChunkName: "archive" */ '../views/Archive.vue')
 
   }
 ]
