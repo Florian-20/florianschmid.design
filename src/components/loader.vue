@@ -13,6 +13,7 @@
 <style lang="scss" scoped>
 
 #loader {
+  animation: onload 0.75s 2s forwards;
   width: 100%;
   height: 100%;
   background-color: var(--dark);
@@ -30,5 +31,11 @@
     filter: invert(100%);
     mix-blend-mode: lighten;
   }
+}
+
+@keyframes onload {
+  0% { width: 100%;}
+  100% { width: 0%;}
+
 }
 </style>

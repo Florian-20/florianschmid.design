@@ -1,6 +1,5 @@
 <template>
   <div class="grain">
-    <loader v-if="loader"></loader>
     <topnav></topnav>
     <h1 id="toptitle">Work</h1>
     <div id="work">
@@ -13,7 +12,6 @@
 
 <script>
 
-import loader from '@/components/loader.vue'
 import projectitem from '@/components/project_box.vue'
 import topnav from '@/components/nav.vue'
 import projects from '@/projects.json'
@@ -21,23 +19,11 @@ import projects from '@/projects.json'
 export default {
   components: {
     projectitem,
-    topnav,
-    loader
+    topnav
   },
   data () {
     return {
-      projects,
-      loader: true
-    }
-  },
-  beforeMount () {
-    setTimeout (() => {
-      this.loadingState(false)
-    }, 3000)
-  },
-  methods: {
-    loadingState (value) {
-      this.loader = value
+      projects
     }
   }
 }

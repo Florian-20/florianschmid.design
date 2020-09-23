@@ -1,8 +1,35 @@
 <template>
   <div id="app">
+    <loader v-if="loading"/>
     <router-view/>
   </div>
 </template>
+
+<script>
+
+import loader from '@/components/loader.vue'
+
+export default {
+  components: {
+    loader
+  },
+  data () {
+    return {
+      loading: true
+    }
+  },
+  beforeMount () {
+    setTimeout (() => {
+      this.loadingState(false)
+    }, 3000)
+  },
+  methods: {
+    loadingState (value) {
+      this.loading = value
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 
