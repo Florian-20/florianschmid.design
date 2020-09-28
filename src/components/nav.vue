@@ -1,10 +1,10 @@
 <template>
     <div id="nav">
-      <h3>Florian Schmid</h3>
+      <h3 id="first">Florian Schmid</h3>
       <span></span>
-      <router-link to="/">Work</router-link>
-      <router-link to="/about&contact">About&<br>Contact</router-link>
-      <img src="../assets/vectors/Vimeo.svg" @click="vimeotab()">
+      <router-link to="/" id="second">Work</router-link>
+      <router-link to="/about&contact" id="third">About&<br>Contact</router-link>
+      <img src="../assets/vectors/Vimeo.svg" id="fourth" @click="vimeotab()">
       <div id="mode"></div>
     </div>
 </template>
@@ -45,6 +45,44 @@
     cursor: pointer;
     margin-left: 3rem;
   }
+}
+
+#first{
+  margin-top: 2rem;
+  opacity: 0%;
+  animation: slidein forwards 0.75s;
+  animation-delay: 2.6s;
+}
+#second {
+  margin-top: 2rem;
+  opacity: 0%;
+  animation: slidein forwards 0.75s;
+  animation-delay: 2.8s;
+}
+#third {
+  margin-top: 2rem;
+  opacity: 0%;
+  animation: slidein forwards 0.75s;
+  animation-delay: 3s;
+}
+#fourth {
+  margin-top: 2rem;
+  opacity: 0%;
+  animation: slidein forwards 0.75s;
+  animation-delay: 3.2s;
+}
+
+@keyframes slidein {
+  0% {
+
+    margin-top: 2rem;
+    opacity: 0%;
+    }
+  100% {
+    margin-top: 0rem;
+
+    opacity: 100%;
+    }
 }
 
 
