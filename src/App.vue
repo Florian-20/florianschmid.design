@@ -21,7 +21,7 @@ export default {
   beforeMount () {
     setTimeout (() => {
       this.loadingState(false)
-    }, 3000)
+    }/*, 2000*/)
   },
   methods: {
     loadingState (value) {
@@ -156,7 +156,6 @@ a {
   a {
     font-size: 16px;
   }
-
 }
 
 // ---- General Style --- //

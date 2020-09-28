@@ -15,6 +15,15 @@
       methods: {
         vimeotab: function () {
           window.open("https://vimeo.com/user102848625", "_blank");
+        },
+        OnceLoad: function() {
+          var exec = false;
+          return function() {
+            if (!exec) {
+              // Add animation class
+              exec = true;
+            }
+          }
         }
       }
     }
@@ -29,7 +38,7 @@
   margin-left: 2vw;
   margin-right: 2vw;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   span {
     flex-grow: 1;
   }
@@ -48,28 +57,22 @@
 }
 
 #first{
-  margin-top: 2rem;
-  opacity: 0%;
-  animation: slidein forwards 0.75s;
-  animation-delay: 2.6s;
+  animation-delay: 0.6s;
 }
 #second {
-  margin-top: 2rem;
-  opacity: 0%;
-  animation: slidein forwards 0.75s;
-  animation-delay: 2.8s;
+  animation-delay: 0.8s;
 }
 #third {
-  margin-top: 2rem;
-  opacity: 0%;
-  animation: slidein forwards 0.75s;
-  animation-delay: 3s;
+  animation-delay: 1s;
 }
 #fourth {
+  animation-delay: 1.2s;
+}
+
+.navanim {
   margin-top: 2rem;
   opacity: 0%;
   animation: slidein forwards 0.75s;
-  animation-delay: 3.2s;
 }
 
 @keyframes slidein {

@@ -3,7 +3,7 @@
     <topnav></topnav>
     <h1 id="toptitle">Work</h1>
     <div id="work">
-      <router-link class="workitems" :to="project.name" v-for="project in projects" v-bind:key="project.name">
+      <router-link class="workitems" :to="project.name" v-once v-for="project in projects" v-bind:key="project.name">
         <projectitem v-bind:project="project"></projectitem>
       </router-link>
     </div>
@@ -25,6 +25,20 @@ export default {
     return {
       projects
     }
+  },
+  methods: {
+    ScrollTop() {
+      window.scrollTo(0,0)
+    },
+    OnceLoad: function() {
+      var exec = false;
+      return function() {
+        if (!exec) {
+          // Add animation class
+          exec = true;
+        }
+      }
+    }
   }
 }
 </script>
@@ -36,10 +50,18 @@ export default {
   text-align: center;
   margin-top: 5rem;
   margin-bottom: 7rem;
-  font-size: 120pt;
+  font-size: 170px;
+  //opacity: 0%;
+  overflow-y: hidden;
+  height: auto;
+  animation: titleanim 1s forwards;
+  animation-delay: 1.8s;
+  text-overflow: clip;
 }
 
 #work {
+  //scale: .5;
+  //opacity: 0%;
   margin-left: 2vw;
   margin-right: 2vw;
   margin-top: 5vh;
@@ -50,6 +72,7 @@ export default {
   flex-wrap: wrap;
   border-left: 1px  var(--dark) solid;
   border-top: 1px  var(--dark) solid;
+  animation: workanim 0.75s 3s forwards;
 }
 
 .workitems {
@@ -59,4 +82,23 @@ export default {
   min-width: 375px;
 }
 
+/*@keyframes titleanim {
+  0% { 
+    opacity: 0%;
+  }
+  100% { 
+    opacity: 100%;
+  }
+}
+
+@keyframes workanim {
+  0% {
+    scale: .5;
+    opacity: 0%;
+  }
+  100% {
+    scale: 1;
+    opacity: 100%;
+  }
+}*/
 </style>
