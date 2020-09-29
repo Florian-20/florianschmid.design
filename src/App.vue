@@ -158,6 +158,17 @@ a {
   }
 }
 
+@media screen and (max-width: 990px) {
+  h1 {
+    font-size: 100px;
+    line-height: 120px;
+  }
+  h2 {
+    font-size: 34px;
+    line-height: 34px;
+  }
+}
+
 // ---- General Style --- //
 
 .grain {
@@ -226,4 +237,13 @@ a {
   height: auto;
 }
 
+// --- Mobile --- //
+
+@media screen and(max-width: 600px) {
+    .container {
+      margin-top: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+}
 </style>

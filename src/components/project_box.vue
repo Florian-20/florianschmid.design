@@ -5,7 +5,7 @@
         <div class="project_title">
             <p v-if="!hover">{{ project.name }}</p>
             <p v-if="!hover">{{ project.date }}</p>
-            <div v-if="hover" class="marquee" style="--tw: 23rem; --ad: 7s;">
+            <div v-if="hover" class="marquee" style="--tw: 22rem; --ad: 7s;">
                 <span>
                     {{ project.mindesc }}
                 </span>
@@ -72,9 +72,6 @@ p {
 
 // --- marquee --- 
 
-
-
-
 .marquee span {
     display: inline-block;
     white-space: nowrap;
@@ -94,4 +91,13 @@ p {
     100% { transform: translateX(-100%); }
 }
 
+
+@media screen and (max-width: 600px) {
+    .project_title {
+        p {
+            margin-left: 3vw;
+            margin-right: 3vw;
+        }
+    }
+}
 </style>

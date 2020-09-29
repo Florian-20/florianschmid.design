@@ -101,4 +101,17 @@ export default {
     opacity: 100%;
   }
 }*/
+
+// --- responsiv --- //
+
+@media screen and (max-width: 600px) {
+  #toptitle {
+    font-size: 100px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+  .workitems {
+    min-width: 300px;
+  }
+}
 </style>

@@ -1,10 +1,10 @@
 <template>
     <div id="nav">
       <h3 id="first">Florian Schmid</h3>
-      <span></span>
-      <router-link to="/" id="second">Work</router-link>
-      <router-link to="/about&contact" id="third">About&<br>Contact</router-link>
-      <img src="../assets/vectors/Vimeo.svg" id="fourth" @click="vimeotab()">
+      <span v-if="!mobileView"></span>
+      <router-link v-if="!mobileView" to="/" id="second">Work</router-link>
+      <router-link v-if="!mobileView" to="/about&contact" id="third">About&<br>Contact</router-link>
+      <img v-if="!mobileView" src="../assets/vectors/Vimeo.svg" id="fourth" @click="vimeotab()">
       <div id="mode"></div>
     </div>
 </template>
@@ -12,9 +12,17 @@
 <script>
     export default {
       name: 'topnav',
+      data () {
+        return {
+          mobileView: true
+        }
+      },
       methods: {
         vimeotab: function () {
           window.open("https://vimeo.com/user102848625", "_blank");
+        },
+        handleView () {
+          this.mobileView = window.innerWidth <= 990
         },
         OnceLoad: function() {
           var exec = false;
@@ -25,6 +33,9 @@
             }
           }
         }
+      },
+      created() {
+        this.handleView()
       }
     }
 </script>
@@ -88,5 +99,12 @@
     }
 }
 
+// --- Mobile --- // 
+
+@media screen and (max-width: 990px){
+  #nav {
+    justify-content: center;
+  }
+}
 
 </style>
