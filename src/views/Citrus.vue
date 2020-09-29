@@ -3,13 +3,9 @@
         <div class="container">
             <projecttop v-bind:txt = 'txt'></projecttop>
             <div class="project">
-                <div class="section-title">
-                    <div class="section-child">
-                        <div class="chapter">
-                            <p>Chapter I</p>
-                        </div>
-                        <h2>Campaign poster creation</h2>
-                    </div>
+                <chapter :chadata = 'chapterone'></chapter>
+                <div class="full-img">
+                    <img src="../assets/images/Citrus/Yellow-Citrus.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -19,15 +15,17 @@
 <script>
 
 import projecttop from '@/components/projecttop.vue'
+import chapter from '@/components/chapter.vue'
 
 export default {
     components: {
-        projecttop
+        projecttop,
+        chapter
     },
     data() {
         return {
             txt: {
-                name: 'citruspackus',
+                name: 'citrus',
                 date: '2000',
                 counter: '❶',
                 type: 'poster campaign& Animation',
@@ -35,7 +33,12 @@ export default {
                 client: 'NONE',
                 credits: '-',
                 path: require('../assets/vectors/Citrus_Black.svg')
-                }
+            },
+            chapterone: {
+                no: 'I',
+                chatitle: 'The final poster series'
+            }
+
         }
     },
 }
@@ -47,39 +50,19 @@ export default {
     position: absolute;
     height: 100vh;
     width: 100%;
-    background-image: url('../assets/images/Back-grain.jpg');
-    background-blend-mode: screen;
-    background-size: cover;
     background-position: center;
-    background-color: #ffcc00;
+    background-color: var(--light);
 }
 
 .project {
-    margin-top: 20vh;
     width: 100%;
     height: 200vh;
 }
 
-.section-title {
-    display: flex;
+.full-img {
     width: 100%;
-    justify-content: center;
-    h2 {
-        margin-top: 2rem;
-        text-transform: none;
-    }
-}
-
-.section-child {
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
-    width: 40%;
-    align-items: center;
-}
-
-.chapter {
-    border: 1px solid var(--dark);
-    width: auto;
-    padding: 1vh;
+    justify-content: center;
 }
 </style>
