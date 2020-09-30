@@ -19,9 +19,9 @@
       <h1>{{ txt.name }}</h1>
       <div class="flex-container">
         <div>
-          <h2>Helllo</h2>
+          <h2>{{ txt.desc }}</h2>
           <div id="infobox">
-            <h2 id="world">1</h2>
+            <h2 id="world">{{ txt.counter }}</h2>
             <div class="credits">
               <p>CLient<span/>{{ txt.client }}</p>
               <div></div>
