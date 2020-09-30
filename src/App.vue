@@ -21,7 +21,7 @@ export default {
   beforeMount () {
     setTimeout (() => {
       this.loadingState(false)
-    }/*, 2000*/)
+    }, 2000)
   },
   methods: {
     loadingState (value) {
@@ -85,19 +85,19 @@ body {
 
 h1 {
   font-family: "Neue Machina Ultrabold";
-  font-size: 210px;
-  line-height: 170px;
-  text-align: left;
+  font-size: 170px;
+  line-height: 150px;
+  text-align: right;
   text-transform: uppercase;
   margin: 0;
 }
 
 h2 {
   font-family: "Neue Machina Regular";
-  font-size: 42px;
+  font-size: 40px;
   line-height: 41px;
   margin: 0;
-  text-align: left;
+  text-align: right;
   text-transform: uppercase;
 }
 

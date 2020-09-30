@@ -46,11 +46,9 @@ export default {
 <style lang="scss">
 
 #toptitle {
-  color: var(--dark);
   text-align: center;
   margin-top: 5rem;
   margin-bottom: 7rem;
-  font-size: 170px;
   //opacity: 0%;
   overflow-y: hidden;
   height: auto;
@@ -60,8 +58,6 @@ export default {
 }
 
 #work {
-  //scale: .5;
-  //opacity: 0%;
   margin-left: 2vw;
   margin-right: 2vw;
   margin-top: 5vh;
@@ -81,26 +77,6 @@ export default {
   width: auto;
   min-width: 375px;
 }
-
-/*@keyframes titleanim {
-  0% { 
-    opacity: 0%;
-  }
-  100% { 
-    opacity: 100%;
-  }
-}
-
-@keyframes workanim {
-  0% {
-    scale: .5;
-    opacity: 0%;
-  }
-  100% {
-    scale: 1;
-    opacity: 100%;
-  }
-}*/
 
 // --- responsiv --- //
 

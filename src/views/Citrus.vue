@@ -16,6 +16,7 @@
 
 import projecttop from '@/components/projecttop.vue'
 import chapter from '@/components/chapter.vue'
+// import { TimelineLite} from 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js'
 
 export default {
     components: {
@@ -25,10 +26,10 @@ export default {
     data() {
         return {
             txt: {
-                name: 'citrus',
+                name: 'citrus& packus',
                 date: '2000',
                 counter: '❶',
-                type: 'poster campaign& Animation',
+                type: 'poster& Animation',
                 desc: 'A campaign against the overuse of packages',
                 client: 'NONE',
                 credits: '-',

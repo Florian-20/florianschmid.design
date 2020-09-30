@@ -2,8 +2,8 @@
   <div id="mainpage">
     <div id="head">
       <div class="type">
-        <h3>{{ txt.type }}</h3>
         <h3>{{ txt.date }}</h3>
+        <h3>{{ txt.type }}</h3>
       </div>
       <div id="fix">
         <router-link v-if="!mobileView" to="/">Work</router-link>
@@ -16,23 +16,21 @@
       </div>
     </div>
     <div class="top-page-container">
-      <div class="child-left">
-        <h2>{{ txt.desc }}</h2>
-        <img v-if="mobileView" class="mobileimg" :src="txt.path" alt="" />
-        <div id="infobox">
-          <div class="flexitem">
-            <h2 id="world">{{ txt.counter }}</h2>
-          </div>
-          <div class="credits">
-            <p>client<span />{{ txt.client }}</p>
-            <div></div>
-            <p>credits<span />{{ txt.credits }}</p>
+      <h1>{{ txt.name }}</h1>
+      <div class="flex-container">
+        <div>
+          <h2>Helllo</h2>
+          <div id="infobox">
+            <h2 id="world">1</h2>
+            <div class="credits">
+              <p>CLient<span/>{{ txt.client }}</p>
+              <div></div>
+              <p>CLient<span/>{{ txt.credits }}</p>
+            </div>
           </div>
         </div>
       </div>
-      <img v-if="!mobileView" class="child-right" :src="txt.path" alt="" />
     </div>
-    <h1 v-if="!mobileView">{{ txt.name }}</h1>
   </div>
 </template>
 
@@ -59,12 +57,6 @@ export default {
 <style lang="scss" scoped>
 #mainpage {
   min-height: 100vh;
-  h1 {
-    position: absolute;
-    float: bottom;
-    bottom: 1rem;
-    left: 0.5rem;
-  }
 }
 
 #head {
@@ -100,23 +92,14 @@ export default {
 .top-page-container {
   margin-top: 4vh;
   display: flex;
+  flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-between;
   min-height: 100%;
 }
 
-.child-left {
-  width: 40vw;
+.flex-container {
   display: flex;
-  flex-direction: column;
-}
-
-.child-right {
-  width: auto;
-  height: 50vh;
-  mix-blend-mode: darken;
-  margin-top: 2rem;
-  margin-right: 1.5rem;
+  justify-content: space-between;
 }
 
 #infobox {
@@ -126,14 +109,6 @@ export default {
   height: 55px;
   width: 340px;
   bottom: 11rem;
-}
-
-.flexitem {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  width: 55px;
 }
 
 #world {
@@ -159,7 +134,6 @@ export default {
   div {
     border-top: solid 1px var(--dark);
   }
-
   p {
     display: flex;
     margin-left: 0.3rem;
@@ -177,28 +151,5 @@ export default {
 
 // --- mobile --- //
 
-@media screen and (max-width: 990px) {
-  .top-page-container {
-    flex-direction: column;
-  }
-}
 
-@media screen and (max-width: 600px) {
-  #fix {
-    right: 1rem;
-  }
-  #infobox {
-    right: 2vw;
-    left: 2vw;
-    width: auto;
-    margin-top: 5vh;
-    position: unset;
-  }
-  .top-page-container {
-    margin-top: 1rem;
-  }
-  .child-left {
-    width: 100%;
-  }
-}
 </style>

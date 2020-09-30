@@ -1,6 +1,6 @@
 <template>
     <div id="loader">
-        <!--<video src="../assets/general/Moloader.mp4" autoplay="autoplay" loop="loop"></video>-->
+        <video src="../assets/general/Moloader.mp4" autoplay="autoplay" loop="loop"></video>
     </div>
 </template>
 
@@ -16,7 +16,7 @@
   animation: onload 0.75s 2s forwards;
   width: 100%;
   height: 100%;
-  background-color: var(--light);
+  background-color: var(--dark);
   position: absolute;
   z-index: 9998;
   overflow: hidden;
@@ -28,7 +28,7 @@
   justify-content: center;
   video {
     width: 20rem;
-    mix-blend-mode: color-burn;
+    mix-blend-mode:color-dodge;
   }
 }
 
