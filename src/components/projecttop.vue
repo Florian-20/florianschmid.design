@@ -16,9 +16,9 @@
       </div>
     </div>
     <div class="top-page-container">
-      <h1>{{ txt.name }}</h1>
+      <div id="project-title"><h1>{{ txt.name }}</h1></div>
       <div class="flex-container">
-        <div>
+        <div class="flex-child">
           <h2>{{ txt.desc }}</h2>
           <div id="infobox">
             <h2 id="world">{{ txt.counter }}</h2>
@@ -28,6 +28,21 @@
               <p>CLient<span/>{{ txt.credits }}</p>
             </div>
           </div>
+        </div>
+        <div class="flex-child">
+          <p>
+            A poster series against the overuse of packages. 
+            Est ex nulla proident sunt nostrud qui cillum fugiat 
+            esse laboris mollit sit. Velit non cupidatat commodo 
+            culpa ex nulla cupidatat in ipsum nostrud laborum. Fugiat 
+          </p>
+        </div>
+        <div class="flex-child">
+          <p>
+            HA poster series against the overuse of packages. 
+            Est ex nulla proident sunt nostrud qui cillum fugiat 
+            esse laboris mollit sit. Velit non cupidatat commodo 
+          </p>
         </div>
       </div>
     </div>
@@ -55,9 +70,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#mainpage {
-  min-height: 100vh;
-}
 
 #head {
   display: flex;
@@ -90,11 +102,23 @@ export default {
 }
 
 .top-page-container {
-  margin-top: 4vh;
+  margin-top: 2.5vh;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   min-height: 100%;
+  margin-bottom: 7rem;
+  align-items: center;
+}
+
+#project-title {
+  margin-top: 4rem;
+  margin-bottom: 7rem;
+  max-width: 60%;
+  h1 {
+    font-size: 100px;
+    line-height: 90px;
+  }
 }
 
 .flex-container {
@@ -102,13 +126,25 @@ export default {
   justify-content: space-between;
 }
 
+.flex-child {
+  width: 32%;
+  p {
+    text-transform: unset;
+  }
+}
+
 #infobox {
-  position: absolute;
+  margin-top: 2rem;
   display: flex;
   border: 1px solid var(--dark);
   height: 55px;
   width: 340px;
-  bottom: 11rem;
+  bottom: 11rem;  
+  h2 {
+    margin-top: .2rem;
+    margin-left: .3rem;
+    margin-right: .3rem;
+  }
 }
 
 #world {

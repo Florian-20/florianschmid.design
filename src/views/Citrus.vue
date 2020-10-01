@@ -3,7 +3,7 @@
         <div class="container">
             <projecttop v-bind:txt = 'txt'></projecttop>
             <div class="project">
-                <chapter :chadata = 'chapterone'></chapter>
+                <!--<chapter :chadata = 'chapterone'></chapter>-->
                 <div class="full-img">
                     <img src="../assets/images/Citrus/Yellow-Citrus.jpg" alt="">
                 </div>
@@ -15,19 +15,19 @@
 <script>
 
 import projecttop from '@/components/projecttop.vue'
-import chapter from '@/components/chapter.vue'
+//import chapter from '@/components/chapter.vue'
 // import { TimelineLite} from 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js'
 
 export default {
     components: {
         projecttop,
-        chapter
+        //chapter
     },
     data() {
         return {
             txt: {
                 name: 'citrus& packus',
-                date: '2000',
+                date: '2017',
                 counter: '❶',
                 type: 'poster& Animation',
                 desc: 'A campaign against the overuse of packages',
@@ -52,18 +52,23 @@ export default {
     height: 100vh;
     width: 100%;
     background-position: center;
-    background-color: var(--light);
+    background-color: #ffcc00;
 }
 
 .project {
+    background-color: var(--light);
     width: 100%;
     height: 200vh;
+    display: flex;
 }
 
 .full-img {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
+    width: 75%;
+    img {
+        opacity: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
 }
 </style>

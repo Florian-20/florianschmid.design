@@ -21,7 +21,7 @@ export default {
   beforeMount () {
     setTimeout (() => {
       this.loadingState(false)
-    }, 2000)
+    }/*, 2000*/)
   },
   methods: {
     loadingState (value) {
@@ -85,19 +85,19 @@ body {
 
 h1 {
   font-family: "Neue Machina Ultrabold";
-  font-size: 170px;
+  font-size: 160px;
   line-height: 150px;
-  text-align: right;
+  text-align: center;
   text-transform: uppercase;
   margin: 0;
 }
 
 h2 {
   font-family: "Neue Machina Regular";
-  font-size: 40px;
-  line-height: 41px;
+  font-size: 33px;
+  line-height: 33px;
   margin: 0;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
 }
 
@@ -131,18 +131,20 @@ a {
 
 // --- Responsiv --- //
 
-@media screen and(max-width: 1400px) {
+@media screen and(max-width: 1600px) {
   html,
   body {
     font-size: 16px;
   }
 
   h1 {
-    font-size: 170px;
+    font-size: 140px;
+    line-height: 135px;
   }
 
   h2 {
-    font-size: 37px;
+    font-size: 27px;
+    line-height: 26px;
   }
 
   h3 {
@@ -164,7 +166,7 @@ a {
     line-height: 120px;
   }
   h2 {
-    font-size: 34px;
+    font-size: 27px;
     line-height: 34px;
   }
 }

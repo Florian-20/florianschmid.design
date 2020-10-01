@@ -1,6 +1,6 @@
 <template>
     <div id="loader">
-        <video src="../assets/general/Moloader.mp4" autoplay="autoplay" loop="loop"></video>
+        <!--<video src="../assets/general/Moloader.mp4" autoplay="autoplay" loop="loop"></video>-->
     </div>
 </template>
 

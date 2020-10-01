@@ -45,7 +45,7 @@ export default {
 
 #migros {
     position: absolute;
-    height: 100vh;
+    height: 75vh;
     width: 100%;
     background-image: url('../assets/images/Back-grain.jpg');
     background-blend-mode: screen;
