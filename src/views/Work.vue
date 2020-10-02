@@ -29,16 +29,11 @@ export default {
   methods: {
     ScrollTop() {
       window.scrollTo(0,0)
-    },
-    OnceLoad: function() {
-      var exec = false;
-      return function() {
-        if (!exec) {
-          // Add animation class
-          exec = true;
-        }
-      }
+      console.log("Top")
     }
+  },
+  created () {
+    this.ScrollTop()
   }
 }
 </script>

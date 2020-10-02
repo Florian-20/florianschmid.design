@@ -50,6 +50,8 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+
 export default {
   name: "projecttop",
   props: ["txt"],
@@ -62,9 +64,30 @@ export default {
     handleView() {
       this.mobileView = window.innerWidth <= 990;
     },
+    slideIn() {
+      var tl = gsap.timeline()
+      tl.from('#project-title', {
+        duration: 1.5,
+        marginTop: "10rem",
+        opacity: 0,
+        ease: "power4",
+        onComplete: this.tweenComplete
+      })
+    },
+    tweenComplete() {
+      var tl = gsap.timeline()
+      tl.to('#project-title', {
+        duration: 0.5,
+        color: "#ffcc00",
+        ease: "power3",
+      })
+    }
   },
   created() {
-    this.handleView();
+    this.handleView()
+  },
+  mounted () {
+    this.slideIn()
   }
 };
 </script>
@@ -117,8 +140,8 @@ export default {
   margin-bottom: 7rem;
   max-width: 60%;
   h1 {
-    font-size: 100px;
-    line-height: 90px;
+    font-size: 130px;
+    line-height: 120px;
   }
 }
 
@@ -142,9 +165,9 @@ export default {
   width: 340px;
   bottom: 11rem;  
   h2 {
-    margin-top: .2rem;
-    margin-left: .3rem;
-    margin-right: .3rem;
+    margin-top: .6rem;
+    margin-left: .6rem;
+    margin-right: .6rem;
   }
 }
 
@@ -187,6 +210,15 @@ export default {
 }
 
 // --- mobile --- //
+
+@media screen and (max-width: 1600px) {
+  #project-title {
+    h1 {
+      font-size: 100px;
+      line-height: 90px;
+    }
+  }  
+}
 
 
 @media screen and(max-width: 990px) {

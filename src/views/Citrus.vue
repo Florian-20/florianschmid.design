@@ -42,6 +42,14 @@ export default {
 
         }
     },
+    methods: {
+        ScrollTop() {
+        window.scrollTo(0,0)
+        }
+    },
+    created () {
+        this.ScrollTop()
+    }
 }
 </script>
 

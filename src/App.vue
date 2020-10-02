@@ -21,7 +21,7 @@ export default {
       rTransition: undefined
     }
   },
-  watch: {
+  /*watch: {
     '$route'(to, from) {
       const to_depth = to.path.split('/').length
       const from_depth = from.path.split('/').length
@@ -106,8 +106,8 @@ h1 {
 
 h2 {
   font-family: "Neue Machina Regular";
-  font-size: 33px;
-  line-height: 33px;
+  font-size: 30px;
+  line-height: 29px;
   margin: 0;
   text-align: left;
   text-transform: uppercase;
