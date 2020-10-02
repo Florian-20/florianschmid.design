@@ -5,7 +5,7 @@
             <div class="project">
                 <!--<chapter :chadata = 'chapterone'></chapter>-->
                 <div class="full-img">
-                    <img src="../assets/images/Citrus/Yellow-Citrus.jpg" alt="">
+                    <img src="../assets/images/3D&Typo/Pascard-Neon.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -49,21 +49,24 @@ export default {
 
 #citrus {
     position: absolute;
-    height: 100vh;
+    height: 25rem;
     width: 100%;
     background-position: center;
-    background-color: #ffcc00;
+    //background-color: #ffcc00;
+    background-color: var(--light);
 }
 
 .project {
+    margin-top: 7rem;
+    margin-left: 7vw;
+    margin-right: 7vw;
     background-color: var(--light);
-    width: 100%;
     height: 200vh;
     display: flex;
 }
 
 .full-img {
-    width: 75%;
+    width: 66%;
     img {
         opacity: 100%;
         max-width: 100%;

@@ -45,13 +45,10 @@ export default {
 
 #migros {
     position: absolute;
-    height: 75vh;
+    height: 20rem;
     width: 100%;
-    background-image: url('../assets/images/Back-grain.jpg');
-    background-blend-mode: screen;
-    background-size: cover;
-    background-position: center;
-    background-color: #f99007;
+    background-color: var(--light);
+    //background-color: #f99007;
 }
 
 .project {

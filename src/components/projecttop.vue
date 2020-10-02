@@ -23,9 +23,9 @@
           <div id="infobox">
             <h2 id="world">{{ txt.counter }}</h2>
             <div class="credits">
-              <p>CLient<span/>{{ txt.client }}</p>
+              <p>CLIENT<span/>{{ txt.client }}</p>
               <div></div>
-              <p>CLient<span/>{{ txt.credits }}</p>
+              <p>CLIENT<span/>{{ txt.credits }}</p>
             </div>
           </div>
         </div>
@@ -102,12 +102,13 @@ export default {
 }
 
 .top-page-container {
+  margin-left: 7vw;
+  margin-right: 7vw;
   margin-top: 2.5vh;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   min-height: 100%;
-  margin-bottom: 7rem;
   align-items: center;
 }
 
@@ -187,5 +188,28 @@ export default {
 
 // --- mobile --- //
 
+
+@media screen and(max-width: 990px) {
+  .top-page-container {
+    margin-left: unset;
+    margin-right: unset;
+  }
+  #project-title {
+    max-width: unset;
+    h1 {
+      font-size: 70px;
+      line-height: 60px;
+    }
+  }
+  .flex-container {
+    flex-direction: column;
+  }
+  .flex-child {
+    width: 100%;
+  }
+  #infobox {
+    width: 100%;
+  }
+}
 
 </style>

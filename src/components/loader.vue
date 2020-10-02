@@ -1,35 +1,51 @@
 <template>
-    <div id="loader">
-        <!--<video src="../assets/general/Moloader.mp4" autoplay="autoplay" loop="loop"></video>-->
+    <div class="page-transition">
     </div>
 </template>
 
 <script>
-    export default {
-        name: 'loader'
+import { gsap } from 'gsap'
+
+export default {
+    name: 'loader',
+    mounted () {
+      this.pTransition()
+    },
+    methods: {
+      pTransition() {
+        var tl = gsap.timeline();
+        tl.to('.page-transition', {
+          duration: 1.5,
+          width: "100%",
+          left: "0%",
+          ease: "Expo.easeInOut"
+        })
+
+        tl.to('.page-transition', {
+          duration: 1,
+          width: "100%",
+          left: "100%",
+          ease: "Expo.easeInOut",
+          delay: 0.3
+        })
+
+        tl.set(".page-transition", { left: "-100%" });
+      }
     }
+}
 </script>
 
 <style lang="scss" scoped>
 
-#loader {
-  animation: onload 0.75s 2s forwards;
-  width: 100%;
-  height: 100%;
-  background-color: var(--dark);
-  position: absolute;
-  z-index: 9998;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  video {
-    width: 20rem;
-    mix-blend-mode:color-dodge;
-  }
+.page-transition {
+  z-index: 999;
+    position: absolute;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    background-color: var(--dark);
+    width: 0%;
+    height: 100%;
 }
 
 </style>

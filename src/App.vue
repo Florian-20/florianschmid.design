@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <loader v-if="loading"/>
-    <router-view/>
+    <transition :name="rTransition">
+      <router-view class="child-view"/>
+    </transition>
   </div>
 </template>
 
@@ -15,14 +17,24 @@ export default {
   },
   data () {
     return {
-      loading: true
+      loading: false,
+      rTransition: undefined
     }
   },
-  beforeMount () {
+  watch: {
+    '$route'(to, from) {
+      const to_depth = to.path.split('/').length
+      const from_depth = from.path.split('/').length
+      this.rTransition = to_depth < from_depth ? this.loadingState(true) : this.loadingState(true)
+      console.log("Route Change")
+      console.log(this.loadingState)
+    }
+  },
+  /*beforeMount () {
     setTimeout (() => {
       this.loadingState(false)
-    }/*, 2000*/)
-  },
+    }, 3000)
+  },*/
   methods: {
     loadingState (value) {
       this.loading = value
@@ -167,7 +179,7 @@ a {
   }
   h2 {
     font-size: 27px;
-    line-height: 34px;
+    line-height: 27px;
   }
 }
 
