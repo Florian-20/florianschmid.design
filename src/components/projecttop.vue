@@ -1,7 +1,7 @@
 <template>
   <div id="mainpage">
     <div id="head">
-      <div class="type">
+      <div class="type slide-small">
         <h3>{{ txt.date }}</h3>
         <h3>{{ txt.type }}</h3>
       </div>
@@ -16,11 +16,11 @@
       </div>
     </div>
     <div class="top-page-container">
-      <div id="project-title"><h1>{{ txt.name }}</h1></div>
+      <div id="project-title" class="quote"><h1>{{ txt.name }}</h1></div>
       <div class="flex-container">
         <div class="flex-child">
-          <h2>{{ txt.desc }}</h2>
-          <div id="infobox">
+          <h2 class="slide-small">{{ txt.desc }}</h2>
+          <div id="infobox" class="slide-small">
             <h2 id="world">{{ txt.counter }}</h2>
             <div class="credits">
               <p>CLIENT<span/>{{ txt.client }}</p>
@@ -29,7 +29,7 @@
             </div>
           </div>
         </div>
-        <div class="flex-child">
+        <div class="flex- slide-small">
           <p>
             A poster series against the overuse of packages. 
             Est ex nulla proident sunt nostrud qui cillum fugiat 
@@ -37,7 +37,7 @@
             culpa ex nulla cupidatat in ipsum nostrud laborum. Fugiat 
           </p>
         </div>
-        <div class="flex-child">
+        <div class="flex- slide-small">
           <p>
             HA poster series against the overuse of packages. 
             Est ex nulla proident sunt nostrud qui cillum fugiat 
@@ -50,7 +50,12 @@
 </template>
 
 <script>
-import { gsap } from 'gsap'
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger );
 
 export default {
   name: "projecttop",
@@ -67,12 +72,27 @@ export default {
     slideIn() {
       var tl = gsap.timeline()
       tl.from('#project-title', {
-        duration: 1.5,
-        marginTop: "10rem",
+        duration: 0.8,
+        y: 100,
         opacity: 0,
-        ease: "power4",
-        onComplete: this.tweenComplete
+        ease: "circ.out",
       })
+    },
+    slideInSmall() {
+      const slide= gsap.from('.slide-small', {
+          delay: 0.5,
+          transformOrigin: "Bottom Left",
+          rotateZ: "3deg",
+          duration: 0.8,
+          opacity: 0,
+          y: 50,
+          stagger: 0.1,
+          ease: "power4"
+      });
+      document.querySelectorAll(".slide-small").forEach(
+        slide(),
+        slide.kill()
+      )
     },
     tweenComplete() {
       var tl = gsap.timeline()
@@ -88,6 +108,7 @@ export default {
   },
   mounted () {
     this.slideIn()
+    this.slideInSmall()
   }
 };
 </script>
