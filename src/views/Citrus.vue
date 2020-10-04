@@ -1,5 +1,5 @@
 <template>
-    <div id="citrus" class="grain">
+    <div id="citrus" class="grain scrollto">
         <div class="container">
             <projecttop v-bind:txt = 'txt'></projecttop>
             <div class="project">
@@ -41,14 +41,6 @@ export default {
             }
 
         }
-    },
-    methods: {
-        ScrollTop() {
-        window.scrollTo(0,0)
-        }
-    },
-    created () {
-        this.ScrollTop()
     }
 }
 </script>

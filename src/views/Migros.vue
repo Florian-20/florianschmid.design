@@ -1,5 +1,5 @@
 <template>
-    <div id="migros" class="grain">
+    <div id="migros" class="grain scrollto">
         <div class="container">
             <projecttop v-bind:txt = 'txt'></projecttop>
             <div class="project">

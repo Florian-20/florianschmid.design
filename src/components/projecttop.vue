@@ -29,7 +29,7 @@
             </div>
           </div>
         </div>
-        <div class="flex- slide-small">
+        <div class="flex-child slide-small">
           <p>
             A poster series against the overuse of packages. 
             Est ex nulla proident sunt nostrud qui cillum fugiat 
@@ -37,7 +37,7 @@
             culpa ex nulla cupidatat in ipsum nostrud laborum. Fugiat 
           </p>
         </div>
-        <div class="flex- slide-small">
+        <div class="flex-child slide-small">
           <p>
             HA poster series against the overuse of packages. 
             Est ex nulla proident sunt nostrud qui cillum fugiat 

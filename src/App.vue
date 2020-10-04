@@ -85,6 +85,7 @@ export default {
 
 html,
 body {
+  color: var(--dark);
   background-color: var(--light);
   width: 100%;
   height: 100%;
