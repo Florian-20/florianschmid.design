@@ -1,5 +1,6 @@
 <template>
     <div class="page-transition">
+      <img src="../assets/general/Ladescreen_V1.gif" alt="">
     </div>
 </template>
 

@@ -21,22 +21,11 @@ export default {
       rTransition: undefined
     }
   },
-  /*watch: {
-    '$route'(to, from) {
-      const to_depth = to.path.split('/').length
-      const from_depth = from.path.split('/').length
-      this.rTransition = to_depth < from_depth ? this.loadingState(true) : this.loadingState(true)
-      console.log("Route Change")
-      console.log(this.loadingState)
-    }
+  beforeMount () {
+    setTimeout ( this.loader(true), 3000)
   },
-  /*beforeMount () {
-    setTimeout (() => {
-      this.loadingState(false)
-    }, 3000)
-  },*/
   methods: {
-    loadingState (value) {
+    loader (value) {
       this.loading = value
     }
   }

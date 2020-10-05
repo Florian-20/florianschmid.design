@@ -25,15 +25,6 @@ export default {
     return {
       projects
     }
-  },
-  methods: {
-    ScrollTop() {
-      window.scrollTo(0,0)
-      console.log("Top")
-    }
-  },
-  created () {
-    this.ScrollTop()
   }
 }
 </script>
