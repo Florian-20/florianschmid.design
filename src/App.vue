@@ -1,32 +1,30 @@
 <template>
   <div id="app">
-    <loader v-if="loading"/>
-    <transition :name="rTransition">
-      <router-view class="child-view"/>
-    </transition>
+    <router-view :darkmode="darkmode" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'/>
   </div>
 </template>
 
 <script>
 
-import loader from '@/components/loader.vue'
 
 export default {
-  components: {
-    loader
-  },
   data () {
     return {
       loading: false,
-      rTransition: undefined
+      darkmode: true
     }
   },
   beforeMount () {
-    setTimeout ( this.loader(true), 3000)
+    this.checkmode()
   },
   methods: {
-    loader (value) {
-      this.loading = value
+    checkmode () {
+      if (this.darkmode == true) {
+        console.log("Welcome to the dark side")
+      }
+      else {
+        console.log("Welcome to the light side")
+      }
     }
   }
 }
@@ -63,19 +61,10 @@ export default {
   font-display: auto;
 }
 
-
 // --- Headers --- // 
-
-:root {
-  --dark: #151515;
-  --light: #f5f5f5;
-  cursor: default;
-}
 
 html,
 body {
-  color: var(--dark);
-  background-color: var(--light);
   width: 100%;
   height: 100%;
   margin: 0;
@@ -174,6 +163,7 @@ a {
 }
 
 // ---- General Style --- //
+
 
 .grain {
   position: absolute;

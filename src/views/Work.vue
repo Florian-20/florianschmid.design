@@ -4,7 +4,7 @@
     <h1 id="toptitle">Work</h1>
     <div id="work">
       <router-link class="workitems" :to="project.name" v-once v-for="project in projects" v-bind:key="project.name">
-        <projectitem v-bind:project="project"></projectitem>
+        <projectitem v-bind:project="project" :darkmode="darkmode"></projectitem>
       </router-link>
     </div>
   </div>
@@ -21,6 +21,7 @@ export default {
     projectitem,
     topnav
   },
+  props: ['darkmode'],
   data () {
     return {
       projects
@@ -35,7 +36,6 @@ export default {
   text-align: center;
   margin-top: 5rem;
   margin-bottom: 7rem;
-  //opacity: 0%;
   overflow-y: hidden;
   height: auto;
   animation: titleanim 1s forwards;

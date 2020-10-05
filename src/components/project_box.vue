@@ -1,7 +1,8 @@
 <template>
     <div class="project_item" v-bind:style='{"background-color" : (hover? project.colour : "var(--light)" )}' @mouseover="hover = true" @mouseleave="hover = false">
         <h3 id="counter">{{ project.counter }}</h3>
-        <img :src="filesrc" alt="">
+        <img  v-if="!darkmode" id="mode-light" :src="filesrc">
+        <img v-if="darkmode" id="mode-dark" :src="filesrc">
         <div class="project_title">
             <p v-if="!hover">{{ project.name }}</p>
             <p v-if="!hover">{{ project.date }}</p>
@@ -17,11 +18,11 @@
 <script>
     export default {
         name: 'projectitem',
-        props: ['project'],
+        props: ['project', 'darkmode'],
         data () {
             return {
                 hover: false,
-                filesrc: require("../assets/vectors/" + this.project.filename) 
+                filesrc: require("../assets/vectors/" + this.project.filename)
             }
         }
     }
@@ -48,12 +49,19 @@ p {
     flex-direction: column;
     justify-content: space-between;
     img {
-        mix-blend-mode: multiply;
         position: relative;
         height: 70%;
         align-self: center;
         margin-top: 30px;
     }
+}
+
+#mode-dark {
+    mix-blend-mode: unset;
+}
+
+#mode-light {
+    mix-blend-mode: multiply;
 }
 
 .project_title {

@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div id="about">
     <topnav></topnav>
-    <div class="about">
+    <div>
       <h2>
         Hi, my name is Florian. 
         I am a Graphic Designer and front end Web developer based in Switzerland. 
@@ -22,3 +22,14 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+
+#about {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+}
+
+</style>

@@ -52,18 +52,15 @@ export default {
 
 #citrus {
     position: absolute;
-    height: 25rem;
+    height: auto;
     width: 100%;
     background-position: center;
-    //background-color: #ffcc00;
-    background-color: var(--light);
 }
 
 .project {
     margin-top: 7rem;
     margin-left: 7vw;
     margin-right: 7vw;
-    background-color: var(--light);
     height: 200vh;
     display: flex;
 }

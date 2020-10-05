@@ -8,11 +8,13 @@
       <div id="fix">
         <router-link v-if="!mobileView" to="/">Work</router-link>
         <router-link v-if="!mobileView" to="/about&contact">About&<br />Contact</router-link>
-        <img
-          @click="$router.go(-1)"
-          src="../assets/vectors/Backwords.svg"
-          alt=""
-        />
+        <svg @click="$router.go(-1)" xmlns="http://www.w3.org/2000/svg" width="39.409" height="39.409" viewBox="0 0 39.409 39.409">
+          <g transform="translate(4.7046301 4.7046301)">
+            <path fill="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" d="M29.50819672 30V0H0"/>
+            <path fill="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" d="M30 0L.98360656 29.5"/>
+          </g>
+        </svg>
+
       </div>
     </div>
     <div class="top-page-container">
@@ -79,7 +81,8 @@ export default {
       })
     },
     slideInSmall() {
-      const slide= gsap.from('.slide-small', {
+      var tl = gsap.timeline()
+      tl.from('.slide-small', {
           delay: 0.5,
           transformOrigin: "Bottom Left",
           rotateZ: "3deg",
@@ -88,11 +91,7 @@ export default {
           y: 50,
           stagger: 0.1,
           ease: "power4"
-      });
-      document.querySelectorAll(".slide-small").forEach(
-        slide(),
-        slide.kill()
-      )
+      })
     },
     tweenComplete() {
       var tl = gsap.timeline()
@@ -139,7 +138,8 @@ export default {
   a {
     margin-left: 3rem;
   }
-  img {
+  svg {
+    stroke: var(--dark);
     margin-left: 3rem;
     cursor: pointer;
   }
