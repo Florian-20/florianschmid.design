@@ -4,7 +4,19 @@
       <span v-if="!mobileView"></span>
       <router-link v-if="!mobileView" to="/" id="second">Work</router-link>
       <router-link v-if="!mobileView" to="/about&contact" id="third">About&<br>Contact</router-link>
-      <img v-if="!mobileView" src="../assets/vectors/Vimeo.svg" id="fourth" @click="vimeotab()">
+      <div id="modeswitch" v-on:click="$emit('switch-mode')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 57.89">
+          <g id="Ebene_2" data-name="Ebene 2">
+          <g id="Switch">
+          <rect id="Light" width="39" height="39" style="fill: #f5f5f5"/>
+          <rect id="Dark" x="39" width="40" height="40" style="fill:#151515"/>
+          <path id="D" data-name="Dark" d="M69.5,19c0,7.9-5.09,9.18-10,9.18H52.76V9.87h6.76C64.41,9.87,69.5,11.14,69.5,19Zm-4.16,0c0-5.25-2.57-5.51-5.82-5.51h-2.6v11h2.6C62.77,24.56,65.34,24.3,65.34,19Z" style="fill:#f5f5f5"/>
+          <path id="L" data-name="Light" d="M13.67,26.27V9.87h4.16v15l8.92-.26V28.2l-10.84.26A2,2,0,0,1,13.67,26.27Z" style="fill:#151515"/>
+          <g id="Edge"><path d="M79,1V39H1V1H79m1-1H0V40H80V0Z" style="fill: var(--dark)"/></g>
+          <path id="State" d="M14.16,53A4.74,4.74,0,0,1,19,48.15a4.87,4.87,0,0,1,0,9.74A4.74,4.74,0,0,1,14.16,53Zm7.22,0A2.35,2.35,0,1,0,19,55.37,2.3,2.3,0,0,0,21.38,53Z" style="fill:var(--dark)"/>
+          </g></g>
+        </svg>
+      </div>
       <div id="mode"></div>
     </div>
 </template>
@@ -12,26 +24,15 @@
 <script>
     export default {
       name: 'topnav',
+      props: ['darkmode'],
       data () {
         return {
           mobileView: true
         }
       },
       methods: {
-        vimeotab: function () {
-          window.open("https://vimeo.com/user102848625", "_blank");
-        },
         handleView () {
           this.mobileView = window.innerWidth <= 990
-        },
-        OnceLoad: function() {
-          var exec = false;
-          return function() {
-            if (!exec) {
-              // Add animation class
-              exec = true;
-            }
-          }
         }
       },
       created() {
@@ -61,10 +62,13 @@
       text-decoration: underline;
     }
   }
-  img {
-    cursor: pointer;
-    margin-left: 3rem;
-  }
+}
+
+#modeswitch {
+  height: 50px;
+  width: 70px;
+  margin-left: 3rem;
+  cursor: pointer;
 }
 
 #first{

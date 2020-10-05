@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view :darkmode="darkmode" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'/>
+    <router-view v-on:switch-mode="onswitch" :darkmode="darkmode" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'/>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
   data () {
     return {
       loading: false,
-      darkmode: true
+      darkmode: false
     }
   },
   beforeMount () {
@@ -25,6 +25,10 @@ export default {
       else {
         console.log("Welcome to the light side")
       }
+    },
+    onswitch() {
+      console.log("Switched on Parent 2")
+      this.darkmode = true
     }
   }
 }

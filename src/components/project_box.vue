@@ -1,7 +1,7 @@
 <template>
     <div class="project_item" v-bind:style='{"background-color" : (hover? project.colour : "var(--light)" )}' @mouseover="hover = true" @mouseleave="hover = false">
         <h3 id="counter">{{ project.counter }}</h3>
-        <img  v-if="!darkmode" id="mode-light" :src="filesrc">
+        <img v-if="!darkmode" id="mode-light" :src="filesrc">
         <img v-if="darkmode" id="mode-dark" :src="filesrc">
         <div class="project_title">
             <p v-if="!hover">{{ project.name }}</p>

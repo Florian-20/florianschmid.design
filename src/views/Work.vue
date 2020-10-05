@@ -1,9 +1,9 @@
 <template>
   <div class="grain">
-    <topnav></topnav>
+    <topnav :darkmode="darkmode"  v-on:switch-mode="$emit('switch-mode')"></topnav>
     <h1 id="toptitle">Work</h1>
     <div id="work">
-      <router-link class="workitems" :to="project.name" v-once v-for="project in projects" v-bind:key="project.name">
+      <router-link class="workitems" :to="project.name" v-for="project in projects" v-bind:key="project.name">
         <projectitem v-bind:project="project" :darkmode="darkmode"></projectitem>
       </router-link>
     </div>
@@ -26,7 +26,12 @@ export default {
     return {
       projects
     }
-  }
+  },
+  methods: {
+    onswitch() {
+      console.log("Switched on Parent 1")
+    }
+  },
 }
 </script>
 
