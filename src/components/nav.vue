@@ -1,9 +1,10 @@
 <template>
     <div id="nav">
-      <h3 id="first">Florian Schmid</h3>
+      <h3 id="first" v-if="!mobileView">Florian Schmid</h3>
+      <p v-if="mobileView">Florian<br>Schmid</p>
       <span v-if="!mobileView"></span>
       <router-link v-if="!mobileView" to="/" id="second">Work</router-link>
-      <router-link v-if="!mobileView" to="/about&contact" id="third">About&<br>Contact</router-link>
+      <router-link to="/about&contact" id="third">About&<br>Contact</router-link>
       <div id="modeswitch" v-on:click="$emit('switch-mode')">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 57.89">
           <g id="Ebene_2" data-name="Ebene 2">
@@ -17,28 +18,62 @@
           </g></g>
         </svg>
       </div>
-      <div id="mode"></div>
     </div>
 </template>
 
 <script>
-    export default {
-      name: 'topnav',
-      props: ['darkmode'],
-      data () {
-        return {
-          mobileView: true
-        }
-      },
-      methods: {
-        handleView () {
-          this.mobileView = window.innerWidth <= 990
-        }
-      },
-      created() {
-        this.handleView()
+
+import { gsap } from 'gsap'
+
+export default {
+  name: 'topnav',
+  props: ['darkmode'],
+  data () {
+    return {
+      mobileView: true
+    }
+  },
+  methods: {
+    handleView () {
+      this.mobileView = window.innerWidth <= 990
+    },
+    checkSwitch() {
+      if (this.darkmode == true) {
+        gsap.set('#State', {
+          x: 40
+        })
+      }
+    },
+    switchModeAnim() {
+      var tween = gsap.fromTo('#State', {
+          duration: 0.5,
+          ease: 'power3.inOut',
+          x: '0',
+        },
+        {
+          duration: 0.5,
+          x:'40'
+        })
+      if (this.darkmode == true) {
+         tween.play()
+      }
+      if (this.darkmode == false) {
+        tween.reverse(0)
       }
     }
+  },
+  watch: {
+    darkmode() {
+      this.switchModeAnim()
+    }
+  },
+  created() {
+    this.handleView()
+  },
+  mounted() {
+    this.checkSwitch()
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -87,27 +122,22 @@
 .navanim {
   margin-top: 2rem;
   opacity: 0%;
-  animation: slidein forwards 0.75s;
-}
-
-@keyframes slidein {
-  0% {
-
-    margin-top: 2rem;
-    opacity: 0%;
-    }
-  100% {
-    margin-top: 0rem;
-
-    opacity: 100%;
-    }
 }
 
 // --- Mobile --- // 
 
-@media screen and (max-width: 990px){
+@media screen and (max-width: 600px){
   #nav {
-    justify-content: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    justify-content: space-between;
+    a {
+      margin-left: unset;
+    }
+  }
+  #modeswitch {
+    margin-left: unset;
   }
 }
 

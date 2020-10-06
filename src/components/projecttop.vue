@@ -56,7 +56,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
 gsap.registerPlugin(ScrollTrigger );
 
 export default {
@@ -249,6 +248,7 @@ export default {
   }
   #project-title {
     max-width: unset;
+    margin-bottom: 5rem;
     h1 {
       font-size: 70px;
       line-height: 60px;
@@ -258,9 +258,11 @@ export default {
     flex-direction: column;
   }
   .flex-child {
+    margin-top: 1rem;
     width: 100%;
   }
   #infobox {
+    margin-top: 1rem;
     width: 100%;
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view v-on:switch-mode="onswitch" :darkmode="darkmode" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'/>
+    <router-view v-on:switch-mode="onSwitch" :darkmode="darkmode" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'/>
   </div>
 </template>
 
@@ -14,21 +14,9 @@ export default {
       darkmode: false
     }
   },
-  beforeMount () {
-    this.checkmode()
-  },
   methods: {
-    checkmode () {
-      if (this.darkmode == true) {
-        console.log("Welcome to the dark side")
-      }
-      else {
-        console.log("Welcome to the light side")
-      }
-    },
-    onswitch() {
-      console.log("Switched on Parent 2")
-      this.darkmode = true
+    onSwitch() {
+      this.darkmode = !this.darkmode
     }
   }
 }
@@ -76,6 +64,10 @@ body {
   font-family: "Neue Machina Regular";
   font-size: 18px;
   line-height: 17px;
+  -webkit-tap-highlight-color: transparent;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 h1 {

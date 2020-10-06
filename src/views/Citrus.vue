@@ -3,9 +3,11 @@
         <div class="container">
             <projecttop v-bind:txt = 'txt'></projecttop>
             <div class="project">
-                <!--<chapter :chadata = 'chapterone'></chapter>-->
                 <div class="full-img">
-                    <img src="../assets/images/3D&Typo/Pascard-Neon.jpg" alt="">
+                    <img src="../assets/images/Citrus/Yellow-Citrus.jpg" alt="">
+                </div>
+                <div class="min-img">
+                    <img src="../assets/images/Citrus/Violett-Patato.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -15,13 +17,14 @@
 <script>
 
 import projecttop from '@/components/projecttop.vue'
-//import chapter from '@/components/chapter.vue'
-// import { TimelineLite} from 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
     components: {
-        projecttop,
-        //chapter
+        projecttop
     },
     data() {
         return {
@@ -42,8 +45,22 @@ export default {
 
         }
     },
+    methods: {
+        onscroll() {
+            gsap.from(".full-img", {
+                scrollTrigger: ".full-img",
+                y: 100,
+                opacity: 0,
+                delay: 0.2,
+                duration: 0.5
+            })
+        }
+    },
     created () {
         window.scroll(0, 0)
+    },
+    mounted() {
+        this.onscroll()
     }
 }
 </script>
@@ -63,6 +80,7 @@ export default {
     margin-right: 7vw;
     height: 200vh;
     display: flex;
+    flex-direction: column;
 }
 
 .full-img {
@@ -72,6 +90,14 @@ export default {
         max-width: 100%;
         max-height: 100%;
     }
+}
 
+.min-img {
+    width: 33%;
+    img {
+        opacity: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 </style>
