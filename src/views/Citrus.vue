@@ -3,11 +3,16 @@
         <div class="container">
             <projecttop v-bind:txt = 'txt'></projecttop>
             <div class="project">
-                <div class="full-img">
+                <div class="One-img">
                     <img src="../assets/images/Citrus/Yellow-Citrus.jpg" alt="">
                 </div>
-                <div class="min-img">
-                    <img src="../assets/images/Citrus/Violett-Patato.jpg" alt="">
+                <div class="flex-box">
+                    <div class="Two-img">
+                        <img src="../assets/images/Citrus/Grey-Banana.jpg" alt="">
+                    </div>
+                    <div class="Three-img">
+                        <img src="../assets/images/Citrus/Violett-Patato.jpg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,13 +52,16 @@ export default {
     },
     methods: {
         onscroll() {
-            gsap.from(".full-img", {
-                scrollTrigger: ".full-img",
-                y: 100,
-                opacity: 0,
-                delay: 0.2,
-                duration: 0.5
-            })
+            const images = ['.One-img', '.Two-img', '.Three-img']
+            for (const img of images) {
+                gsap.from(img, {
+                    scrollTrigger: img,
+                    opacity: 0,
+                    y: 100,
+                    delay: 0.2,
+                    duration: 1,
+                })
+            }
         }
     },
     created () {
@@ -78,12 +86,20 @@ export default {
     margin-top: 7rem;
     margin-left: 7vw;
     margin-right: 7vw;
-    height: 200vh;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
 
-.full-img {
+.flex-box {
+    align-items: center;
+    margin-top: 10rem;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.One-img {
     width: 66%;
     img {
         opacity: 100%;
@@ -92,7 +108,7 @@ export default {
     }
 }
 
-.min-img {
+.Two-img {
     width: 33%;
     img {
         opacity: 100%;
@@ -100,4 +116,15 @@ export default {
         max-height: 100%;
     }
 }
+
+.Three-img {
+    margin-left: 11rem;
+    width: 66%;
+    img {
+        opacity: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
 </style>
