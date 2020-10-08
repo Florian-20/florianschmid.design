@@ -3,8 +3,11 @@
         <div class="container">
             <projecttop v-bind:projectdata = 'projectdata'></projecttop>
             <div class="project">
-                <goldimage v-bind:projectdata = 'projectdata' ></goldimage>
+                <div class="full-size" id="a">
+                    <img src="../assets/images/Edicion/E02_Plakat.jpg" alt="">
+                </div>
                 <imagebox v-bind:projectdata = 'projectdata'></imagebox>
+                <posterimage v-bind:projectdata = 'projectdata' ></posterimage>
             </div>
         </div>
     </div>
@@ -14,7 +17,7 @@
 
 import projecttop from '@/components/projecttop.vue'
 import imagebox from '@/components/image_box.vue'
-import goldimage from '@/components/gold_image.vue'
+import posterimage from '@/components/Poster_image.vue'
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -25,14 +28,16 @@ export default {
     components: {
         projecttop,
         imagebox,
-        goldimage
+        posterimage
     },
     data() {
         return {
             projectdata: {
-                name: 'edicion19',
+                name: 'edicion 19',
                 date: '2019',
                 counter: '❶',
+                colour: '#ea0e0e',
+                colour2: '#151515',
                 type: 'poster& Animation',
                 desc: 'A campaign against the overuse of packages',
                 client: 'NONE',
@@ -40,14 +45,14 @@ export default {
                 desc1: "Littering is a huge problem, especially in time of climat change. This project focuses on the overuse of packages in the food industry.",
                 desc2: "For this purpose i made 3 posters and a short animation.",
                 img1: require('../assets/images/Edicion/E01_Plakat.jpg'),
-                img2: require('../assets/images/Citrus/Grey-Banana.jpg'),
+                img2: require('../assets/images/Edicion/E01_Plakat.jpg'),
                 img3: require('../assets/images/Citrus/Violett-Patato.jpg')
             }
         }
     },
     methods: {
         onscroll() {
-            const images = ['.large-image', '.left-img', '.right-half']
+            const images = ['#a', '#flex-box','.box', '.left-img', '.right-half']
             for (const img of images) {
                 gsap.from(img, {
                     scrollTrigger: img,
@@ -84,6 +89,14 @@ export default {
     height: auto;
     display: flex;
     flex-direction: column;
+}
+
+.full-size {
+    width: 100%;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 
 // --- Media --- //
