@@ -1,5 +1,5 @@
 <template>
-    <div id="page" class="grain scrollto">
+    <div id="page" class="grain">
         <div class="container">
             <projecttop v-bind:projectdata = 'projectdata'></projecttop>
             <div class="project">
@@ -30,8 +30,8 @@ export default {
     data() {
         return {
             projectdata: {
-                name: 'citrus& packus',
-                date: '2017',
+                name: 'edicion19',
+                date: '2019',
                 counter: '❶',
                 type: 'poster& Animation',
                 desc: 'A campaign against the overuse of packages',
@@ -39,7 +39,7 @@ export default {
                 credits: '-',
                 desc1: "Littering is a huge problem, especially in time of climat change. This project focuses on the overuse of packages in the food industry.",
                 desc2: "For this purpose i made 3 posters and a short animation.",
-                img1: require('../assets/images/Citrus/Yellow-Citrus.jpg'),
+                img1: require('../assets/images/Edicion/E01_Plakat.jpg'),
                 img2: require('../assets/images/Citrus/Grey-Banana.jpg'),
                 img3: require('../assets/images/Citrus/Violett-Patato.jpg')
             }

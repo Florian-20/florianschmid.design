@@ -1,16 +1,10 @@
 <template>
-    <div id="migros" class="grain scrollto">
+    <div id="page" class="grain scrollto">
         <div class="container">
-            <projecttop v-bind:txt = 'txt'></projecttop>
+            <projecttop v-bind:projectdata = 'projectdata'></projecttop>
             <div class="project">
-                <div class="section-title">
-                    <div class="section-child">
-                        <div class="chapter">
-                            <p>Chapter I</p>
-                        </div>
-                        <h2>Final printed bag design</h2>
-                    </div>
-                </div>
+                <goldimage v-bind:projectdata = 'projectdata' ></goldimage>
+                <imagebox v-bind:projectdata = 'projectdata'></imagebox>
             </div>
         </div>
     </div>
@@ -19,67 +13,87 @@
 <script>
 
 import projecttop from '@/components/projecttop.vue'
+import imagebox from '@/components/image_box.vue'
+import goldimage from '@/components/gold_image.vue'
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
     components: {
-        projecttop
+        projecttop,
+        imagebox,
+        goldimage
     },
     data() {
         return {
-            txt: {
+            projectdata: {
                 name: 'Migros',
-                date: '2017',
-                counter: '❷',
-                type: 'Bag design& compositing',
-                desc: 'Won competiton for Migros new bag design',
-                client: 'Migros',
+                date: '2018',
+                counter: '❶',
+                type: 'poster& Animation',
+                desc: 'A campaign against the overuse of packages',
+                client: 'NONE',
                 credits: '-',
-                path: require('../assets/vectors/Migros_Black.svg')
-                }
+                desc1: "Littering is a huge problem, especially in time of climat change. This project focuses on the overuse of packages in the food industry.",
+                desc2: "For this purpose i made 3 posters and a short animation.",
+                img1: require('../assets/images/Migros/M01_Tasche.jpg'),
+                img2: require('../assets/images/Migros/M02_Tasche.jpg'),
+                img3: require('../assets/images/Migros/M03_Tasche.jpg')
+            }
         }
     },
+    methods: {
+        onscroll() {
+            const images = ['.large-image', '.left-img', '.right-half']
+            for (const img of images) {
+                gsap.from(img, {
+                    scrollTrigger: img,
+                    opacity: 0,
+                    y: 100,
+                    delay: 0.2,
+                    duration: 1,
+                })
+            }
+        }
+    },
+    created () {
+        window.scroll(0, 0)
+    },
+    mounted() {
+        this.onscroll()
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 
-#migros {
+#page {
     position: absolute;
-    height: 20rem;
+    height: auto;
     width: 100%;
-    background-color: var(--light);
-    //background-color: #f99007;
+    background-position: center;
 }
 
 .project {
-    margin-top: 20vh;
-    width: 100%;
-    height: 200vh;
-}
-
-.section-title {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    h2 {
-        margin-top: 2rem;
-        text-transform: none;
-    }
-}
-
-.section-child {
+    margin-top: 7rem;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    height: auto;
     display: flex;
     flex-direction: column;
-    width: 40%;
-    align-items: center;
-    h2 {
-        text-align: center;
-    }
 }
 
-.chapter {
-    border: 1px solid var(--dark);
-    width: auto;
-    padding: 1vh;
+// --- Media --- //
+
+@media screen and (max-width: 990px) {
+    .project {
+        margin-top: 4rem;
+        margin-left: unset;
+        margin-right: unset;
+    }
 }
 </style>
+

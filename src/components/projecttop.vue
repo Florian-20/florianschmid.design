@@ -2,8 +2,8 @@
   <div id="mainpage">
     <div id="head">
       <div class="type slide-small">
-        <h3>{{ txt.date }}</h3>
-        <h3>{{ txt.type }}</h3>
+        <h3>{{ projectdata.date }}</h3>
+        <h3>{{ projectdata.type }}</h3>
       </div>
       <div id="fix">
         <router-link v-if="!mobileView" to="/">Work</router-link>
@@ -18,33 +18,24 @@
       </div>
     </div>
     <div class="top-page-container">
-      <div id="project-title" class="quote"><h1>{{ txt.name }}</h1></div>
+      <div id="project-title"><h1>{{ projectdata.name }}</h1></div>
       <div class="flex-container">
         <div class="flex-child">
-          <h2 class="slide-small">{{ txt.desc }}</h2>
+          <h2 class="slide-small">{{ projectdata.desc }}</h2>
           <div id="infobox" class="slide-small">
-            <h2 id="world">{{ txt.counter }}</h2>
+            <h2 id="world">{{ projectdata.counter }}</h2>
             <div class="credits">
-              <p>CLIENT<span/>{{ txt.client }}</p>
+              <p>CLIENT<span/>{{ projectdata.client }}</p>
               <div></div>
-              <p>CLIENT<span/>{{ txt.credits }}</p>
+              <p>CLIENT<span/>{{ projectdata.credits }}</p>
             </div>
           </div>
         </div>
         <div class="flex-child slide-small">
-          <p>
-            A poster series against the overuse of packages. 
-            Est ex nulla proident sunt nostrud qui cillum fugiat 
-            esse laboris mollit sit. Velit non cupidatat commodo 
-            culpa ex nulla cupidatat in ipsum nostrud laborum. Fugiat 
-          </p>
+          <p>{{ projectdata.desc1 }}</p>
         </div>
         <div class="flex-child slide-small">
-          <p>
-            HA poster series against the overuse of packages. 
-            Est ex nulla proident sunt nostrud qui cillum fugiat 
-            esse laboris mollit sit. Velit non cupidatat commodo 
-          </p>
+          <p>{{ projectdata.desc2 }}</p>
         </div>
       </div>
     </div>
@@ -60,7 +51,7 @@ gsap.registerPlugin(ScrollTrigger );
 
 export default {
   name: "projecttop",
-  props: ["txt"],
+  props: ["projectdata"],
   data() {
     return {
       mobileView: true,
@@ -131,6 +122,7 @@ export default {
 }
 
 #fix {
+  z-index: 1000;
   position: fixed;
   display: flex;
   right: 2vw;
@@ -253,6 +245,9 @@ export default {
       font-size: 70px;
       line-height: 60px;
     }
+  }
+  #fix {
+    right: 1rem;
   }
   .flex-container {
     flex-direction: column;

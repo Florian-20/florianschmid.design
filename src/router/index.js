@@ -33,6 +33,11 @@ const routes = [
     name: 'Archive',
     component: () => import(/*webpackChunkName: "archive" */ '../views/Archive.vue')
 
+  },
+  {
+    path: '/edicion19',
+    name: 'Edicion19',
+    component: () => import(/*webpackChunkName: "edicion19" */ '../views/Edicion.vue')
   }
 ]
 
