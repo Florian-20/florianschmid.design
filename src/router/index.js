@@ -22,6 +22,16 @@ const routes = [
     path: '/edicion19',
     name: 'Edicion19',
     component: () => import(/*webpackChunkName: "edicion19" */ '../views/Edicion.vue')
+  },
+  {
+    path: '/migros',
+    name: 'Migros',
+    component: () => import(/*webpackChunkName: "migros" */ '../views/Migros.vue')
+  },
+  {
+    path: '/bildsprache',
+    name: 'Bildsprache',
+    component: () => import(/*webpackChunkName: "bildsprache" */ '../views/Bildsprache.vue')
   }
 ]
 

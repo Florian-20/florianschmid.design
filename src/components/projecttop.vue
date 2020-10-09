@@ -150,7 +150,6 @@ export default {
 #project-title {
   margin-top: 4rem;
   margin-bottom: 7rem;
-  max-width: 60%;
   h1 {
     font-size: 130px;
     line-height: 120px;

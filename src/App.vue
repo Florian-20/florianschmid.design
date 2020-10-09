@@ -227,6 +227,18 @@ a {
   height: auto;
 }
 
+.vimeo-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  iframe {
+    width: calc(1.66 * 640px);
+    height: calc(1.66 * 360px);
+  }
+}
+
 // --- Mobile --- //
 
 @media screen and(max-width: 600px) {

@@ -4,19 +4,22 @@
             <projecttop v-bind:projectdata = 'projectdata'></projecttop>
             <div class="project">
                 <div class="full-size" id="a">
-                    <img src="../assets/images/Edicion/E02_Plakat.jpg" alt="">
+                    <img src="../assets/images/Bildsprache/Licht-Mensch.jpg" alt="">
                 </div>
                 <div class="half-half">
-                    <div class="half">
-                        <img src="../assets/images/Edicion/E01_Plakat.jpg" alt="">
+                    <div class="l">
+                        <img src="../assets/images/Bildsprache/Manneslicht.jpg" alt="">
                     </div>
                     <span></span>
-                    <div class="half">
-                        <img src="../assets/images/Edicion/E03_Plakat.jpg" alt="">
+                    <div class="r">
+                        <img src="../assets/images/Bildsprache/Wolke-7.jpg" alt="">
                     </div>
                 </div>
                 <div class="full-size" id="b">
-                    <img src="../assets/images/Edicion/E04_Bag.jpg" alt="">
+                    <img src="../assets/images/Bildsprache/Stone-Man.jpg" alt="">
+                </div>
+                <div class="vimeo-container">
+                    <iframe src="https://player.vimeo.com/video/397647989" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -26,6 +29,7 @@
 <script>
 
 import projecttop from '@/components/projecttop.vue'
+//import imagebox from '@/components/image_box.vue'
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -39,23 +43,25 @@ export default {
     data() {
         return {
             projectdata: {
-                name: 'edicion 19',
+                name: 'Bildsprache',
                 date: '2019',
                 counter: '❶',
                 colour: '#ea0e0e',
                 colour2: '#151515',
-                type: 'poster& Animation',
-                desc: 'A campaign against the overuse of packages',
-                client: 'NONE',
+                type: 'exhibition',
+                desc: 'Won competiton for Migros new bag design',
+                client: 'MIGROS',
                 credits: '-',
-                desc1: "Littering is a huge problem, especially in time of climat change. This project focuses on the overuse of packages in the food industry.",
-                desc2: "For this purpose i made 3 posters and a short animation."
+                desc1: "A 8 week long trip to found out who i am.",
+                desc2: "For this purpose i made 3 posters and a short animation.",
+                img2: require('../assets/images/Migros/M02_Tasche.jpg'),
+                img3: require('../assets/images/Migros/M01_Tasche.jpg'),
             }
         }
     },
     methods: {
         onscroll() {
-            const images = ['#a', '#b', '.half-half']
+            const images = ['#a', '#b', '.l', '.r']
             for (const img of images) {
                 gsap.from(img, {
                     scrollTrigger: img,
@@ -105,16 +111,27 @@ export default {
 
 .half-half {
     margin-top: .1rem;
+    margin-bottom: 5rem;
     display: flex;
     span {
         width: .5rem;
     }
 }
 
-.half {
+.l {
+    width: 25%;
+    padding: 7rem;
+    padding-bottom: 12rem;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.r {
+    margin-top: 10rem;
     width: auto;
     padding: 7rem;
-    background-color: #ea0e0e;
     img {
         max-width: 100%;
         max-height: 100%;

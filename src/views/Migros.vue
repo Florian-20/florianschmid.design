@@ -4,19 +4,20 @@
             <projecttop v-bind:projectdata = 'projectdata'></projecttop>
             <div class="project">
                 <div class="full-size" id="a">
-                    <img src="../assets/images/Edicion/E02_Plakat.jpg" alt="">
+                    <img src="../assets/images/Migros/M03_Tasche.jpg" alt="">
                 </div>
+                <imagebox v-bind:projectdata = 'projectdata'></imagebox>
                 <div class="half-half">
                     <div class="half">
-                        <img src="../assets/images/Edicion/E01_Plakat.jpg" alt="">
+                        <img src="../assets/images/Migros/M01_Tasche.jpg" alt="">
                     </div>
                     <span></span>
                     <div class="half">
-                        <img src="../assets/images/Edicion/E03_Plakat.jpg" alt="">
+                        <img src="../assets/images/Migros/M01_Tasche.jpg" alt="">
                     </div>
                 </div>
                 <div class="full-size" id="b">
-                    <img src="../assets/images/Edicion/E04_Bag.jpg" alt="">
+                    <img src="../assets/images/Migros/M01_Tasche.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -26,6 +27,7 @@
 <script>
 
 import projecttop from '@/components/projecttop.vue'
+import imagebox from '@/components/image_box.vue'
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -34,22 +36,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default {
     components: {
-        projecttop
+        projecttop,
+        imagebox
     },
     data() {
         return {
             projectdata: {
-                name: 'edicion 19',
+                name: 'Migros',
                 date: '2019',
                 counter: '❶',
                 colour: '#ea0e0e',
                 colour2: '#151515',
-                type: 'poster& Animation',
-                desc: 'A campaign against the overuse of packages',
-                client: 'NONE',
+                type: 'won bag design competition',
+                desc: 'Won competiton for Migros new bag design',
+                client: 'MIGROS',
                 credits: '-',
                 desc1: "Littering is a huge problem, especially in time of climat change. This project focuses on the overuse of packages in the food industry.",
-                desc2: "For this purpose i made 3 posters and a short animation."
+                desc2: "For this purpose i made 3 posters and a short animation.",
+                img2: require('../assets/images/Migros/M02_Tasche.jpg'),
+                img3: require('../assets/images/Migros/M01_Tasche.jpg')
             }
         }
     },
