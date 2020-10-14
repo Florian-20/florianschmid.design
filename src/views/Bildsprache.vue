@@ -3,23 +3,23 @@
         <div class="container">
             <projecttop v-bind:projectdata = 'projectdata'></projecttop>
             <div class="project">
-                <div class="full-size" id="a">
+                <div class="full-size anim">
                     <img src="../assets/images/Bildsprache/Licht-Mensch.jpg" alt="">
                 </div>
                 <div class="half-half">
-                    <div class="l">
+                    <div class="l anim">
                         <img src="../assets/images/Bildsprache/Manneslicht.jpg" alt="">
                     </div>
                     <span></span>
-                    <div class="r">
+                    <div class="r anim">
                         <img src="../assets/images/Bildsprache/Wolke-7.jpg" alt="">
                     </div>
                 </div>
-                <div class="full-size" id="b">
+                <div class="full-size anim">
                     <img src="../assets/images/Bildsprache/Stone-Man.jpg" alt="">
                 </div>
                 <div class="vimeo-container">
-                    <iframe src="https://player.vimeo.com/video/397647989" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <iframe class="anim" src="https://player.vimeo.com/video/397647989" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -29,7 +29,6 @@
 <script>
 
 import projecttop from '@/components/projecttop.vue'
-//import imagebox from '@/components/image_box.vue'
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -49,27 +48,13 @@ export default {
                 colour: '#ea0e0e',
                 colour2: '#151515',
                 type: 'exhibition',
-                desc: 'Won competiton for Migros new bag design',
-                client: 'MIGROS',
+                desc: 'B20',
+                client: 'Biel',
                 credits: '-',
-                desc1: "A 8 week long trip to found out who i am.",
+                desc1: "Lorem ipsulum",
                 desc2: "For this purpose i made 3 posters and a short animation.",
                 img2: require('../assets/images/Migros/M02_Tasche.jpg'),
                 img3: require('../assets/images/Migros/M01_Tasche.jpg'),
-            }
-        }
-    },
-    methods: {
-        onscroll() {
-            const images = ['#a', '#b', '.l', '.r']
-            for (const img of images) {
-                gsap.from(img, {
-                    scrollTrigger: img,
-                    opacity: 0,
-                    y: 100,
-                    delay: 0.2,
-                    duration: 1,
-                })
             }
         }
     },
@@ -77,7 +62,19 @@ export default {
         window.scroll(0, 0)
     },
     mounted() {
-        this.onscroll()
+        gsap.utils.toArray(".anim").forEach(anim => {
+            gsap.from(anim, {
+                scrollTrigger: {
+                    start: "top bottom",
+                    end: "top center",
+                    markers: true,
+                    scrub: 1,
+                    trigger: anim
+                },
+            y: 120,
+            opacity: 0.3
+            })
+        })
     }
 }
 </script>

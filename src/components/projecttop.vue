@@ -14,7 +14,6 @@
             <path fill="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" d="M30 0L.98360656 29.5"/>
           </g>
         </svg>
-
       </div>
     </div>
     <div class="top-page-container">
@@ -82,14 +81,6 @@ export default {
           stagger: 0.1,
           ease: "power4"
       })
-    },
-    tweenComplete() {
-      var tl = gsap.timeline()
-      tl.to('#project-title', {
-        duration: 0.5,
-        color: "#ffcc00",
-        ease: "power3",
-      })
     }
   },
   created() {
@@ -131,7 +122,7 @@ export default {
   }
   svg {
     stroke: var(--dark);
-    margin-left: 3rem;
+    margin-left: 5.6rem;;
     cursor: pointer;
   }
 }

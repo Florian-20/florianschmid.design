@@ -3,10 +3,10 @@
         <div class="container">
             <projecttop v-bind:projectdata = 'projectdata'></projecttop>
             <div class="project">
-                <div class="full-size" id="a">
+                <div class="full-size anim">
                     <img src="../assets/images/Edicion/E02_Plakat.jpg" alt="">
                 </div>
-                <div class="half-half">
+                <div class="half-half anim">
                     <div class="half">
                         <img src="../assets/images/Edicion/E01_Plakat.jpg" alt="">
                     </div>
@@ -15,7 +15,7 @@
                         <img src="../assets/images/Edicion/E03_Plakat.jpg" alt="">
                     </div>
                 </div>
-                <div class="full-size" id="b">
+                <div class="full-size anim">
                     <img src="../assets/images/Edicion/E04_Bag.jpg" alt="">
                 </div>
             </div>
@@ -55,16 +55,19 @@ export default {
     },
     methods: {
         onscroll() {
-            const images = ['#a', '#b', '.half-half']
-            for (const img of images) {
-                gsap.from(img, {
-                    scrollTrigger: img,
-                    opacity: 0,
-                    y: 100,
-                    delay: 0.2,
-                    duration: 1,
+            gsap.utils.toArray(".anim").forEach(anim => {
+                var tween = gsap.from(anim, {
+                scrollTrigger: {
+                    start: "top bottom",
+                    end: "top center",
+                    scrub: 1,
+                    trigger: anim
+                },
+                y: 120,
+                opacity: 0.3
                 })
-            }
+                tween.kill()
+            })
         }
     },
     created () {
