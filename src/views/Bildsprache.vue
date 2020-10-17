@@ -3,39 +3,34 @@
         <div class="container">
             <projecttop v-bind:projectdata = 'projectdata'></projecttop>
             <div class="project">
-                <div class="full-size anim">
+                <div class="full-size" v-scrollanimation>
                     <img src="../assets/images/Bildsprache/Licht-Mensch.jpg" alt="">
                 </div>
                 <div class="half-half">
-                    <div class="l anim">
+                    <div class="l" v-scrollanimation>
                         <img src="../assets/images/Bildsprache/Manneslicht.jpg" alt="">
                     </div>
                     <span></span>
-                    <div class="r anim">
+                    <div class="r" v-scrollanimation>
                         <img src="../assets/images/Bildsprache/Wolke-7.jpg" alt="">
                     </div>
                 </div>
-                <div class="full-size anim">
+                <div class="full-size" v-scrollanimation>
                     <img src="../assets/images/Bildsprache/Stone-Man.jpg" alt="">
                 </div>
                 <div class="vimeo-container">
-                    <iframe class="anim" src="https://player.vimeo.com/video/397647989" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    <iframe  v-scrollanimation src="https://player.vimeo.com/video/397647989" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
 </template>
-
 <script>
 
 import projecttop from '@/components/projecttop.vue'
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
 export default {
+    name: 'Bildsprache',
     components: {
         projecttop
     },
@@ -48,7 +43,7 @@ export default {
                 colour: '#ea0e0e',
                 colour2: '#151515',
                 type: 'exhibition',
-                desc: 'B20',
+                desc: 'A series of animations an',
                 client: 'Biel',
                 credits: '-',
                 desc1: "Lorem ipsulum",
@@ -60,21 +55,6 @@ export default {
     },
     created () {
         window.scroll(0, 0)
-    },
-    mounted() {
-        gsap.utils.toArray(".anim").forEach(anim => {
-            gsap.from(anim, {
-                scrollTrigger: {
-                    start: "top bottom",
-                    end: "top center",
-                    markers: true,
-                    scrub: 1,
-                    trigger: anim
-                },
-            y: 120,
-            opacity: 0.3
-            })
-        })
     }
 }
 </script>

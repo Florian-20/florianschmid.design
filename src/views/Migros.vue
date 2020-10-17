@@ -3,11 +3,11 @@
         <div class="container">
             <projecttop v-bind:projectdata = 'projectdata'></projecttop>
             <div class="project">
-                <div class="full-size" id="a">
+                <div class="full-size anim">
                     <img src="../assets/images/Migros/M03_Tasche.jpg" alt="">
                 </div>
                 <imagebox v-bind:projectdata = 'projectdata'></imagebox>
-                <div class="half-half">
+                <div class="half-half anim">
                     <div class="half">
                         <img src="../assets/images/Migros/M01_Tasche.jpg" alt="">
                     </div>
@@ -16,7 +16,7 @@
                         <img src="../assets/images/Migros/M01_Tasche.jpg" alt="">
                     </div>
                 </div>
-                <div class="full-size" id="b">
+                <div class="full-size anim">
                     <img src="../assets/images/Migros/M01_Tasche.jpg" alt="">
                 </div>
             </div>
@@ -29,12 +29,8 @@
 import projecttop from '@/components/projecttop.vue'
 import imagebox from '@/components/image_box.vue'
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
 export default {
+    name: 'Migros',
     components: {
         projecttop,
         imagebox
@@ -58,25 +54,8 @@ export default {
             }
         }
     },
-    methods: {
-        onscroll() {
-            const images = ['#a', '#b', '.half-half']
-            for (const img of images) {
-                gsap.from(img, {
-                    scrollTrigger: img,
-                    opacity: 0,
-                    y: 100,
-                    delay: 0.2,
-                    duration: 1,
-                })
-            }
-        }
-    },
     created () {
         window.scroll(0, 0)
-    },
-    mounted() {
-        this.onscroll()
     }
 }
 </script>

@@ -218,6 +218,18 @@ a {
  }
 }
 
+.before-enter {
+  opacity: .3;
+  transform: translateY(100px);
+  transition: all 1s ease-out;
+}
+/* 
+  If the element intersects with the viewport, the before-enter class is added.
+*/
+.enter {
+  opacity: 1;
+  transform: translateY(0px);
+}
 // ---- Project rules --- //
 
 .container {

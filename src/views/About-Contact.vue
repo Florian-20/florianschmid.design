@@ -122,6 +122,9 @@ export default {
   right: 2vw;
   a {
     margin-left: 3rem;
+    &.router-link-exact-active {
+      text-decoration: underline;
+    }
   }
   svg {
     stroke: var(--dark);

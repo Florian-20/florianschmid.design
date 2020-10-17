@@ -3,10 +3,10 @@
         <div class="container">
             <projecttop v-bind:projectdata = 'projectdata'></projecttop>
             <div class="project">
-                <div class="full-size anim">
+                <div class="full-size" v-scrollanimation>
                     <img src="../assets/images/Edicion/E02_Plakat.jpg" alt="">
                 </div>
-                <div class="half-half anim">
+                <div class="half-half" v-scrollanimation>
                     <div class="half">
                         <img src="../assets/images/Edicion/E01_Plakat.jpg" alt="">
                     </div>
@@ -15,7 +15,7 @@
                         <img src="../assets/images/Edicion/E03_Plakat.jpg" alt="">
                     </div>
                 </div>
-                <div class="full-size anim">
+                <div class="full-size" v-scrollanimation>
                     <img src="../assets/images/Edicion/E04_Bag.jpg" alt="">
                 </div>
             </div>
@@ -26,11 +26,6 @@
 <script>
 
 import projecttop from '@/components/projecttop.vue'
-
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default {
     components: {
@@ -53,28 +48,8 @@ export default {
             }
         }
     },
-    methods: {
-        onscroll() {
-            gsap.utils.toArray(".anim").forEach(anim => {
-                var tween = gsap.from(anim, {
-                scrollTrigger: {
-                    start: "top bottom",
-                    end: "top center",
-                    scrub: 1,
-                    trigger: anim
-                },
-                y: 120,
-                opacity: 0.3
-                })
-                tween.kill()
-            })
-        }
-    },
     created () {
         window.scroll(0, 0)
-    },
-    mounted() {
-        this.onscroll()
     }
 }
 </script>
