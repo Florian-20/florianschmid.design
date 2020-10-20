@@ -32,6 +32,11 @@ const routes = [
     path: '/bildsprache',
     name: 'Bildsprache',
     component: () => import(/*webpackChunkName: "bildsprache" */ '../views/Bildsprache.vue')
+  },
+  {
+    path: '/citruspackus',
+    name: 'citruspackus',
+    component: () => import(/*webpackChunkName: "citruspackus" */ '../views/citrus.vue')
   }
 ]
 

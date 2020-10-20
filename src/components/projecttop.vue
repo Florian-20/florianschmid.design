@@ -26,7 +26,7 @@
             <div class="credits">
               <p>CLIENT<span/>{{ projectdata.client }}</p>
               <div></div>
-              <p>CLIENT<span/>{{ projectdata.credits }}</p>
+              <p>CREDITS<span/>{{ projectdata.credits }}</p>
             </div>
           </div>
         </div>
@@ -44,9 +44,6 @@
 <script>
 
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger );
 
 export default {
   name: "projecttop",
@@ -63,6 +60,7 @@ export default {
     slideIn() {
       var tl = gsap.timeline()
       tl.from('#project-title', {
+        delay: 0.5,
         duration: 0.8,
         y: 100,
         opacity: 0,

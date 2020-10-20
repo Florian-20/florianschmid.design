@@ -4,22 +4,19 @@
             <projecttop v-bind:projectdata = 'projectdata'></projecttop>
             <div class="project">
                 <div class="full-size slidein">
-                    <img src="../assets/images/Edicion/E02_Plakat.jpg" alt="">
+                    <img src="../assets/images/Citrus/Yellow-Citrus.jpg" alt="">
                 </div>
                 <div class="half-half">
                     <div class="half">
-                        <img src="../assets/images/Edicion/E01_Plakat.jpg" alt="">
+                        <img src="../assets/images/Citrus/Violett-Patato.jpg" alt="">
                     </div>
                     <span></span>
                     <div class="half">
-                        <img src="../assets/images/Edicion/E03_Plakat.jpg" alt="">
+                        <img src="../assets/images/Citrus/Grey-Banana.jpg" alt="">
                     </div>
                 </div>
-                <div class="full-size">
-                    <img src="../assets/images/Edicion/E04_Bag.jpg" alt="">
-                </div>
-                <div class="website">
-                    <img src="../assets/images/Edicion/E01_Website.jpg" alt="">
+                <div class="vimeo-container">
+                    <iframe src="https://player.vimeo.com/video/361662647" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -38,12 +35,12 @@ export default {
     data() {
         return {
             projectdata: {
-                name: 'edicion 19',
-                date: '2019',
-                counter: '❹',
-                type: 'CD',
-                desc: 'Identity for a small book forum',
-                client: 'EDICION19',
+                name: 'Citrus Packus',
+                date: '2017',
+                counter: '❶',
+                type: 'poster campaign& animation',
+                desc: 'A campaign against the overuse of packages',
+                client: 'SCHOOLPROJECT',
                 credits: '-',
                 desc1: "Edicion is a small book forum in Biel which supports local alternative writers.",
                 desc2: "A corporate identity approach for 2019."
@@ -112,8 +109,6 @@ export default {
 
 .half {
     width: auto;
-    padding: 7rem;
-    background-color: #ea0e0e;
     img {
         max-width: 100%;
         max-height: 100%;
@@ -128,9 +123,6 @@ export default {
         margin-left: unset;
         margin-right: unset;
     }
-    .half {
-        padding: 5rem;
-    }
 }
 
 @media screen and(max-width: 600px) {
@@ -140,7 +132,6 @@ export default {
     }
     .half {
         margin-top: 0.1rem;
-        padding: 4rem;
     }
     .website {
         padding: 2rem;

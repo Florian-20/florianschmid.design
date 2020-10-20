@@ -3,21 +3,30 @@
         <div class="container">
             <projecttop v-bind:projectdata = 'projectdata'></projecttop>
             <div class="project">
-                <div class="full-size anim">
+                <div class="full-size slidein">
                     <img src="../assets/images/Migros/M03_Tasche.jpg" alt="">
                 </div>
-                <imagebox v-bind:projectdata = 'projectdata'></imagebox>
-                <div class="half-half anim">
-                    <div class="half">
+                <div id="flex-box">
+                    <div class="left-half">
+                        <div class="left-img">
+                            <img src="../assets/images/Migros/M02_Tasche.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="right-half">
                         <img src="../assets/images/Migros/M01_Tasche.jpg" alt="">
+                    </div>
+                </div>
+                <div class="half-half">
+                    <div class="half">
+                        <img src="../assets/images/Migros/M04_Close.jpg" alt="">
                     </div>
                     <span></span>
                     <div class="half">
-                        <img src="../assets/images/Migros/M01_Tasche.jpg" alt="">
+                        <img src="../assets/images/Migros/M05_Skizze.jpg" alt="">
                     </div>
                 </div>
-                <div class="full-size anim">
-                    <img src="../assets/images/Migros/M01_Tasche.jpg" alt="">
+                <div class="full-size topwhite">
+                    <img src="../assets/images/Migros/M06_Boats.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -27,13 +36,13 @@
 <script>
 
 import projecttop from '@/components/projecttop.vue'
-import imagebox from '@/components/image_box.vue'
+
+import { gsap } from 'gsap'
 
 export default {
     name: 'Migros',
     components: {
-        projecttop,
-        imagebox
+        projecttop
     },
     data() {
         return {
@@ -41,21 +50,27 @@ export default {
                 name: 'Migros',
                 date: '2019',
                 counter: '❶',
-                colour: '#ea0e0e',
-                colour2: '#151515',
                 type: 'won bag design competition',
                 desc: 'Won competiton for Migros new bag design',
                 client: 'MIGROS',
                 credits: '-',
                 desc1: "Littering is a huge problem, especially in time of climat change. This project focuses on the overuse of packages in the food industry.",
                 desc2: "For this purpose i made 3 posters and a short animation.",
-                img2: require('../assets/images/Migros/M02_Tasche.jpg'),
-                img3: require('../assets/images/Migros/M01_Tasche.jpg')
             }
         }
     },
     created () {
         window.scroll(0, 0)
+    },
+    mounted() {
+            var tl = gsap.timeline()
+            tl.from('.slidein', {
+            duration: 0.8,
+            y: 100,
+            opacity: 0,
+            delay: 1,
+            ease: "circ.out",
+            })
     }
 }
 </script>
@@ -88,21 +103,55 @@ export default {
 }
 
 .half-half {
-    margin-top: .1rem;
+    margin-top: .2rem;
     display: flex;
     span {
-        width: .5rem;
+        width: .3rem;
     }
 }
 
 .half {
     width: auto;
-    padding: 7rem;
-    background-color: #ea0e0e;
     img {
         max-width: 100%;
         max-height: 100%;
     }
+}
+
+#flex-box {
+    background-color: var(--dark);
+    align-items: center;
+    margin-top: .1rem;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.left-half {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.left-img {
+    width: 50%;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.right-half {
+    width: 50%;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.topwhite {
+    margin-top: 10rem;
 }
 
 // --- Media --- //
@@ -113,8 +162,20 @@ export default {
         margin-left: unset;
         margin-right: unset;
     }
-    .half {
-        padding: 5rem;
+    #flex-box {
+        background-color: unset;
+        margin-top: .5rem;
+        flex-direction: column;
+    }
+    .left-half {
+        width: 100%;
+    }
+    .left-img {
+        width: 100%;
+    }
+    .right-half {
+        margin-top: .5rem;
+        width: 100%;
     }
 }
 
@@ -124,8 +185,10 @@ export default {
         flex-direction: column;
     }
     .half {
-        margin-top: 0.1rem;
-        padding: 4rem;
+        margin-top: 0.5rem;
+    }
+    .topwhite {
+        margin-top: 5rem;
     }
 }
 </style>

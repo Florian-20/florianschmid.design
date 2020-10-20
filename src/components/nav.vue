@@ -1,11 +1,11 @@
 <template>
     <div id="nav">
-      <h3 id="first" v-if="!mobileView">Florian Schmid</h3>
-      <p v-if="mobileView">Florian<br>Schmid</p>
+      <h3 id="first" class="slide-nav" v-if="!mobileView">Florian Schmid</h3>
+      <p class="slide-nav" v-if="mobileView">Florian<br>Schmid</p>
       <span v-if="!mobileView"></span>
-      <router-link v-if="!mobileView" to="/" id="second">Work</router-link>
-      <router-link to="/about&contact" id="third">About&<br>Contact</router-link>
-      <div id="modeswitch" v-on:click="$emit('switch-mode')">
+      <router-link class="slide-nav" v-if="!mobileView" to="/" id="second">Work</router-link>
+      <router-link class="slide-nav" to="/about&contact" id="third">About&<br>Contact</router-link>
+      <div class="slide-nav" id="modeswitch" v-on:click="$emit('switch-mode')">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 57.89">
           <g id="Ebene_2" data-name="Ebene 2">
           <g id="Switch">
@@ -27,7 +27,7 @@ import { gsap } from 'gsap'
 
 export default {
   name: 'topnav',
-  props: ['darkmode'],
+  props: ['darkmode', 'loading'],
   data () {
     return {
       mobileView: true
@@ -60,6 +60,19 @@ export default {
       if (this.darkmode == false) {
         tween.reverse(0)
       }
+    },
+    onload() {
+      var tl = gsap.timeline()
+      tl.from('.slide-nav', {
+          delay: 0.5,
+          transformOrigin: "Bottom Left",
+          rotateZ: "3deg",
+          duration: 0.8,
+          opacity: 0,
+          y: 30,
+          stagger: 0.1,
+          ease: "power4"
+      })
     }
   },
   watch: {
@@ -72,6 +85,9 @@ export default {
   },
   mounted() {
     this.checkSwitch()
+    if (this.loading == true) {
+      this.onload()
+    }
   }
 }
 </script>

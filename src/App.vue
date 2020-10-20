@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view v-on:switch-mode="onSwitch" :darkmode="darkmode" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'/>
+    <router-view  :loading="loading" v-on:switch-mode="onSwitch" :darkmode="darkmode" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'/>
   </div>
 </template>
 
@@ -10,14 +10,22 @@
 export default {
   data () {
     return {
-      loading: false,
-      darkmode: false
+      darkmode: false,
+      loading: true
     }
   },
   methods: {
     onSwitch() {
       this.darkmode = !this.darkmode
+    },
+    setloading(value) {
+      this.loading = value
     }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.setloading(false)
+    }, 3000)
   }
 }
 </script>
@@ -218,18 +226,6 @@ a {
  }
 }
 
-.before-enter {
-  opacity: .3;
-  transform: translateY(100px);
-  transition: all 1s ease-out;
-}
-/* 
-  If the element intersects with the viewport, the before-enter class is added.
-*/
-.enter {
-  opacity: 1;
-  transform: translateY(0px);
-}
 // ---- Project rules --- //
 
 .container {
@@ -241,10 +237,11 @@ a {
 
 .vimeo-container {
   display: flex;
+  height: auto;
   width: 100%;
   justify-content: center;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 12rem;
+  margin-bottom: 12rem;
   iframe {
     width: calc(1.66 * 640px);
     height: calc(1.66 * 360px);
@@ -258,6 +255,10 @@ a {
       margin-top: 1rem;
       margin-left: 1rem;
       margin-right: 1rem;
+    }
+    .vimeo-container {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
     }
 }
 </style>

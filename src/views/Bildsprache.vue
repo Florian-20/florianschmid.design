@@ -3,23 +3,29 @@
         <div class="container">
             <projecttop v-bind:projectdata = 'projectdata'></projecttop>
             <div class="project">
-                <div class="full-size" v-scrollanimation>
+                <div class="full-size slidein">
                     <img src="../assets/images/Bildsprache/Licht-Mensch.jpg" alt="">
                 </div>
                 <div class="half-half">
-                    <div class="l" v-scrollanimation>
+                    <div class="min-image">
                         <img src="../assets/images/Bildsprache/Manneslicht.jpg" alt="">
                     </div>
                     <span></span>
-                    <div class="r" v-scrollanimation>
+                    <div class="max-image">
                         <img src="../assets/images/Bildsprache/Wolke-7.jpg" alt="">
                     </div>
                 </div>
-                <div class="full-size" v-scrollanimation>
+                <div class="full-size">
                     <img src="../assets/images/Bildsprache/Stone-Man.jpg" alt="">
                 </div>
                 <div class="vimeo-container">
-                    <iframe  v-scrollanimation src="https://player.vimeo.com/video/397647989" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    <iframe  src="https://player.vimeo.com/video/397647989" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="full-size">
+                    <img src="../assets/images/Bildsprache/Japan-Street.jpg" alt="">
+                </div>
+                <div class="vimeo-container">
+                    <iframe src="https://player.vimeo.com/video/397648215" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -28,6 +34,7 @@
 <script>
 
 import projecttop from '@/components/projecttop.vue'
+import { gsap } from "gsap";
 
 export default {
     name: 'Bildsprache',
@@ -37,24 +44,32 @@ export default {
     data() {
         return {
             projectdata: {
-                name: 'Bildsprache',
+                name: 'Bild sprache',
                 date: '2019',
-                counter: '❶',
+                counter: '❸',
                 colour: '#ea0e0e',
                 colour2: '#151515',
                 type: 'exhibition',
-                desc: 'A series of animations an',
-                client: 'Biel',
+                desc: 'A series of animations and stills',
+                client: 'BILDSPRACHE19',
                 credits: '-',
-                desc1: "Lorem ipsulum",
-                desc2: "For this purpose i made 3 posters and a short animation.",
-                img2: require('../assets/images/Migros/M02_Tasche.jpg'),
-                img3: require('../assets/images/Migros/M01_Tasche.jpg'),
+                desc1: "8 weeks of total freedom to create. Things like surveillance, isolation and a bit of questioning of existence inspired my during this time.",
+                desc2: "At the end 5 animations(digital and analog) and a ton of images were made. A selection was presented in the Bildsprache19 exhibition."
             }
         }
     },
     created () {
         window.scroll(0, 0)
+    },
+    mounted() {
+        var tl = gsap.timeline()
+        tl.from('.slidein', {
+            duration: 0.8,
+            y: 100,
+            opacity: 0,
+            delay: 1,
+            ease: "circ.out",
+        })
     }
 }
 </script>
@@ -95,7 +110,7 @@ export default {
     }
 }
 
-.l {
+.min-image {
     width: 25%;
     padding: 7rem;
     padding-bottom: 12rem;
@@ -105,7 +120,7 @@ export default {
     }
 }
 
-.r {
+.max-image {
     margin-top: 10rem;
     width: auto;
     padding: 7rem;
@@ -123,8 +138,20 @@ export default {
         margin-left: unset;
         margin-right: unset;
     }
-    .half {
-        padding: 5rem;
+    .full-size {
+        margin-top: .5rem;
+    }
+    .half-half {
+        margin-bottom: 0;
+    }
+    .min-image {
+        margin-top: .5rem;
+        width: 100%;
+        padding: 0;
+    }
+    .max-image {
+        margin-top: .5rem;
+        padding: 0;
     }
 }
 

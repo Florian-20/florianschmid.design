@@ -1,6 +1,6 @@
 <template>
   <div class="grain">
-    <topnav :darkmode="darkmode"  v-on:switch-mode="$emit('switch-mode')"></topnav>
+    <topnav :darkmode="darkmode" :loading="loading"  v-on:switch-mode="$emit('switch-mode')"></topnav>
     <h1 id="toptitle">Work</h1>
     <div id="work">
       <router-link class="workitems" :to="project.name" v-for="project in projects" v-bind:key="project.name">
@@ -15,23 +15,41 @@
 import projectitem from '@/components/project_box.vue'
 import topnav from '@/components/nav.vue'
 import projects from '@/projects.json'
+import { gsap } from 'gsap'
 
 export default {
   components: {
     projectitem,
     topnav
   },
-  props: ['darkmode'],
+  props: ['darkmode', 'loading'],
   data () {
     return {
       projects
     }
   },
   methods: {
-    onswitch() {
-      console.log("Switched on Parent 1")
+    onload() {
+      var tl = gsap.timeline()
+      tl.from('#toptitle', {
+        duration: 0.8,
+        y: 100,
+        opacity: 0,
+        ease: "circ.out",
+      }),
+      tl.from('#work', {
+        duration: 0.8,
+        opacity: 0,
+        ease: "circ.out",
+        delay: 0.4
+      })
     }
   },
+  mounted() {
+    if (this.loading == true) {
+      this.onload()
+    }
+  }
 }
 </script>
 
