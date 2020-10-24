@@ -19,13 +19,13 @@
                     <img src="../assets/images/Bildsprache/Stone-Man.jpg" alt="">
                 </div>
                 <div class="vimeo-container">
-                    <iframe  src="https://player.vimeo.com/video/397647989" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    <iframe src="https://player.vimeo.com/video/397647989" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
                 <div class="full-size">
                     <img src="../assets/images/Bildsprache/Japan-Street.jpg" alt="">
                 </div>
                 <div class="vimeo-container">
-                    <iframe src="https://player.vimeo.com/video/397648215" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    <iframe src="https://player.vimeo.com/video/397648215" frameborder="0" rel="preload"  allow="fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -62,14 +62,16 @@ export default {
         window.scroll(0, 0)
     },
     mounted() {
-        var tl = gsap.timeline()
-        tl.from('.slidein', {
-            duration: 0.8,
-            y: 100,
-            opacity: 0,
-            delay: 1,
-            ease: "circ.out",
-        })
+        if(document.readyState === "complete") {
+            var tl = gsap.timeline()
+            tl.from('.slidein', {
+                duration: 0.8,
+                y: 100,
+                opacity: 0,
+                delay: 1,
+                ease: "circ.out",
+            })
+        }
     }
 }
 </script>

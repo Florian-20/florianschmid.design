@@ -85,8 +85,10 @@ export default {
     this.handleView()
   },
   mounted () {
-    this.slideIn()
-    this.slideInSmall()
+    if(document.readyState === "complete") {
+      this.slideIn()
+      this.slideInSmall()
+    }
   }
 };
 </script>

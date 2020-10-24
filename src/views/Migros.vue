@@ -25,7 +25,7 @@
                         <img src="../assets/images/Migros/M05_Skizze.jpg" alt="">
                     </div>
                 </div>
-                <div class="full-size topwhite">
+                <div class="full-size">
                     <img src="../assets/images/Migros/M06_Boats.jpg" alt="">
                 </div>
             </div>
@@ -63,14 +63,16 @@ export default {
         window.scroll(0, 0)
     },
     mounted() {
+        if(document.readyState === "complete") {
             var tl = gsap.timeline()
             tl.from('.slidein', {
-            duration: 0.8,
-            y: 100,
-            opacity: 0,
-            delay: 1,
-            ease: "circ.out",
+                duration: 0.8,
+                y: 100,
+                opacity: 0,
+                delay: 1,
+                ease: "circ.out",
             })
+        }
     }
 }
 </script>
@@ -148,10 +150,6 @@ export default {
         max-width: 100%;
         max-height: 100%;
     }
-}
-
-.topwhite {
-    margin-top: 10rem;
 }
 
 // --- Media --- //

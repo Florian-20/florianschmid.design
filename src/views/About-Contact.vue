@@ -73,7 +73,7 @@ export default {
     slideInSmall() {
       var tl = gsap.timeline()
       tl.from('.slide-small', {
-          delay: 0.3,
+          delay: 0.5,
           transformOrigin: "Bottom Left",
           rotateZ: "3deg",
           duration: 1,

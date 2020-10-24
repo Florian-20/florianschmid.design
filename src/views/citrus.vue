@@ -50,15 +50,17 @@ export default {
     created () {
         window.scroll(0, 0)
     },
-     mounted() {
-        var tl = gsap.timeline()
-        tl.from('.slidein', {
-            duration: 0.8,
-            y: 100,
-            opacity: 0,
-            delay: 1,
-            ease: "circ.out",
-        })
+    mounted() {
+        if(document.readyState === "complete") {
+            var tl = gsap.timeline()
+            tl.from('.slidein', {
+                duration: 0.8,
+                y: 100,
+                opacity: 0,
+                delay: 1,
+                ease: "circ.out",
+            })
+        }
     }
 }
 </script>
