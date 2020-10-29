@@ -25,7 +25,7 @@
                     <img src="../assets/images/Bildsprache/Japan-Street.jpg" alt="">
                 </div>
                 <div class="vimeo-container">
-                    <iframe src="https://player.vimeo.com/video/397648215" frameborder="0" rel="preload"  allow="fullscreen" allowfullscreen></iframe>
+                    <iframe src="https://player.vimeo.com/video/397648215" frameborder="0"  allow="fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -60,7 +60,11 @@ export default {
     },
     created () {
         window.scroll(0, 0)
+        this.fetchData();
     },
+    /*watch: {
+        $route: "fetchData"
+    },*/
     mounted() {
         if(document.readyState === "complete") {
             var tl = gsap.timeline()
@@ -72,7 +76,12 @@ export default {
                 ease: "circ.out",
             })
         }
-    }
+    },
+    /*methods: {
+        async fetchData() {
+            this.user 
+        }
+    }*/
 }
 </script>
 
