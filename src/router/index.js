@@ -37,6 +37,11 @@ const routes = [
     path: '/citruspackus',
     name: 'citruspackus',
     component: () => import(/*webpackChunkName: "citruspackus" */ '../views/citrus.vue')
+  },
+  {
+    path: '/3d&typo',
+    name: '3d&typo',
+    component: () => import(/*webpackChunkName: "3d&typo" */ '../views/3dTypo.vue')
   }
 ]
 
