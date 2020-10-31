@@ -26,6 +26,14 @@ export default {
     setTimeout(() => {
       this.setloading(false)
     }, 3000)
+  },
+  created() {
+    var timenow = new Date()
+    var time = timenow.getHours()
+    console.log(time)
+    if (time >= 18 || time <= 8) {
+      this.darkmode = true
+    }
   }
 }
 </script>
