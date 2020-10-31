@@ -104,6 +104,7 @@ export default {
         max-height: 100%;
     }
 }
+
 .half-half {
     margin-top: .1rem;
     display: flex;

@@ -22,6 +22,14 @@
                     </g>
                   </svg>
                 </div>
+                <div class="half-half">
+                  <div class="half">
+                    <img src="../assets/images/MatScanner/Scanner_01.jpg" alt="">
+                  </div>
+                  <div class="half">
+                    <img src="../assets/images/MatScanner/Scanner_02.jpg" alt="">
+                  </div>
+                </div>
             </div>
         </div>
     </div>
@@ -45,8 +53,8 @@ export default {
         desc: "Texture scanner for 3d materials",
         client: "ME",
         credits: "-",
-        desc1: "To create realistic Materials for 3D applications a precise normal map is key. A normal map is a texture type used in 3D to represent height and depth of a surface.",
-        desc2: "",
+        desc1: "To create realistic materials for 3D applications a precise normal map is key. A normal map is a texture type used in 3D to represent height and depth of a surface.",
+        desc2: "This scanner automates parts of the otherwise manual scanning process, which leads to faster and more precise scan results.",
       },
     };
   },
@@ -123,15 +131,6 @@ export default {
   }
 }
 
-.website {
-  margin-top: 0.1rem;
-  width: auto;
-  padding: 4rem;
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
 .half-half {
   margin-top: 0.1rem;
   display: flex;
@@ -143,7 +142,6 @@ export default {
 .half {
   width: auto;
   padding: 7rem;
-  background-color: #ea0e0e;
   img {
     max-width: 100%;
     max-height: 100%;
@@ -158,5 +156,16 @@ export default {
     margin-left: unset;
     margin-right: unset;
   }
+}
+
+@media screen and(max-width: 600px) {
+    .half-half {
+        margin-top: 0;
+        flex-direction: column;
+    }
+    .half {
+        margin-top: 0.1rem;
+        padding: 4rem;
+    }
 }
 </style>
