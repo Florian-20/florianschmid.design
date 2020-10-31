@@ -49,13 +49,13 @@ export default {
             projectdata: {
                 name: '3D&Typo',
                 date: '2019',
-                counter: '❶',
-                type: 'won bag design competition',
-                desc: 'Won competiton for Migros new bag design',
-                client: 'MIGROS',
+                counter: '❺',
+                type: 'Poster serie',
+                desc: 'Photography and graphics combined',
+                client: 'SCHOOLPROJECT',
                 credits: '-',
-                desc1: "Littering is a huge problem, especially in time of climat change. This project focuses on the overuse of packages in the food industry.",
-                desc2: "For this purpose i made 3 posters and a short animation.",
+                desc1: "A poster creation with 3d typowork and graphics.",
+                desc2: "ok",
             }
         }
     },

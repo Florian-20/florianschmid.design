@@ -42,6 +42,11 @@ const routes = [
     path: '/3d&typo',
     name: '3d&typo',
     component: () => import(/*webpackChunkName: "3d&typo" */ '../views/3dTypo.vue')
+  },
+  {
+    path: '/mat-scanner',
+    name: 'mat-scanner',
+    component: () => import(/*webpackChunkName: "mat-scanner" */ '../views/Mat-Scanner.vue')
   }
 ]
 
