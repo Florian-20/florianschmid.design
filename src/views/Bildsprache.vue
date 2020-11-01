@@ -25,7 +25,7 @@
                     <img src="../assets/images/Bildsprache/Japan-Street.jpg" alt="">
                 </div>
                 <div class="vimeo-container">
-                    <iframe src="https://player.vimeo.com/video/397648215" frameborder="0"  allow="fullscreen" allowfullscreen></iframe>
+                    <iframe src="https://player.vimeo.com/video/397648215" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -65,7 +65,6 @@ export default {
     methods: {
         loadstate() {
             this.loaded = true
-            console.log(this.loaded)
         }
     },
     /*watch: {
@@ -94,6 +93,10 @@ export default {
     height: auto;
     width: 100%;
     background-position: center;
+    iframe {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .project {

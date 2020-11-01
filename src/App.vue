@@ -265,8 +265,8 @@ a {
       margin-right: 1rem;
     }
     .vimeo-container {
-      margin-top: 4rem;
-      margin-bottom: 4rem;
+      margin-top: 0rem;
+      margin-bottom: 0rem;
     }
 }
 </style>
