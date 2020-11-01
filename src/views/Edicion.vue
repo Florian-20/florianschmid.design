@@ -68,9 +68,9 @@ export default {
                 opacity: 0,
                 delay: 1,
                 ease: "circ.out",
-                onComplete: this.loadstate()
             })
         }
+        this.loadstate()
     }
 }
 </script>
