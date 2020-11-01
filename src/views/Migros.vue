@@ -6,7 +6,7 @@
                 <div class="full-size slidein">
                     <img src="../assets/images/Migros/M03_Tasche.jpg" alt="">
                 </div>
-                <div id="flex-box">
+                <div id="flex-box" v-if="loaded">
                     <div class="left-half">
                         <div class="left-img">
                             <img src="../assets/images/Migros/M02_Tasche.jpg" alt="">
@@ -16,7 +16,7 @@
                         <img src="../assets/images/Migros/M01_Tasche.jpg" alt="">
                     </div>
                 </div>
-                <div class="half-half">
+                <div class="half-half" v-if="loaded">
                     <div class="half">
                         <img src="../assets/images/Migros/M04_Close.jpg" alt="">
                     </div>
@@ -25,7 +25,7 @@
                         <img src="../assets/images/Migros/M05_Skizze.jpg" alt="">
                     </div>
                 </div>
-                <div class="full-size">
+                <div class="full-size" v-if="loaded">
                     <img src="../assets/images/Migros/M06_Boats.jpg" alt="">
                 </div>
             </div>
@@ -56,11 +56,17 @@ export default {
                 credits: '-',
                 desc1: "Littering is a huge problem, especially in time of climat change. This project focuses on the overuse of packages in the food industry.",
                 desc2: "For this purpose i made 3 posters and a short animation.",
-            }
+            },
+            loaded: false
         }
     },
     created () {
         window.scroll(0, 0)
+    },
+    methods: {
+        loadstate() {
+            this.loaded = true
+        }
     },
     mounted() {
         if(document.readyState === "complete") {
@@ -71,6 +77,7 @@ export default {
                 opacity: 0,
                 delay: 1,
                 ease: "circ.out",
+                onComplete: this.loadstate()
             })
         }
     }

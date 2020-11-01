@@ -24,10 +24,10 @@
                 </div>
                 <div class="half-half">
                   <div class="half">
-                    <img src="../assets/images/MatScanner/Scanner_01.jpg" alt="">
+                    <img src="../assets/images/MatScanner/Scanner_08.gif" alt="">
                   </div>
                   <div class="half">
-                    <img src="../assets/images/MatScanner/Scanner_02.jpg" alt="">
+                    <img src="../assets/images/MatScanner/Scanner_09.gif" alt="">
                   </div>
                 </div>
             </div>
@@ -118,7 +118,7 @@ export default {
   svg {
     margin-top: 4rem;
     margin-bottom: 4rem;
-    width: 50%;
+    width: 40%;
   }
 }
 
@@ -141,7 +141,7 @@ export default {
 
 .half {
   width: auto;
-  padding: 7rem;
+  padding: 4rem;
   img {
     max-width: 100%;
     max-height: 100%;

@@ -6,7 +6,7 @@
                 <div class="full-size slidein">
                     <img src="../assets/images/Bildsprache/Licht-Mensch.jpg" alt="">
                 </div>
-                <div class="half-half">
+                <div class="half-half" v-if="loaded">
                     <div class="min-image">
                         <img src="../assets/images/Bildsprache/Manneslicht.jpg" alt="">
                     </div>
@@ -18,15 +18,15 @@
                 <div class="full-size">
                     <img src="../assets/images/Bildsprache/Stone-Man.jpg" alt="">
                 </div>
-                <!--<div class="vimeo-container">
+                <div class="vimeo-container">
                     <iframe src="https://player.vimeo.com/video/397647989" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
-                </div>-->
+                </div>
                 <div class="full-size">
                     <img src="../assets/images/Bildsprache/Japan-Street.jpg" alt="">
                 </div>
-                <!--<div class="vimeo-container">
+                <div class="vimeo-container">
                     <iframe src="https://player.vimeo.com/video/397648215" frameborder="0"  allow="fullscreen" allowfullscreen></iframe>
-                </div>-->
+                </div>
             </div>
         </div>
     </div>
@@ -55,11 +55,18 @@ export default {
                 credits: '-',
                 desc1: "8 weeks of total freedom to create. Things like surveillance, isolation and a bit of questioning of existence inspired my during this time.",
                 desc2: "At the end 5 animations(digital and analog) and a ton of images were made. A selection was presented in the Bildsprache19 exhibition."
-            }
+            },
+            loaded: false
         }
     },
     created () {
         window.scroll(0, 0)
+    },
+    methods: {
+        loadstate() {
+            this.loaded = true
+            console.log(this.loaded)
+        }
     },
     /*watch: {
         $route: "fetchData"
@@ -73,6 +80,7 @@ export default {
                 opacity: 0,
                 delay: 1,
                 ease: "circ.out",
+                onComplete: this.loadstate()
             })
         }
     }

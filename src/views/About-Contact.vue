@@ -56,7 +56,7 @@
           <p>Contact</p>
           <span></span>
           <div class="about-child">
-            <h2 id="mail-to">contact@florianschmid.design</h2>
+            <a id="mail-to" href="mailto:contact@florianschmid.design">contact@florianschmid.design</a>
           </div>
         </div>
       </div>
@@ -159,6 +159,9 @@ export default {
 
 .about-child {
   width: 66%;
+  a {
+    font-size: 30px;
+  }
 }
 
 .about-child-b {
@@ -178,6 +181,10 @@ export default {
   h3 {
     margin-bottom: .5rem;
   }
+}
+
+#mail-to {
+  cursor: pointer;
 }
 
 @media screen and(max-width: 990px) {
