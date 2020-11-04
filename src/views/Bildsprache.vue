@@ -6,7 +6,7 @@
                 <div class="full-size slidein">
                     <img src="../assets/images/Bildsprache/Licht-Mensch.jpg" alt="">
                 </div>
-                <div class="half-half" v-if="loaded">
+                <div class="half-half">
                     <div class="min-image">
                         <img src="../assets/images/Bildsprache/Manneslicht.jpg" alt="">
                     </div>
@@ -55,17 +55,11 @@ export default {
                 credits: '-',
                 desc1: "8 weeks of total freedom to create. Things like surveillance, isolation and a bit of questioning of existence inspired my during this time.",
                 desc2: "At the end 5 animations(digital and analog) and a ton of images were made. A selection was presented in the Bildsprache19 exhibition."
-            },
-            loaded: false
+            }
         }
     },
     created () {
         window.scroll(0, 0)
-    },
-    methods: {
-        loadstate() {
-            this.loaded = true
-        }
     },
     /*watch: {
         $route: "fetchData"
@@ -81,7 +75,6 @@ export default {
                 ease: "circ.out"
             })
         }
-        this.loadstate()
     }
 }
 </script>

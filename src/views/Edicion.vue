@@ -6,7 +6,7 @@
                 <div class="full-size slidein">
                     <img src="../assets/images/Edicion/E02_Plakat.jpg" alt="">
                 </div>
-                <div class="half-half" v-if="loaded">
+                <div class="half-half">
                     <div class="half">
                         <img src="../assets/images/Edicion/E01_Plakat.jpg" alt="">
                     </div>
@@ -15,10 +15,10 @@
                         <img src="../assets/images/Edicion/E03_Plakat.jpg" alt="">
                     </div>
                 </div>
-                <div class="full-size" v-if="loaded">
+                <div class="full-size">
                     <img src="../assets/images/Edicion/E04_Bag.jpg" alt="">
                 </div>
-                <div class="website" v-if="loaded">
+                <div class="website">
                     <img src="../assets/images/Edicion/E01_Website.jpg" alt="">
                 </div>
             </div>
@@ -32,6 +32,7 @@ import projecttop from '@/components/projecttop.vue'
 import { gsap } from 'gsap'
 
 export default {
+    name: 'edicion',
     components: {
         projecttop
     },
@@ -47,13 +48,7 @@ export default {
                 credits: '-',
                 desc1: "Edicion is a small book forum in Biel which supports local alternative writers.",
                 desc2: "A corporate identity approach for 2019."
-            },
-            loaded: false
-        }
-    },
-    methods: {
-        loadstate() {
-            this.loaded = true
+            }
         }
     },
     created () {
@@ -70,7 +65,6 @@ export default {
                 ease: "circ.out",
             })
         }
-        this.loadstate()
     }
 }
 </script>

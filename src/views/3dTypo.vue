@@ -6,7 +6,7 @@
                 <div class="full-size slidein">
                     <img src="../assets/images/Migros/M03_Tasche.jpg" alt="">
                 </div>
-                <div id="flex-box" v-if="loaded">
+                <div id="flex-box">
                     <div class="left-half">
                         <div class="left-img">
                             <img src="../assets/images/Migros/M02_Tasche.jpg" alt="">
@@ -16,7 +16,7 @@
                         <img src="../assets/images/Migros/M01_Tasche.jpg" alt="">
                     </div>
                 </div>
-                <div class="half-half" v-if="loaded">
+                <div class="half-half">
                     <div class="half">
                         <img src="../assets/images/Migros/M04_Close.jpg" alt="">
                     </div>
@@ -25,7 +25,7 @@
                         <img src="../assets/images/Migros/M05_Skizze.jpg" alt="">
                     </div>
                 </div>
-                <div class="full-size" v-if="loaded">
+                <div class="full-size">
                     <img src="../assets/images/Migros/M06_Boats.jpg" alt="">
                 </div>
             </div>
@@ -40,7 +40,7 @@ import projecttop from '@/components/projecttop.vue'
 import { gsap } from 'gsap'
 
 export default {
-    name: 'Migros',
+    name: '3dtypo',
     components: {
         projecttop
     },
@@ -56,17 +56,11 @@ export default {
                 credits: '-',
                 desc1: "A poster creation with 3d typowork and graphics.",
                 desc2: "ok",
-            },
-            loaded: false
+            }
         }
     },
     created () {
         window.scroll(0, 0)
-    },
-    methods: {
-        loadstate() {
-            this.loaded = true
-        }
     },
     mounted() {
         if(document.readyState === "complete") {
@@ -79,7 +73,6 @@ export default {
                 ease: "circ.out",
             })
         }
-        this.loadstate()
     }
 }
 </script>
