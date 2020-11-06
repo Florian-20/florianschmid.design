@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
         <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata'></projecttop>
+            <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
             <div class="project">
                 <div class="full-size slidein">
                     <img src="../assets/images/Citrus/Yellow-Citrus.jpg" alt="">
@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="vimeo-container">
-                    <iframe src="https://player.vimeo.com/video/361662647" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    <iframe src="https://player.vimeo.com/video/361662647" @load="videoLoaded = true" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -44,7 +44,8 @@ export default {
                 credits: '-',
                 desc1: "Edicion is a small book forum in Biel which supports local alternative writers.",
                 desc2: "A corporate identity approach for 2019."
-            }
+            },
+            videoLoaded: false
         }
     },
     created () {

@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
         <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata'></projecttop>
+            <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
             <div class="project">
                 <div class="full-size slidein">
                     <img src="../assets/images/Migros/M03_Tasche.jpg" alt="">
@@ -56,7 +56,8 @@ export default {
                 credits: '-',
                 desc1: "Littering is a huge problem, especially in time of climat change. This project focuses on the overuse of packages in the food industry.",
                 desc2: "For this purpose i made 3 posters and a short animation.",
-            }
+            },
+            videoLoaded: false
         }
     },
     created () {
@@ -64,6 +65,7 @@ export default {
     },
     mounted() {
         if(document.readyState === "complete") {
+            this.videoLoaded = true;
             var tl = gsap.timeline()
             tl.from('.slidein', {
                 duration: 0.8,

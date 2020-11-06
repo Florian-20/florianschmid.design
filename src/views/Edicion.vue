@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
         <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata'></projecttop>
+            <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
             <div class="project">
                 <div class="full-size slidein">
                     <img src="../assets/images/Edicion/E02_Plakat.jpg" alt="">
@@ -48,7 +48,8 @@ export default {
                 credits: '-',
                 desc1: "Edicion is a small book forum in Biel which supports local alternative writers.",
                 desc2: "A corporate identity approach for 2019."
-            }
+            },
+            videoLoaded: false
         }
     },
     created () {
@@ -56,6 +57,7 @@ export default {
     },
     mounted() {
         if(document.readyState === "complete") {
+            this.videoLoaded = true;
             var tl = gsap.timeline()
             tl.from('.slidein', {
                 duration: 0.8,

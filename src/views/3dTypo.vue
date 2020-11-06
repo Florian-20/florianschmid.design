@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
         <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata'></projecttop>
+            <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
             <div class="project">
                 <div class="full-size slidein">
                     <img src="../assets/images/Migros/M03_Tasche.jpg" alt="">
@@ -56,7 +56,8 @@ export default {
                 credits: '-',
                 desc1: "A poster creation with 3d typowork and graphics.",
                 desc2: "ok",
-            }
+            },
+            videoLoaded: false
         }
     },
     created () {
@@ -64,6 +65,7 @@ export default {
     },
     mounted() {
         if(document.readyState === "complete") {
+            this.videoLoaded = true;
             var tl = gsap.timeline()
             tl.from('.slidein', {
                 duration: 0.8,

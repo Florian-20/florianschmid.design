@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
         <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata'></projecttop>
+            <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
             <div class="project slidein">
                 <div id="svg-back">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 342.1 511.46">
@@ -56,6 +56,7 @@ export default {
         desc1: "To create realistic materials for 3D applications a precise normal map is key. A normal map is a texture type used in 3D to represent height and depth of a surface.",
         desc2: "This scanner automates parts of the otherwise manual scanning process, which leads to faster and more precise scan results.",
       },
+      videoLoaded: false
     };
   },
   created() {
@@ -76,6 +77,7 @@ export default {
   },
   mounted() {
     if (document.readyState === "complete") {
+      this.videoLoaded = true;
       var tl = gsap.timeline();
       tl.from(".slidein", {
         duration: 0.8,

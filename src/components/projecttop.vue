@@ -47,7 +47,13 @@ import { gsap } from "gsap";
 
 export default {
   name: "projecttop",
-  props: ["projectdata"],
+  props: {
+    projectdata: String,
+    startAnimation: {
+      type: Boolean,
+      required: true
+    }
+  },
   data() {
     return {
       mobileView: true,
@@ -59,41 +65,53 @@ export default {
     },
     slideIn() {
       var tl = gsap.timeline()
-      tl.from('#project-title', {
-        delay: 0.5,
-        duration: 0.8,
+      tl.fromTo('#project-title', {
         y: 100,
         opacity: 0,
-        ease: "circ.out",
+      },
+      {
+        delay: 0.5,
+        duration: 0.8,
+        y: 0,
+        opacity: 1,
+        ease: "circ.out"
       })
     },
     slideInSmall() {
       var tl = gsap.timeline()
-      tl.from('.slide-small', {
-          delay: 0.5,
+      tl.fromTo('.slide-small', {
           transformOrigin: "Bottom Left",
           rotateZ: "3deg",
-          duration: 0.8,
           opacity: 0,
           y: 50,
-          stagger: 0.1,
-          ease: "power4"
+      },
+      {
+        delay: 0.5,
+        rotateZ: "0deg",
+        opacity: 1,
+        duration: 0.8,
+        y: 0,
+        stagger: 0.1,
+        ease: "power4"
       })
     }
   },
   created() {
     this.handleView()
   },
-  mounted () {
-    if(document.readyState === "complete") {
-      this.slideIn()
-      this.slideInSmall()
+  watch: {
+    startAnimation(val) {
+      if (val) this.slideIn(), this.slideInSmall();
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+
+.slide-small {
+  opacity: 0;
+}
 
 #head {
   display: flex;
@@ -141,6 +159,7 @@ export default {
 #project-title {
   margin-top: 4rem;
   margin-bottom: 7rem;
+  opacity: 0;
   h1 {
     font-size: 130px;
     line-height: 120px;
