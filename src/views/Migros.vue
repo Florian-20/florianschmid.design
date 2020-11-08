@@ -49,12 +49,12 @@ export default {
             projectdata: {
                 name: 'Migros',
                 date: '2019',
-                counter: '❶',
+                counter: '❷',
                 type: 'won bag design competition',
                 desc: 'Won competiton for Migros new bag design',
                 client: 'MIGROS',
                 credits: '-',
-                desc1: "Littering is a huge problem, especially in time of climat change. This project focuses on the overuse of packages in the food industry.",
+                desc1: "Migros gave our class the chance to create a new design for their bag.  ",
                 desc2: "For this purpose i made 3 posters and a short animation.",
             },
             videoLoaded: false

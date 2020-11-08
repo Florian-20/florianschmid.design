@@ -19,13 +19,16 @@
                     <img src="../assets/images/Bildsprache/Stone-Man.jpg" alt="">
                 </div>
                 <div class="vimeo-container">
-                    <iframe src="https://player.vimeo.com/video/397647989" @load="videoLoaded = true" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    <iframe src="https://player.vimeo.com/video/397647989" @load="videoLoaded = true" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="vimeo-container">
+                    <iframe src="https://player.vimeo.com/video/397648215" @load="videoLoaded = true" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
                 <div class="full-size">
                     <img src="../assets/images/Bildsprache/Japan-Street.jpg" alt="">
                 </div>
                 <div class="vimeo-container">
-                    <iframe src="https://player.vimeo.com/video/397648215" @load="videoLoaded = true" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    <iframe src="https://player.vimeo.com/video/476784648" @load="videoLoaded = true" frameborder="0"  allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

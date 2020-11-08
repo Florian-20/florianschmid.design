@@ -39,10 +39,10 @@ export default {
                 date: '2017',
                 counter: '❶',
                 type: 'poster campaign& animation',
-                desc: 'A campaign against the overuse of packages',
+                desc: 'A campaign against the overuse of packaging',
                 client: 'SCHOOLPROJECT',
                 credits: '-',
-                desc1: "Edicion is a small book forum in Biel which supports local alternative writers.",
+                desc1: "This series of posters and an additional animation focuses in terms of littering, on the overuse of packaging.",
                 desc2: "A corporate identity approach for 2019."
             },
             videoLoaded: false

@@ -4,29 +4,7 @@
             <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
             <div class="project">
                 <div class="full-size slidein">
-                    <img src="../assets/images/Migros/M03_Tasche.jpg" alt="">
-                </div>
-                <div id="flex-box">
-                    <div class="left-half">
-                        <div class="left-img">
-                            <img src="../assets/images/Migros/M02_Tasche.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="right-half">
-                        <img src="../assets/images/Migros/M01_Tasche.jpg" alt="">
-                    </div>
-                </div>
-                <div class="half-half">
-                    <div class="half">
-                        <img src="../assets/images/Migros/M04_Close.jpg" alt="">
-                    </div>
-                    <span></span>
-                    <div class="half">
-                        <img src="../assets/images/Migros/M05_Skizze.jpg" alt="">
-                    </div>
-                </div>
-                <div class="full-size">
-                    <img src="../assets/images/Migros/M06_Boats.jpg" alt="">
+                    <img src="../assets/images/3D&Typo/3dtypo-1.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -106,53 +84,6 @@ export default {
     }
 }
 
-.half-half {
-    margin-top: .2rem;
-    display: flex;
-    span {
-        width: .3rem;
-    }
-}
-
-.half {
-    width: auto;
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-}
-
-#flex-box {
-    background-color: var(--dark);
-    align-items: center;
-    margin-top: .1rem;
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-}
-
-.left-half {
-    width: 50%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.left-img {
-    width: 50%;
-      img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-}
-
-.right-half {
-    width: 50%;
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-}
 
 // --- Media --- //
 
@@ -162,33 +93,6 @@ export default {
         margin-left: unset;
         margin-right: unset;
     }
-    #flex-box {
-        background-color: unset;
-        margin-top: .5rem;
-        flex-direction: column;
-    }
-    .left-half {
-        width: 100%;
-    }
-    .left-img {
-        width: 100%;
-    }
-    .right-half {
-        margin-top: .5rem;
-        width: 100%;
-    }
 }
 
-@media screen and(max-width: 600px) {
-    .half-half {
-        margin-top: 0;
-        flex-direction: column;
-    }
-    .half {
-        margin-top: 0.5rem;
-    }
-    .topwhite {
-        margin-top: 5rem;
-    }
-}
 </style>
