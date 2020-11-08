@@ -24,10 +24,10 @@
               </div>
               <div class="half-half">
                 <div class="half">
-                  <img src="../assets/images/MatScanner/Scanner_08.gif" alt="">
+                  <img src="../assets/images/MatScanner/Scanner_08.gif" alt="scanner diy">
                 </div>
                 <div class="half">
-                  <img src="../assets/images/MatScanner/Scanner_09.gif" alt="">
+                  <img src="../assets/images/MatScanner/Scanner_09.gif" alt="scanner diy">
                 </div>
               </div>
             </div>

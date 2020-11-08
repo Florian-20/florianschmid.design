@@ -4,7 +4,7 @@
             <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
             <div class="project">
                 <div class="full-size slidein">
-                    <img src="../assets/images/3D&Typo/3dtypo-1.jpg" alt="">
+                    <img src="../assets/images/3D&Typo/3dtypo-1.jpg" alt="Poster Neon">
                 </div>
             </div>
         </div>

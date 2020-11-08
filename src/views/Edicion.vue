@@ -4,22 +4,22 @@
             <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
             <div class="project">
                 <div class="full-size slidein">
-                    <img src="../assets/images/Edicion/E02_Plakat.jpg" alt="">
+                    <img src="../assets/images/Edicion/E02_Plakat.jpg" alt="Forum Poster">
                 </div>
                 <div class="half-half">
                     <div class="half">
-                        <img src="../assets/images/Edicion/E01_Plakat.jpg" alt="">
+                        <img src="../assets/images/Edicion/E01_Plakat.jpg" alt="Forum Poster">
                     </div>
                     <span></span>
                     <div class="half">
-                        <img src="../assets/images/Edicion/E03_Plakat.jpg" alt="">
+                        <img src="../assets/images/Edicion/E03_Plakat.jpg" alt="Forum Poster">
                     </div>
                 </div>
                 <div class="full-size">
-                    <img src="../assets/images/Edicion/E04_Bag.jpg" alt="">
+                    <img src="../assets/images/Edicion/E04_Bag.jpg" alt="Bag design">
                 </div>
                 <div class="website">
-                    <img src="../assets/images/Edicion/E01_Website.jpg" alt="">
+                    <img src="../assets/images/Edicion/E01_Website.jpg" alt="Website design">
                 </div>
             </div>
         </div>

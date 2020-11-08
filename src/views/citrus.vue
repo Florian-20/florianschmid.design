@@ -4,15 +4,15 @@
             <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
             <div class="project">
                 <div class="full-size slidein">
-                    <img src="../assets/images/Citrus/Yellow-Citrus.jpg" alt="">
+                    <img src="../assets/images/Citrus/Yellow-Citrus.jpg" alt="Poster littering">
                 </div>
                 <div class="half-half">
                     <div class="half">
-                        <img src="../assets/images/Citrus/Violett-Patato.jpg" alt="">
+                        <img src="../assets/images/Citrus/Violett-Patato.jpg" alt="Poster littering">
                     </div>
                     <span></span>
                     <div class="half">
-                        <img src="../assets/images/Citrus/Grey-Banana.jpg" alt="">
+                        <img src="../assets/images/Citrus/Grey-Banana.jpg" alt="Poster littering">
                     </div>
                 </div>
                 <div class="vimeo-container">

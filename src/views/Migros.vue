@@ -4,29 +4,29 @@
             <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
             <div class="project">
                 <div class="full-size slidein">
-                    <img src="../assets/images/Migros/M03_Tasche.jpg" alt="">
+                    <img src="../assets/images/Migros/M03_Tasche.jpg" alt="Migros Tasche">
                 </div>
                 <div id="flex-box">
                     <div class="left-half">
                         <div class="left-img">
-                            <img src="../assets/images/Migros/M02_Tasche.jpg" alt="">
+                            <img src="../assets/images/Migros/M02_Tasche.jpg" alt="Migros Tasche">
                         </div>
                     </div>
                     <div class="right-half">
-                        <img src="../assets/images/Migros/M01_Tasche.jpg" alt="">
+                        <img src="../assets/images/Migros/M01_Tasche.jpg" alt="Migros Tasche">
                     </div>
                 </div>
                 <div class="half-half">
                     <div class="half">
-                        <img src="../assets/images/Migros/M04_Close.jpg" alt="">
+                        <img src="../assets/images/Migros/M04_Close.jpg" alt="Migros Tasche">
                     </div>
                     <span></span>
                     <div class="half">
-                        <img src="../assets/images/Migros/M05_Skizze.jpg" alt="">
+                        <img src="../assets/images/Migros/M05_Skizze.jpg" alt="Migros Tasche">
                     </div>
                 </div>
                 <div class="full-size">
-                    <img src="../assets/images/Migros/M06_Boats.jpg" alt="">
+                    <img src="../assets/images/Migros/M06_Boats.jpg" alt="Migros Tasche">
                 </div>
             </div>
         </div>

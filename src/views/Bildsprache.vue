@@ -4,19 +4,19 @@
             <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
             <div class="project">
                 <div class="full-size slidein">
-                    <img src="../assets/images/Bildsprache/Licht-Mensch.jpg" alt="">
+                    <img src="../assets/images/Bildsprache/Licht-Mensch.jpg" alt="Bildsprache">
                 </div>
                 <div class="half-half">
                     <div class="min-image">
-                        <img src="../assets/images/Bildsprache/Manneslicht.jpg" alt="">
+                        <img src="../assets/images/Bildsprache/Manneslicht.jpg" alt="Bildsprache Licht">
                     </div>
                     <span></span>
                     <div class="max-image">
-                        <img src="../assets/images/Bildsprache/Wolke-7.jpg" alt="">
+                        <img src="../assets/images/Bildsprache/Wolke-7.jpg" alt="Bildsprache Burnout">
                     </div>
                 </div>
                 <div class="full-size">
-                    <img src="../assets/images/Bildsprache/Stone-Man.jpg" alt="">
+                    <img src="../assets/images/Bildsprache/Stone-Man.jpg" alt="Bildsprache Crytal">
                 </div>
                 <div class="vimeo-container">
                     <iframe src="https://player.vimeo.com/video/397647989" @load="videoLoaded = true" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -25,7 +25,7 @@
                     <iframe src="https://player.vimeo.com/video/397648215" @load="videoLoaded = true" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
                 <div class="full-size">
-                    <img src="../assets/images/Bildsprache/Japan-Street.jpg" alt="">
+                    <img src="../assets/images/Bildsprache/Japan-Street.jpg" alt="Bildsprache Touche">
                 </div>
                 <div class="vimeo-container">
                     <iframe src="https://player.vimeo.com/video/476784648" @load="videoLoaded = true" frameborder="0"  allow="autoplay; fullscreen" allowfullscreen></iframe>
