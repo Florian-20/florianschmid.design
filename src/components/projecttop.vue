@@ -48,7 +48,7 @@ import { gsap } from "gsap";
 export default {
   name: "projecttop",
   props: {
-    projectdata: String,
+    projectdata: null,
     startAnimation: {
       type: Boolean,
       required: true

@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="vimeo-container">
-                    <iframe src="https://player.vimeo.com/video/361662647" @load="videoLoaded = true" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    <iframe :src="vim1" @load="videoLoaded = true" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -45,7 +45,8 @@ export default {
                 desc1: "This series of posters and an additional animation focuses in terms of littering, on the overuse of packaging.",
                 desc2: "A corporate identity approach for 2019."
             },
-            videoLoaded: false
+            videoLoaded: false,
+            vim1: 'https://player.vimeo.com/video/361662647'
         }
     },
     created () {

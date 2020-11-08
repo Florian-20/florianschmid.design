@@ -19,16 +19,16 @@
                     <img src="../assets/images/Bildsprache/Stone-Man.jpg" alt="Bildsprache Crytal">
                 </div>
                 <div class="vimeo-container">
-                    <iframe src="https://player.vimeo.com/video/397647989" @load="videoLoaded = true" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <iframe :src="vim1" @load="videoLoaded = true" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
                 <div class="vimeo-container">
-                    <iframe src="https://player.vimeo.com/video/397648215" @load="videoLoaded = true" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    <iframe :src="vim2" @load="videoLoaded = true" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
                 <div class="full-size">
                     <img src="../assets/images/Bildsprache/Japan-Street.jpg" alt="Bildsprache Touche">
                 </div>
                 <div class="vimeo-container">
-                    <iframe src="https://player.vimeo.com/video/476784648" @load="videoLoaded = true" frameborder="0"  allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <iframe :src="vim3" @load="videoLoaded = true" frameborder="0"  allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -59,14 +59,17 @@ export default {
                 desc1: "8 weeks of total freedom to create. Things like surveillance, isolation and a bit of questioning of existence inspired my during this time.",
                 desc2: "At the end 5 animations(digital and analog) and a ton of images were made. A selection was presented in the Bildsprache19 exhibition."
             },
-            videoLoaded: false
+            videoLoaded: false,
+            vim1: 'https://player.vimeo.com/video/397647989',
+            vim2: 'https://player.vimeo.com/video/397648215', 
+            vim3: 'https://player.vimeo.com/video/476784648'
         }
     },
     created () {
         window.scroll(0, 0)
     },
     mounted() {
-        if(document.readyState === "complete") {
+        if(document.readyState == "complete") {
             var tl = gsap.timeline()
             tl.from('.slidein', {
                 duration: 0.8,
