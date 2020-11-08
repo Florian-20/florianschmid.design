@@ -69,15 +69,23 @@ export default {
         window.scroll(0, 0)
     },
     mounted() {
-        if(document.readyState == "complete") {
+        gsap.set('.slidein', {
+            opacity: 0,
+            y: 100
+        })
+    },
+    watch: {
+        videoLoaded(val) {
+            if(val == true) {
             var tl = gsap.timeline()
-            tl.from('.slidein', {
-                duration: 0.8,
-                y: 100,
-                opacity: 0,
-                delay: 1,
-                ease: "circ.out",
-            })
+                tl.to('.slidein', {
+                    duration: 0.8,
+                    y: 0,
+                    opacity: 1,
+                    delay: 1,
+                    ease: "circ.out",
+                })
+            }
         }
     }
 }
