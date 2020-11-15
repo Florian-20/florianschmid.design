@@ -1,4 +1,4 @@
-# redesign
+# Florianschmid.design
 
 ## Project setup
 ```
