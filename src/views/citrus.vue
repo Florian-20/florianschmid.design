@@ -42,8 +42,8 @@ export default {
                 desc: 'A campaign against the overuse of packaging',
                 client: 'SCHOOLPROJECT',
                 credits: '-',
-                desc1: "This series of posters and an additional animation focuses in terms of littering, on the overuse of packaging.",
-                desc2: "A corporate identity approach for 2019."
+                desc1: "In this project I focused on the overuse of packaging in foods. ",
+                desc2: "Especially in times of climate change packaging should be reduced to the necessary and be made of recycles materials."
             },
             videoLoaded: false,
             vim1: 'https://player.vimeo.com/video/361662647',

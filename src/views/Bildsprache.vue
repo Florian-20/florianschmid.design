@@ -56,8 +56,8 @@ export default {
                 desc: 'A series of animations and stills',
                 client: 'BILDSPRACHE19',
                 credits: '-',
-                desc1: "8 weeks of total freedom to create. Things like surveillance, isolation and a bit of questioning of existence inspired my during this time.",
-                desc2: "At the end 5 animations(digital and analog) and a ton of images were made. A selection was presented in the Bildsprache19 exhibition."
+                desc1: "Eight weeks of total freedom to create. Things like surveillance, isolation and a bit of questioning of existence inspired my during this time.",
+                desc2: "At the end 5 animations and a ton of images were made. A selection was presented in the Bildsprache19 exhibition."
             },
             videoLoaded: false,
             vim1: 'https://player.vimeo.com/video/397647989',

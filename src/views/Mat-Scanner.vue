@@ -3,6 +3,10 @@
         <div class="container">
             <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
             <div class="project slidein">
+              <div id="howwork">
+                <h2>Okay, but how does it actually work?</h2>
+                <p @click="substance">→The full principle explained on Substance←</p>
+              </div>
               <div id="svg-back">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 342.1 511.46">
                   <g id="Ebene_2" data-name="Ebene 2">
@@ -53,8 +57,8 @@ export default {
         desc: "Texture scanner for 3d materials",
         client: "ME",
         credits: "-",
-        desc1: "To create realistic materials for 3D applications a precise normal map is key. A normal map is a texture type used in 3D to represent height and depth of a surface.",
-        desc2: "This scanner automates parts of the otherwise manual scanning process, which leads to faster and more precise scan results.",
+        desc1: "A key factor to create realistic materials in 3D is a high quality normal map. A normal map is a texture type used in 3D to represent height and depth of a surface.",
+        desc2: "This scanner automates parts of the otherwise manual scanning process, which leads to faster and more precise scan results, who again lead to a more accurate representation of the real world. ",
       },
       videoLoaded: false
     };
@@ -73,6 +77,9 @@ export default {
         tl.set(lamp, { opacity: 1 }, i * dur);
         tl.set(lamp, { opacity: 0 }, (i + 1) * dur);
       });
+    },
+    substance() {
+      window.open("https://academy.substance3d.com/courses/your-smartphone-is-a-material-scanner", "_blank")
     }
   },
   mounted() {
@@ -147,6 +154,20 @@ export default {
   img {
     max-width: 100%;
     max-height: 100%;
+  }
+}
+
+#howwork {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  p {
+    text-transform: unset;
+    margin-top: 1rem;
   }
 }
 

@@ -98,7 +98,7 @@ h1 {
 h2 {
   font-family: "Neue Machina Regular";
   font-size: 30px;
-  line-height: 29px;
+  line-height: 31px;
   margin: 0;
   text-align: left;
   text-transform: uppercase;
