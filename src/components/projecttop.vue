@@ -70,7 +70,7 @@ export default {
         opacity: 0,
       },
       {
-        delay: 0.5,
+        delay: 0.3,
         duration: 0.8,
         y: 0,
         opacity: 1,
@@ -86,7 +86,7 @@ export default {
           y: 50,
       },
       {
-        delay: 0.5,
+        delay: 0.3,
         rotateZ: "0deg",
         opacity: 1,
         duration: 0.8,

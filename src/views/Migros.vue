@@ -54,7 +54,7 @@ export default {
                 desc: 'Won competiton for Migros new bag design',
                 client: 'MIGROS',
                 credits: '-',
-                desc1: "Each year Migros chooeses a class in a creative field to redesign their bag. For 2017 our class has been choosen.",
+                desc1: "Each year Migros chooeses a class of an creative field to redesign their bag. For 2017 our class has been choosen.",
                 desc2: "At the end",
             },
             videoLoaded: false
