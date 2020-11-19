@@ -42,8 +42,8 @@ export default {
                 desc: 'A campaign against the overuse of packaging',
                 client: 'SCHOOLPROJECT',
                 credits: '-',
-                desc1: "In this project I focused on the overuse of packaging in foods. ",
-                desc2: "Especially in times of climate change packaging should be reduced to the necessary and be made of recycles materials."
+                desc1: "Littering is a huge problem, especially in times of climat change. The goal was to show the tremendous amount of packaging used today by overusing space, material or complexity.",
+                desc2: "A series of 3 posters were made and an additional 3D Animation."
             },
             videoLoaded: false,
             vim1: 'https://player.vimeo.com/video/361662647',
