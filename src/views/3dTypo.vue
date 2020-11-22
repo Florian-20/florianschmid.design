@@ -6,6 +6,15 @@
                 <div class="full-size slidein">
                     <img src="../assets/images/3D&Typo/3dtypo-1.jpg" alt="Poster Neon">
                 </div>
+                <div class="half-half">
+                    <div class="half">
+                        <img src="../assets/images/3D&Typo/3dtypo-2.jpg" alt="">
+                    </div>
+                    <span></span>
+                    <div class="half">
+                        <img src="../assets/images/3D&Typo/3dtypo-3.jpg" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -28,12 +37,12 @@ export default {
                 name: '3D&Typo',
                 date: '2019',
                 counter: '❺',
-                type: 'Poster serie',
-                desc: 'Photography and graphics combined',
+                type: 'Posters',
+                desc: 'Expermenting with liquids and typo',
                 client: 'SCHOOLPROJECT',
-                credits: '-',
-                desc1: "A poster creation with 3d typowork and graphics.",
-                desc2: "ok",
+                credits: 'A0',
+                desc1: "Posters created from photos taken of plexiglass cutouts and liquid colors.",
+                desc2: "",
             },
             videoLoaded: false
         }
@@ -66,15 +75,6 @@ export default {
     background-position: center;
 }
 
-.project {
-    margin-top: 7rem;
-    margin-left: 7vw;
-    margin-right: 7vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-}
-
 .full-size {
     margin-top: 0.1rem;
     width: 100%;
@@ -84,15 +84,32 @@ export default {
     }
 }
 
-
-// --- Media --- //
-
-@media screen and (max-width: 990px) {
-    .project {
-        margin-top: 4rem;
-        margin-left: unset;
-        margin-right: unset;
+.half-half {
+    margin-top: .1rem;
+    display: flex;
+    span {
+        width: .4rem;
     }
 }
 
+.half {
+    width: auto;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+
+// --- Media --- //
+
+@media screen and(max-width: 600px) {
+    .half-half {
+        margin-top: 0;
+        flex-direction: column;
+    }
+    .half {
+        margin-top: 0.1rem;
+    }
+}
 </style>

@@ -111,14 +111,6 @@ export default {
   opacity: 0;
 }
 
-.project {
-  margin-top: 7rem;
-  margin-left: 7vw;
-  margin-right: 7vw;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-}
 
 #svg-back {
   background-color: #151515;
@@ -172,14 +164,6 @@ export default {
 }
 
 // --- Media --- //
-
-@media screen and (max-width: 990px) {
-  .project {
-    margin-top: 4rem;
-    margin-left: unset;
-    margin-right: unset;
-  }
-}
 
 @media screen and(max-width: 600px) {
     .half-half {

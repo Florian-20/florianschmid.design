@@ -6,15 +6,11 @@
                 <div class="full-size slidein">
                     <img src="../assets/images/Migros/M03_Tasche.jpg" alt="Migros Tasche">
                 </div>
-                <div id="flex-box">
-                    <div class="left-half">
-                        <div class="left-img">
-                            <img src="../assets/images/Migros/M02_Tasche.jpg" alt="Migros Tasche">
-                        </div>
-                    </div>
-                    <div class="right-half">
-                        <img src="../assets/images/Migros/M01_Tasche.jpg" alt="Migros Tasche">
-                    </div>
+                <div class="full-size">
+                    <img src="../assets/images/Migros/M01_Tasche.jpg" alt="">
+                </div>
+                <div class="full-size">
+                    <img src="../assets/images/Migros/M02_Tasche.jpg" alt="">
                 </div>
                 <div class="half-half">
                     <div class="half">
@@ -53,7 +49,7 @@ export default {
                 type: 'won bag design competition',
                 desc: 'Won competiton for Migros new bag design',
                 client: 'MIGROS',
-                credits: '-',
+                credits: '40x44',
                 desc1: "Migros is one of the biggest supermarkets in Switzerland and spends 1% of their total icome into different fields of culture.",
                 desc2: "Each year Migros gives creatives the chance to redesign their bag. This bag was choosen for 2017 and has been printed one million times.",
             },
@@ -88,17 +84,8 @@ export default {
     background-position: center;
 }
 
-.project {
-    margin-top: 7rem;
-    margin-left: 7vw;
-    margin-right: 7vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-}
-
 .full-size {
-    margin-top: 0.1rem;
+    margin-top: 0.2rem;
     width: 100%;
     img {
         max-width: 100%;
@@ -110,7 +97,7 @@ export default {
     margin-top: .2rem;
     display: flex;
     span {
-        width: .3rem;
+        width: .4rem;
     }
 }
 
@@ -122,62 +109,8 @@ export default {
     }
 }
 
-#flex-box {
-    background-color: var(--dark);
-    align-items: center;
-    margin-top: .1rem;
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-}
-
-.left-half {
-    width: 50%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.left-img {
-    width: 50%;
-      img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-}
-
-.right-half {
-    width: 50%;
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-}
-
 // --- Media --- //
 
-@media screen and (max-width: 990px) {
-    .project {
-        margin-top: 4rem;
-        margin-left: unset;
-        margin-right: unset;
-    }
-    #flex-box {
-        background-color: unset;
-        margin-top: .5rem;
-        flex-direction: column;
-    }
-    .left-half {
-        width: 100%;
-    }
-    .left-img {
-        width: 100%;
-    }
-    .right-half {
-        margin-top: .5rem;
-        width: 100%;
-    }
-}
 
 @media screen and(max-width: 600px) {
     .half-half {

@@ -18,6 +18,9 @@
                 <div class="vimeo-container">
                     <iframe :src="vim1" @load="videoLoaded = true" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
+                <div class="vimeo-container">
+                    <iframe :src="vim2" @load="videoLoaded = true" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </div>
@@ -41,12 +44,13 @@ export default {
                 type: 'poster campaign& animation',
                 desc: 'A campaign against the overuse of packaging',
                 client: 'SCHOOLPROJECT',
-                credits: '-',
-                desc1: "Littering is a huge problem, especially in times of climat change. The goal was to show the tremendous amount of packaging used today by overusing space, material or complexity.",
+                credits: 'A0',
+                desc1: "Littering is a huge problem, especially in times of climat change. The goal was to show the tremendous amount of packaging used today by overusing space and material.",
                 desc2: "A series of 3 posters were made and an additional 3D Animation."
             },
             videoLoaded: false,
             vim1: 'https://player.vimeo.com/video/361662647',
+            vim2: 'https://player.vimeo.com/video/482303610'
         }
     },
     created () {
@@ -84,15 +88,6 @@ export default {
     background-position: center;
 }
 
-.project {
-    margin-top: 7rem;
-    margin-left: 7vw;
-    margin-right: 7vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-}
-
 .full-size {
     margin-top: 0.1rem;
     width: 100%;
@@ -111,11 +106,12 @@ export default {
         max-height: 100%;
     }
 }
+
 .half-half {
     margin-top: .1rem;
     display: flex;
     span {
-        width: .5rem;
+        width: .4rem;
     }
 }
 
@@ -144,9 +140,6 @@ export default {
     }
     .half {
         margin-top: 0.1rem;
-    }
-    .website {
-        padding: 2rem;
     }
 }
 </style>

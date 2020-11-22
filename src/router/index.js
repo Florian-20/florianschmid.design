@@ -47,6 +47,11 @@ const routes = [
     path: '/mat-scanner',
     name: 'mat-scanner',
     component: () => import(/*webpackChunkName: "mat-scanner" */ '../views/Mat-Scanner.vue')
+  },
+  {
+    path: '/archive',
+    name: 'archive',
+    component: () => import(/*webpackChunkName: "archive" */ '../views/Archive.vue') 
   }
 ]
 

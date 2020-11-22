@@ -236,6 +236,17 @@ a {
 
 // ---- Project rules --- //
 
+.project {
+    margin-top: 7rem;
+    margin-bottom: 10rem;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
 .container {
   margin-top: 4.5vh;
   margin-left: 2vw;
@@ -249,7 +260,6 @@ a {
   width: 100%;
   justify-content: center;
   margin-top: 12rem;
-  margin-bottom: 12rem;
   iframe {
     width: calc(1.66 * 640px);
     height: calc(1.66 * 360px);
@@ -257,6 +267,15 @@ a {
 }
 
 // --- Mobile --- //
+
+@media screen and (max-width: 990px) {
+    .project {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        margin-left: unset;
+        margin-right: unset;
+    }
+}
 
 @media screen and(max-width: 600px) {
     .container {

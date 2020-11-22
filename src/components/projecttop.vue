@@ -26,7 +26,7 @@
             <div class="credits">
               <p>CLIENT<span/>{{ projectdata.client }}</p>
               <div></div>
-              <p>CREDITS<span/>{{ projectdata.credits }}</p>
+              <p>SIZE<span/>{{ projectdata.credits }}</p>
             </div>
           </div>
         </div>

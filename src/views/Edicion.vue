@@ -45,7 +45,7 @@ export default {
                 type: 'CD',
                 desc: 'Identity for a small book forum',
                 client: 'EDICION19',
-                credits: '-',
+                credits: 'A1',
                 desc1: "Edicion is a small book forum in Biel which supports local alternative writers. Each year, Edicion makes an exhibiton with a selection of writers presenting their newest books.",
                 desc2: "A corporate identity approach for 2019."
             },
@@ -78,15 +78,6 @@ export default {
     height: auto;
     width: 100%;
     background-position: center;
-}
-
-.project {
-    margin-top: 7rem;
-    margin-left: 7vw;
-    margin-right: 7vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
 }
 
 .full-size {
@@ -129,11 +120,6 @@ export default {
 // --- Media --- //
 
 @media screen and (max-width: 990px) {
-    .project {
-        margin-top: 4rem;
-        margin-left: unset;
-        margin-right: unset;
-    }
     .half {
         padding: 5rem;
     }

@@ -24,7 +24,7 @@
                 <div class="vimeo-container">
                     <iframe :src="vim2" @load="videoLoaded = true" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
-                <div class="full-size">
+                <div class="full-size-2">
                     <img src="../assets/images/Bildsprache/Japan-Street.jpg" alt="Bildsprache Touche">
                 </div>
                 <div class="vimeo-container">
@@ -55,7 +55,7 @@ export default {
                 type: 'exhibition',
                 desc: 'A series of animations and stills',
                 client: 'BILDSPRACHE19',
-                credits: '-',
+                credits: '40x40',
                 desc1: "Eight weeks of total freedom to create. Things like surveillance, isolation and a bit of questioning of existence inspired my during this time.",
                 desc2: "At the end 5 animations and a ton of images were made. A selection was presented in the Bildsprache19 exhibition."
             },
@@ -104,17 +104,17 @@ export default {
     }
 }
 
-.project {
-    margin-top: 7rem;
-    margin-left: 7vw;
-    margin-right: 7vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-}
-
 .full-size {
     margin-top: 0.1rem;
+    width: 100%;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.full-size-2 {
+    margin-top: 12rem;
     width: 100%;
     img {
         max-width: 100%;
@@ -154,11 +154,6 @@ export default {
 // --- Media --- //
 
 @media screen and (max-width: 990px) {
-    .project {
-        margin-top: 4rem;
-        margin-left: unset;
-        margin-right: unset;
-    }
     .full-size {
         margin-top: .5rem;
     }
