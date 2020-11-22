@@ -31,7 +31,7 @@
         "type": "exhibition",
         "client": "-",
         "credits": "-",
-        "mindesc": "A series of animations",
+        "mindesc": "A series of animations&stills",
         "max-desc": "-",
         "filename":"BS19_Black.svg"
     },
@@ -55,7 +55,7 @@
         "type": "poster creation",
         "client": "schoolp.",
         "credits": "-",
-        "mindesc": "3d and typo poster creation",
+        "mindesc": "Experimental posters using fluids",
         "max-desc": "A poster creation with 3d typowork and graphics",
         "filename":"3DTypo.svg"
     },
