@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
         <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
+            <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
             <div class="project slidein">
               <div id="howwork">
                 <h2>Okay, but how does it actually work?</h2>
@@ -60,7 +60,7 @@ export default {
         desc1: "A key factor to create realistic materials in 3D is a high quality normal map. A normal map is a texture type used in 3D to represent height and depth of a surface.",
         desc2: "This scanner automates parts of the otherwise manual scanning process, which leads to faster and more precise scan results, who again lead to a more accurate representation of the real world. ",
       },
-      videoLoaded: false
+      pageLoaded: false
     };
   },
   created() {
@@ -80,20 +80,25 @@ export default {
     },
     substance() {
       window.open("https://academy.substance3d.com/courses/your-smartphone-is-a-material-scanner", "_blank")
+    },
+    gsapin() {
+      var tl = gsap.timeline()
+      tl.to('.slidein', {
+          duration: 0.8,
+          y: 0,
+          opacity: 1,
+          delay: 1,
+          ease: "circ.out"
+      })
     }
   },
   mounted() {
-    if (document.readyState === "complete") {
-      this.videoLoaded = true;
-      var tl = gsap.timeline();
-      tl.from(".slidein", {
-        duration: 0.8,
-        y: 100,
+    gsap.set('.slidein', {
         opacity: 0,
-        delay: 1,
-        ease: "circ.out",
-      })
-    }
+        y: 100
+    })
+    this.pageLoaded = true;
+    this.gsapin()
     this.scanner()
   }
 };

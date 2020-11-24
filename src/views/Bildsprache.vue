@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
         <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
+            <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
             <div class="project">
                 <div class="full-size slidein">
                     <img src="../assets/images/Bildsprache/Licht-Mensch.jpg" alt="Bildsprache">
@@ -19,16 +19,16 @@
                     <img src="../assets/images/Bildsprache/Stone-Man.jpg" alt="Bildsprache Crytal">
                 </div>
                 <div class="vimeo-container">
-                    <iframe :src="vim1" @load="videoLoaded = true" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <iframe :src="vim1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
                 <div class="vimeo-container">
-                    <iframe :src="vim2" @load="videoLoaded = true" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    <iframe :src="vim2" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
                 <div class="full-size-2">
                     <img src="../assets/images/Bildsprache/Japan-Street.jpg" alt="Bildsprache Touche">
                 </div>
                 <div class="vimeo-container">
-                    <iframe :src="vim3" @load="videoLoaded = true" frameborder="0"  allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <iframe :src="vim3" frameborder="0"  allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -59,10 +59,10 @@ export default {
                 desc1: "Eight weeks of total freedom to create. Things like surveillance, isolation and a bit of questioning of existence inspired my during this time.",
                 desc2: "At the end 5 animations and a ton of images were made. A selection was presented in the Bildsprache19 exhibition."
             },
-            videoLoaded: false,
-            vim1: 'https://player.vimeo.com/video/397647989',
-            vim2: 'https://player.vimeo.com/video/397648215', 
-            vim3: 'https://player.vimeo.com/video/476784648'
+            pageLoaded: false,
+            vim1: '',
+            vim2: '', 
+            vim3: ''
         }
     },
     created () {
@@ -73,19 +73,27 @@ export default {
             opacity: 0,
             y: 100
         })
+        this.pageLoaded = true;
+        this.gsapin()
     },
-    watch: {
-        videoLoaded(val) {
-            if(val == true) {
+    methods: {
+        gsapin() {
             var tl = gsap.timeline()
-                tl.to('.slidein', {
-                    duration: 0.8,
-                    y: 0,
-                    opacity: 1,
-                    delay: 1,
-                    ease: "circ.out",
-                })
-            }
+            tl.to('.slidein', {
+                duration: 0.8,
+                y: 0,
+                opacity: 1,
+                delay: 1,
+                ease: "circ.out",
+                onComplete: this.srcloader()
+            })
+        },
+        srcloader() {
+            setTimeout(() => {
+            this.vim1 = 'https://player.vimeo.com/video/397647989'
+            this.vim2 = 'https://player.vimeo.com/video/397648215'
+            this.vim3 = 'https://player.vimeo.com/video/476784648'
+            }, 2000)
         }
     }
 }

@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
         <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
+            <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
             <div class="project">
                 <div class="full-size slidein">
                     <img src="../assets/images/Citrus/Yellow-Citrus.jpg" alt="Poster littering">
@@ -16,10 +16,10 @@
                     </div>
                 </div>
                 <div class="vimeo-container">
-                    <iframe :src="vim1" @load="videoLoaded = true" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    <iframe :src="vim1" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
                 <div class="vimeo-container">
-                    <iframe :src="vim2" @load="videoLoaded = true" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    <iframe :src="vim2" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -27,6 +27,9 @@
 </template>
 
 <script>
+
+//https://player.vimeo.com/video/361662647
+//https://player.vimeo.com/video/482303610
 
 import projecttop from '@/components/projecttop.vue'
 import { gsap } from 'gsap'
@@ -48,9 +51,9 @@ export default {
                 desc1: "Littering is a huge problem, especially in times of climat change. The goal was to show the tremendous amount of packaging used today by overusing space and material.",
                 desc2: "A series of 3 posters were made and an additional 3D Animation."
             },
-            videoLoaded: false,
-            vim1: 'https://player.vimeo.com/video/361662647',
-            vim2: 'https://player.vimeo.com/video/482303610'
+            pageLoaded: false,
+            vim1: '',
+            vim2: ''
         }
     },
     created () {
@@ -61,19 +64,26 @@ export default {
             opacity: 0,
             y: 100
         })
+        this.pageLoaded = true;
+        this.gsapin()
     },
-    watch: {
-        videoLoaded(val) {
-            if(val == true) {
+    methods: {
+        gsapin() {
             var tl = gsap.timeline()
-                tl.to('.slidein', {
-                    duration: 0.8,
-                    y: 0,
-                    opacity: 1,
-                    delay: 1,
-                    ease: "circ.out",
-                })
-            }
+            tl.to('.slidein', {
+                duration: 0.8,
+                y: 0,
+                opacity: 1,
+                delay: 1,
+                ease: "circ.out",
+                onComplete: this.srcloader()
+            })
+        },
+        srcloader() {
+            setTimeout(() => {
+            this.vim1 = 'https://player.vimeo.com/video/361662647'
+            this.vim2 = 'https://player.vimeo.com/video/482303610'
+            }, 2000)
         }
     }
 }

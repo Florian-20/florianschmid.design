@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
         <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
+            <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
             <div class="project">
                 <div id="placeholder"></div>
             </div>
@@ -32,22 +32,29 @@ export default {
                 desc1: "A fundus of desin stuff will be coming soon",
                 desc2: ""
             },
-            videoLoaded: false
+            pageLoaded: false
         }
     },
     created () {
         window.scroll(0, 0)
     },
     mounted() {
-        if(document.readyState === "complete") {
-            this.videoLoaded = true;
+        gsap.set('.slidein', {
+            opacity: 0,
+            y: 100
+        })
+        this.pageLoaded = true;
+        this.gsapin()
+    },
+    methods: {
+        gsapin() {
             var tl = gsap.timeline()
-            tl.from('.slidein', {
+            tl.to('.slidein', {
                 duration: 0.8,
-                y: 100,
-                opacity: 0,
+                y: 0,
+                opacity: 1,
                 delay: 1,
-                ease: "circ.out",
+                ease: "circ.out"
             })
         }
     }

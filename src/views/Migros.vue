@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
         <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata' :start-animation="videoLoaded"></projecttop>
+            <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
             <div class="project">
                 <div class="full-size slidein">
                     <img src="../assets/images/Migros/M03_Tasche.jpg" alt="Migros Tasche">
@@ -53,22 +53,29 @@ export default {
                 desc1: "Migros is one of the biggest supermarkets in Switzerland and spends 1% of their total icome into different fields of culture.",
                 desc2: "Each year Migros gives creatives the chance to redesign their bag. This bag was choosen for 2017 and has been printed one million times.",
             },
-            videoLoaded: false
+            pageLoaded: false
         }
     },
     created () {
         window.scroll(0, 0)
     },
     mounted() {
-        if(document.readyState === "complete") {
-            this.videoLoaded = true;
+        gsap.set('.slidein', {
+            opacity: 0,
+            y: 100
+        })
+        this.pageLoaded = true;
+        this.gsapin()
+    },
+    methods: {
+        gsapin() {
             var tl = gsap.timeline()
-            tl.from('.slidein', {
+            tl.to('.slidein', {
                 duration: 0.8,
-                y: 100,
-                opacity: 0,
+                y: 0,
+                opacity: 1,
                 delay: 1,
-                ease: "circ.out",
+                ease: "circ.out"
             })
         }
     }
