@@ -28,11 +28,30 @@
               </div>
               <div class="half-half">
                 <div class="half">
-                  <img src="../assets/images/MatScanner/Scanner_08.gif" alt="scanner diy">
-                </div>
-                <div class="half">
                   <img src="../assets/images/MatScanner/Scanner_09.gif" alt="scanner diy">
                 </div>
+                <span></span>
+                <div class="half">
+                  <img src="../assets/images/MatScanner/Scanner_11.gif" alt="scanner diy">
+                </div>
+              </div>
+              <div class="half-half">
+                <div class="half">
+                  <img src="../assets/images/MatScanner/Scanner_07.gif" alt="scanner diy">
+                </div>
+                <span></span>
+                <div class="half">
+                  <img src="../assets/images/MatScanner/Scanner_08.gif" alt="scanner diy">
+                </div>
+              </div>
+              <div class="full-size">
+                <img src="../assets/images/MatScanner/Scanner_05.jpg" alt="">
+              </div>
+              <div class="full-size">
+                <img src="../assets/images/MatScanner/Brot_Brett.png" alt="">
+              </div>
+              <div class="full-size">
+                <img src="../assets/images/MatScanner/009png.png" alt="">
               </div>
             </div>
         </div>
@@ -141,13 +160,12 @@ export default {
   margin-top: 0.1rem;
   display: flex;
   span {
-    width: 0.5rem;
+    width: 0.4rem;
   }
 }
 
 .half {
   width: auto;
-  padding: 4rem;
   img {
     max-width: 100%;
     max-height: 100%;

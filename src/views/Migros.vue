@@ -50,8 +50,8 @@ export default {
                 desc: 'Won competiton for Migros new bag design',
                 client: 'MIGROS',
                 credits: '40x44',
-                desc1: "Migros is one of the biggest supermarkets in Switzerland and spends 1% of their total icome into different fields of culture.",
-                desc2: "Each year Migros gives creatives the chance to redesign their bag. This bag was choosen for 2017 and has been printed one million times.",
+                desc1: "Migros is one of the biggest supermarkets in Switzerland and spends 1% of their total icome for different fields of culture.",
+                desc2: "Each year Migros gives creative peoples the chance to redesign their bag. This bag was chosen for 2017 and has been printed one million times.",
             },
             pageLoaded: false
         }

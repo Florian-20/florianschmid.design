@@ -29,7 +29,7 @@ export default {
                 desc: 'Archive is under construction',
                 client: '-',
                 credits: '-',
-                desc1: "A fundus of desin stuff will be coming soon",
+                desc1: "A fundus of design stuff will be coming soon",
                 desc2: ""
             },
             pageLoaded: false

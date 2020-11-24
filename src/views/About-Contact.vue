@@ -23,7 +23,7 @@
           <div class="about-child">
             <h2>
               Hi, my name is Florian. 
-              I am a Graphic Designer and selfthought front end Web developer based in Switzerland. 
+              I am a Graphic Designer and autodidact front end Web developer based in Switzerland. 
               I am currently in my final graphic design training year at Schule für Gestaltung bern&Biel. 
               I like to develop outstanding and long term Designs and Websites who function technically and visually.
             </h2>
