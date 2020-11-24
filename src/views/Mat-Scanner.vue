@@ -7,6 +7,13 @@
                 <h2>Okay, but how does it actually work?</h2>
                 <p @click="substance">→The full principle explained on Substance←</p>
               </div>
+              <div class="full-size">
+                <img src="../assets/images/MatScanner/Scan_Results.png" alt="">
+              </div>
+              <div id="matdesc">
+                <p>Wooden breadbord scan result</p>
+                <p>Sagex scan result</p>
+              </div>
               <div id="svg-back">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 342.1 511.46">
                   <g id="Ebene_2" data-name="Ebene 2">
@@ -28,30 +35,33 @@
               </div>
               <div class="half-half">
                 <div class="half">
-                  <img src="../assets/images/MatScanner/Scanner_09.gif" alt="scanner diy">
+                  <img src="../assets/images/MatScanner/Scanner_09_1.gif" alt="scanner diy">
                 </div>
                 <span></span>
                 <div class="half">
-                  <img src="../assets/images/MatScanner/Scanner_11.gif" alt="scanner diy">
+                  <img src="../assets/images/MatScanner/Scanner_11_1.gif" alt="scanner diy">
                 </div>
               </div>
               <div class="half-half">
                 <div class="half">
-                  <img src="../assets/images/MatScanner/Scanner_07.gif" alt="scanner diy">
+                  <img src="../assets/images/MatScanner/Scanner_07_1.gif" alt="scanner diy">
                 </div>
                 <span></span>
                 <div class="half">
-                  <img src="../assets/images/MatScanner/Scanner_08.gif" alt="scanner diy">
+                  <img src="../assets/images/MatScanner/Scanner_08_1.gif" alt="scanner diy">
                 </div>
               </div>
               <div class="full-size">
                 <img src="../assets/images/MatScanner/Scanner_05.jpg" alt="">
               </div>
-              <div class="full-size">
-                <img src="../assets/images/MatScanner/Brot_Brett.png" alt="">
-              </div>
-              <div class="full-size">
-                <img src="../assets/images/MatScanner/009png.png" alt="">
+              <div class="half-half">
+                <div class="half">
+                  <img src="../assets/images/MatScanner/Scanner_01.jpg" alt="">
+                </div>
+                <span></span>
+                <div class="half">
+                  <img src="../assets/images/MatScanner/Scanner_02.jpg" alt="">
+                </div>
               </div>
             </div>
         </div>
@@ -148,7 +158,7 @@ export default {
 }
 
 .full-size {
-  margin-top: 0.1rem;
+  margin-top: 0.2rem;
   width: 100%;
   img {
     max-width: 100%;
@@ -156,8 +166,16 @@ export default {
   }
 }
 
+#matdesc {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-around;
+  margin-bottom: 4rem;
+}
+
 .half-half {
-  margin-top: 0.1rem;
+  margin-top: 0.2rem;
   display: flex;
   span {
     width: 0.4rem;
@@ -194,8 +212,12 @@ export default {
         flex-direction: column;
     }
     .half {
-        margin-top: 0.1rem;
-        padding: 4rem;
+        margin-top: 0.2rem;
+    }
+    #svg-back {
+      svg {
+        width: 80%;
+      }
     }
 }
 </style>
