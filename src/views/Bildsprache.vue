@@ -56,7 +56,7 @@ export default {
                 desc: 'A series of animations and stills',
                 client: 'BILDSPRACHE19',
                 credits: '40x40',
-                desc1: "Eight weeks of total freedom to create. Things like surveillance, isolation and a bit of questioning of existence inspired my during this time.",
+                desc1: "Eight weeks of total freedom to create. Things like surveillance, isolation and a bit of questioning of existence inspired me during this time.",
                 desc2: "At the end 5 animations and a ton of images were made. A selection was presented in the Bildsprache19 exhibition."
             },
             pageLoaded: false,
