@@ -60,10 +60,22 @@
         "filename":"3DTypo.svg"
     },
     {
+        "name": "Echokammer",
+        "date": "2021",
+        "colour": "#00ccf9",
+        "counter": "❻",
+        "type": "DIY Project",
+        "client": "-",
+        "credits": "-",
+        "mindesc": "Work about the Echo Chamber",
+        "max-desc": "Half automatic texture scanner, to generate 3d materials",
+        "filename":"MatS_Black.svg"
+    },
+    {
         "name": "mat-scanner",
         "date": "2019",
         "colour": "#A0A0A0",
-        "counter": "❻",
+        "counter": "❼",
         "type": "DIY Project",
         "client": "-",
         "credits": "-",
@@ -75,7 +87,7 @@
         "name": "archive",
         "date": "2000-2020",
         "colour": "#a0a0a0",
-        "counter": "❼",
+        "counter": "❽",
         "type": "all types",
         "client": "-",
         "credits": "-",

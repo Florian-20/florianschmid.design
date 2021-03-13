@@ -3,7 +3,12 @@
         <div class="container">
             <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
             <div class="project">
-                <div id="placeholder"></div>
+                <div id="arch-gallery">
+                    <img src="../assets/images/Archive/BlackShot.jpg" alt="">
+                    <img src="../assets/images/Archive/Blackrock.jpg" alt="">
+                    <img src="../assets/images/Archive/Jagtreferendum.jpg" alt="">
+                    <img src="../assets/images/Archive/Jagtreferendum.jpg" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -24,7 +29,7 @@ export default {
             projectdata: {
                 name: 'Archive',
                 date: '2000-2020',
-                counter: '❹',
+                counter: '❼',
                 type: 'ALL',
                 desc: 'Archive is under construction',
                 client: '-',
@@ -70,8 +75,17 @@ export default {
     background-position: center;
 }
 
-#placeholder {
-    height: 10vh;
+#arch-gallery {
+    height: auto;
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    img {
+        width:24.5%;
+    }
 }
 
 // --- Media --- //

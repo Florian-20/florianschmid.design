@@ -44,6 +44,11 @@ const routes = [
     component: () => import(/*webpackChunkName: "3d&typo" */ '../views/3dTypo.vue')
   },
   {
+    path: '/echokammer',
+    name: 'Echokammer',
+    component: () => import(/*webpackChunkName: "echokammer" */ '../views/Echokammer.vue')
+  },
+  {
     path: '/mat-scanner',
     name: 'mat-scanner',
     component: () => import(/*webpackChunkName: "mat-scanner" */ '../views/Mat-Scanner.vue')
