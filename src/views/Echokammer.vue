@@ -4,7 +4,7 @@
             <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
             <div class="project">
                 <div class="full-size slidein">
-                    <img src="../assets/images/Edicion/E02_Plakat.jpg" alt="Forum Poster">
+                    <img src="../assets/images/Echokammer/Echokammer_01.jpg" alt="Forum Poster">
                 </div>
                 <div class="half-half">
                     <div class="half">
