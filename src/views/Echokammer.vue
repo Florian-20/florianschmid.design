@@ -46,8 +46,8 @@ export default {
                 desc: 'a work about the echo chamber-effect',
                 client: 'schoolproject',
                 credits: 'F4',
-                desc1: "Edicion is a small book forum in Biel which supports local alternative writers. Each year, Edicion makes an exhibiton with a selection of writers presenting their newest books.",
-                desc2: "A corporate identity approach for 2019."
+                desc1: "The Echo Chamber effect is an social situation, in which no matter what you say, mean or preferences you have, it will always be reflectet be others in the same social situation. You are constantly under Like-minded people.",
+                desc2: "Trought this, you have a non diversed view on thing."
             },
             pageLoaded: false
         }
