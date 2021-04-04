@@ -4,10 +4,10 @@
             <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
             <div class="project">
                 <div id="arch-gallery">
-                    <img src="../assets/images/Archive/BlackShot.jpg" alt="">
                     <img src="../assets/images/Archive/Blackrock.jpg" alt="">
+                    <img src="../assets/images/Archive/Wolf-Exp.jpg" alt="">
                     <img src="../assets/images/Archive/Jagtreferendum.jpg" alt="">
-                    <img src="../assets/images/Archive/Jagtreferendum.jpg" alt="">
+                    <img src="../assets/images/Archive/Ente-Exp.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -31,7 +31,7 @@ export default {
                 date: '2000-2020',
                 counter: '❼',
                 type: 'ALL',
-                desc: 'Archive is under construction',
+                desc: 'Archive',
                 client: '-',
                 credits: '-',
                 desc1: "A fundus of design stuff will be coming soon",
@@ -77,14 +77,16 @@ export default {
 
 #arch-gallery {
     height: auto;
-    background-color: grey;
+    //background-color: grey;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    flex: 1 1 0;
     align-items: flex-start;
     img {
         width:24.5%;
+        min-width: 175px;
     }
 }
 

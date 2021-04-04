@@ -69,6 +69,23 @@ export default {
   font-display: auto;
 }
 
+// - Project Fonts -- //
+
+@font-face {
+  font-family: aktiv-grotesk,sans-serif;
+  src: url('https://use.typekit.net/dil0dtn.css');
+  font-weight: 400;
+  font-style: normal;
+  display: auto;
+}
+
+@font-face {
+  font-family: aktiv-grotesk,sans-serif;
+  src: url('https://use.typekit.net/dil0dtn.css');
+  font-weight: 500;
+  font-style: normal;
+}
+
 // --- Headers --- // 
 
 html,

@@ -8,18 +8,15 @@
                 </div>
                 <div class="half-half">
                     <div class="half">
-                        <img src="../assets/images/Edicion/E01_Plakat.jpg" alt="Forum Poster">
+                        <video src="../assets/images/Echokammer/Mac-Echo-01_3.mp4" alt="Horizontal Website" autoplay loop></video>
                     </div>
                     <span></span>
                     <div class="half">
-                        <img src="../assets/images/Edicion/E03_Plakat.jpg" alt="Forum Poster">
+                        <video src="../assets/images/Echokammer/Mac-Echo-01_3.mp4" alt="Horizontal Website" autoplay loop></video>
                     </div>
                 </div>
                 <div class="full-size">
-                    <img src="../assets/images/Edicion/E04_Bag.jpg" alt="Bag design">
-                </div>
-                <div class="website">
-                    <img src="../assets/images/Edicion/E01_Website.jpg" alt="Website design">
+                    <video src="../assets/images/Echokammer/Mac-Echo-02.mp4" alt="Horizontal Website" autoplay loop></video>
                 </div>
             </div>
         </div>
@@ -118,7 +115,7 @@ export default {
     width: auto;
     padding: 5rem;
     background-color: #adadad;
-    img {
+    video {
         max-width: 100%;
         max-height: 100%;
     }
