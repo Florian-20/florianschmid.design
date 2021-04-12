@@ -3,7 +3,7 @@
         <div class="container">
             <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
             <div class="project">
-                <div id="arch-gallery">
+                <div id="arch-gallery" class="slidein">
                     <img src="../assets/images/Archive/Blackrock.jpg" alt="">
                     <img src="../assets/images/Archive/Wolf-Exp.jpg" alt="">
                     <img src="../assets/images/Archive/Jagtreferendum.jpg" alt="">
@@ -34,7 +34,7 @@ export default {
                 desc: 'Archive',
                 client: '-',
                 credits: '-',
-                desc1: "A fundus of design stuff will be coming soon",
+                desc1: "A fundus of design stuff.",
                 desc2: ""
             },
             pageLoaded: false
@@ -76,6 +76,7 @@ export default {
 }
 
 #arch-gallery {
+    z-index: 1000;
     height: auto;
     //background-color: grey;
     display: flex;

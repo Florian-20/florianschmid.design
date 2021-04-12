@@ -12,7 +12,7 @@
                     </div>
                     <span></span>
                     <div class="half">
-                        <video src="../assets/images/Echokammer/Mac-Echo-01_3.mp4" alt="Horizontal Website" autoplay loop></video>
+                        <video src="../assets/images/Echokammer//Mac-Echo-03.mp4" alt="Horizontal Website" autoplay loop></video>
                     </div>
                 </div>
                 <div class="full-size">
@@ -43,8 +43,8 @@ export default {
                 desc: 'a work about the echo chamber-effect',
                 client: 'schoolproject',
                 credits: 'F4',
-                desc1: "The Echo Chamber effect is an social situation, in which no matter what you say, mean or preferences you have, it will always be reflectet be others in the same social situation. You are constantly under Like-minded people.",
-                desc2: "Trought this, you have a non diversed view on thing."
+                desc1: "The Echo Chamber effect is an social situation, in which no matter what you say, mean or preferences you have, it will always be reflectet be others in the same social situation. You are constantly under like-minded people.",
+                desc2: ""
             },
             pageLoaded: false
         }
@@ -88,6 +88,10 @@ export default {
     margin-top: 0.1rem;
     width: 100%;
     img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    video {
         max-width: 100%;
         max-height: 100%;
     }
