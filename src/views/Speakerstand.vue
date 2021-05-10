@@ -3,34 +3,34 @@
         <div class="container">
             <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
             <div class="project slidein">
-              <div class="half-half">
-                <div class="half">
-                  <img src="../assets/images/MatScanner/Scanner_09_1.gif" alt="scanner diy">
-                </div>
-                <span></span>
-                <div class="half">
-                  <img src="../assets/images/MatScanner/Scanner_11_1.gif" alt="scanner diy">
-                </div>
-              </div>
-              <div class="half-half">
-                <div class="half">
-                  <img src="../assets/images/MatScanner/Scanner_07_1.gif" alt="scanner diy">
-                </div>
-                <span></span>
-                <div class="half">
-                  <img src="../assets/images/MatScanner/Scanner_08_1.gif" alt="scanner diy">
-                </div>
-              </div>
               <div class="full-size">
-                <img src="../assets/images/MatScanner/Scanner_05.jpg" alt="">
+                <img src="../assets/images/Speaker/Speakerstand_03.jpg" alt="speaker stand">
               </div>
               <div class="half-half">
                 <div class="half">
-                  <img src="../assets/images/MatScanner/Scanner_01.jpg" alt="">
+                  <img src="../assets/images/Speaker/Speakerstand_02.jpg" alt="speaker stand">
                 </div>
                 <span></span>
                 <div class="half">
-                  <img src="../assets/images/MatScanner/Scanner_02.jpg" alt="">
+                  <img src="../assets/images/Speaker/Speakerstand_01.jpg" alt="speaker stand">
+                </div>
+              </div>
+              <div class="half-half">
+                <div class="half">
+                  <img src="../assets/images/Speaker/Speakerstand_04.jpg" alt="speaker stand">
+                </div>
+                <span></span>
+                <div class="half">
+                  <img src="../assets/images/Speaker/Speakerstand_08.jpg" alt="speaker stand">
+                </div>
+              </div>
+              <div class="half-half">
+                <div class="half">
+                  <img src="../assets/images/Speaker/Speakerstand_07.jpg" alt="speaker stand">
+                </div>
+                <span></span>
+                <div class="half">
+                  <img src="../assets/images/Speaker/Speakerstand_06.jpg" alt="speaker stand">
                 </div>
               </div>
             </div>
@@ -53,10 +53,10 @@ export default {
         date: "2021",
         counter: "❻",
         type: "Woodwork",
-        desc: "Texture scanner for 3d materials",
-        client: "ME",
+        desc: "Walnut speaker stands for Klipsch RP-600m",
+        client: "Pers. Project",
         credits: "-",
-        desc1: "A key factor to create realistic materials in 3D is a high quality normal map. A normal map is a texture type used in 3D to represent height and depth of a surface.",
+        desc1: "Walnut speaker stands for Klipsch RP-600m.",
         desc2: "This scanner automates parts of the otherwise manual scanning process, which leads to faster and more precise scan results, who again lead to a more accurate representation of the real world. ",
       },
       pageLoaded: false
@@ -110,7 +110,7 @@ export default {
   margin-top: 0.2rem;
   display: flex;
   span {
-    width: 0.4rem;
+    width: 1rem;
   }
 }
 
@@ -131,11 +131,6 @@ export default {
     }
     .half {
         margin-top: 0.2rem;
-    }
-    #svg-back {
-      svg {
-        width: 80%;
-      }
     }
 }
 </style>
