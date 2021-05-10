@@ -35,7 +35,7 @@
               </div>
             </div>
         </div>
-        <projectfooter/>
+        <projectfooter v-if="pageLoaded"/>
     </div>
 </template>
 

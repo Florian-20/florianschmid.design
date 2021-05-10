@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <projectfooter v-if="!pageLoaded"/>
+        <projectfooter v-if="pageLoaded"/>
     </div>
 </template>
 
