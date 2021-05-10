@@ -49,6 +49,11 @@ const routes = [
     component: () => import(/*webpackChunkName: "echokammer" */ '../views/Echokammer.vue')
   },
   {
+    path: '/Speaker-Stands',
+    name: 'Speaker-Stands',
+    component: () => import(/*webpackChunkName: "mat-scanner" */ '../views/Speakerstand.vue')
+  },
+  {
     path: '/mat-scanner',
     name: 'mat-scanner',
     component: () => import(/*webpackChunkName: "mat-scanner" */ '../views/Mat-Scanner.vue')

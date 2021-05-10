@@ -14,7 +14,7 @@
     {
         "name": "migros",
         "date": "2017",
-        "colour": "#f99007",
+        "colour": "#fc8805",
         "counter": "❷",
         "type": "won competition& bag design",
         "client": "Migros",
@@ -38,7 +38,7 @@
     {
         "name": "edicion19",
         "date": "2019",
-        "colour": "#ea0e0e",
+        "colour": "#fc0d05",
         "counter": "❹",
         "type": "corporate design",
         "client": "edicion",
@@ -72,10 +72,22 @@
         "filename":"Echo.svg"
     },
     {
+        "name": "Speaker-Stands",
+        "date": "2021",
+        "colour": "#fc007e",
+        "counter": "❼",
+        "type": "Woodwork",
+        "client": "-",
+        "credits": "-",
+        "mindesc": "Speaker Stand for Klipsch RP-600m",
+        "max-desc": "Half automatic texture scanner, to generate 3d materials",
+        "filename":"Speaker_Stand.svg"
+    },
+    {
         "name": "mat-scanner",
         "date": "2019",
         "colour": "#A0A0A0",
-        "counter": "❼",
+        "counter": "❽",
         "type": "DIY Project",
         "client": "-",
         "credits": "-",
@@ -87,7 +99,7 @@
         "name": "archive",
         "date": "2000-2020",
         "colour": "#a0a0a0",
-        "counter": "❽",
+        "counter": "❾",
         "type": "all types",
         "client": "-",
         "credits": "-",
