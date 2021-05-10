@@ -25,8 +25,15 @@
               Hi, my name is Florian. 
               I am a Graphic Designer and self-taught front end Web developer based in Switzerland. 
               I am currently in my final graphic design training year at Schule für Gestaltung bern&Biel. 
-              I like to develop outstanding and long term Designs and Websites who function technically and visually.
+              I like to develop outstanding and long term designs and websites who function technically and visually.
+              
             </h2>
+            <!--I am passioned about bringing things into form, all i do is the endproduct of my thoughts.
+            All my work is the endproduct of my thoughts who shaped them.
+            I do like to think; I see my work as way to bring my thoughts into visible form.
+            Ich sehe meine Arbeiten als Endprodukt meiner Gedanken. Arbeiten sind der Punkt meines Gedankenganges.
+            I see my work as the ending dot of a long thaughtprocess, at the end its about bringing thinks on point.
+            Meine Gedanken offenbaren sich in meinen Arbeiten.-->
           </div>
         </div>
         <div id="skills" class="about-flex slide-small">

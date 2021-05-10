@@ -32,17 +32,20 @@
                 </div>
             </div>
         </div>
+        <projectfooter v-if="!pageLoaded"/>
     </div>
 </template>
 <script>
 
 import projecttop from '@/components/projecttop.vue'
+import projectfooter from "@/components/projectfooter.vue";
 import { gsap } from "gsap";
 
 export default {
     name: 'Bildsprache',
     components: {
-        projecttop
+        projecttop,
+        projectfooter
     },
     data() {
         return {

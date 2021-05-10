@@ -35,16 +35,19 @@
               </div>
             </div>
         </div>
+        <projectfooter/>
     </div>
 </template>
 
 <script>
 import projecttop from "@/components/projecttop.vue";
+import projectfooter from "@/components/projectfooter.vue";
 import { gsap } from "gsap";
 
 export default {
   components: {
     projecttop,
+    projectfooter
   },
   data() {
     return {
@@ -57,7 +60,7 @@ export default {
         client: "Pers. Project",
         credits: "-",
         desc1: "Walnut speaker stands for Klipsch RP-600m.",
-        desc2: "This scanner automates parts of the otherwise manual scanning process, which leads to faster and more precise scan results, who again lead to a more accurate representation of the real world. ",
+        desc2: "",
       },
       pageLoaded: false
     };

@@ -23,6 +23,7 @@
                 </div>
             </div>
         </div>
+        <projectfooter v-if="!pageLoaded"/>
     </div>
 </template>
 
@@ -32,11 +33,13 @@
 //https://player.vimeo.com/video/482303610
 
 import projecttop from '@/components/projecttop.vue'
+import projectfooter from "@/components/projectfooter.vue";
 import { gsap } from 'gsap'
 
 export default {
     components: {
-        projecttop
+        projecttop,
+        projectfooter
     },
     data() {
         return {
