@@ -251,6 +251,19 @@ a {
  }
 }
 
+#whois {
+  height: 4rem;
+  background-color: var(--light);
+  display: flex;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  p {
+    margin-top: 2rem;
+    font-size: 14px;
+  }
+}
+
 // ---- Project rules --- //
 
 .project {

@@ -59,7 +59,7 @@ export default {
         desc: "Walnut speaker stands for Klipsch RP-600m",
         client: "Pers. Project",
         credits: "-",
-        desc1: "Walnut speaker stands for Klipsch RP-600m.",
+        desc1: "Lower height speaker stands made with a form factor to fit sideboards.",
         desc2: "",
       },
       pageLoaded: false

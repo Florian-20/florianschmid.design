@@ -7,8 +7,8 @@
         <projectitem v-bind:project="project" :darkmode="darkmode"></projectitem>
       </router-link>
     </div>
-    <div id="footer">
-      <p>©2021 Florian Schmid</p>
+    <div id="whois">
+      <p>© 2021 Florian Schmid</p>
     </div>
   </div>
 </template>
@@ -73,7 +73,6 @@ export default {
   margin-left: 2vw;
   margin-right: 2vw;
   margin-top: 5vh;
-  margin-bottom: 3vh;
   width: auto;
   height: auto;
   display: flex;
@@ -88,18 +87,6 @@ export default {
   flex: 1 1 0px;
   width: auto;
   min-width: 375px;
-}
-
-#footer {
-  display: flex;
-  justify-content: end;
-  p {
-    font-size: 14px;
-  }
-  margin-left: 2vw;
-  margin-right: 2vw;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 // --- responsiv --- //

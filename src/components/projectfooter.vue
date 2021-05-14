@@ -1,11 +1,14 @@
 <template>
     <div id="p_footer">
-        <div class="back" @click="$router.push(prevproject)" v-bind:style='{"background-color" : (nexthover? "var(--dark)" : "var(--light)" ), "color" : (nexthover? "var(--light" : "var(--dark)")}' @mouseover="nexthover = true" @mouseleave="nexthover = false">
-            <p>Previous</p>
+        <div class="footernav">
+            <div class="back" @click="$router.push(prevproject)" v-bind:style='{"background-color" : (nexthover? "var(--dark)" : "var(--light)" ), "color" : (nexthover? "var(--light" : "var(--dark)")}' @mouseover="nexthover = true" @mouseleave="nexthover = false">
+                <p>Previous</p>
+            </div>
+            <div class="next" @click="$router.push(nextproject)" v-bind:style='{"background-color" : (prevhover? "var(--dark)" : "var(--light)" ), "color" : (prevhover? "var(--light" : "var(--dark)")}' @mouseover="prevhover = true" @mouseleave="prevhover = false">
+                <p>next</p>
+            </div>
         </div>
-        <div class="next" @click="$router.push(nextproject)" v-bind:style='{"background-color" : (prevhover? "var(--dark)" : "var(--light)" ), "color" : (prevhover? "var(--light" : "var(--dark)")}' @mouseover="prevhover = true" @mouseleave="prevhover = false">
-            <p>next</p>
-        </div>
+        <div id="whois"><p>© 2021 Florian Schmid</p></div>
     </div>
 </template>
 
@@ -35,7 +38,6 @@ export default {
         let finder = projects.find(Element => Element.name === this.$router.currentRoute.path.replace("/",""))
         // Get the index
         const index = projects.indexOf(finder)
-        console.log(index)
         if (index === projects.listlength) {
             this.nextproject = "/" + projects[0].name
             this.prevproject = "/" + projects[index - 1].name
@@ -59,10 +61,19 @@ export default {
     right: 0;
     margin: 0;
     padding: 0;
-    height: 2rem;
+    height: auto;
     position: absolute;
     display: flex;
+    flex-direction: column;
+}
+
+.footernav {
+    height: 2rem;
     border-top: 1px solid var(--dark);
+    border-bottom: 1px solid var(--dark);
+    display: flex;
+    left: 0;
+    right: 0;
 }
 
 .back {
