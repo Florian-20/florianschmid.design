@@ -8,15 +8,24 @@
                 </div>
                 <div class="half-half">
                     <div class="half">
-                        <video src="../assets/images/Echokammer/Mac-Echo-01_3.mp4" alt="Horizontal Website" autoplay loop></video>
+                        <img src="../assets/images/Echokammer/Echokammer_02.jpg" alt="">
                     </div>
                     <span></span>
                     <div class="half">
-                        <video src="../assets/images/Echokammer//Mac-Echo-03.mp4" alt="Horizontal Website" autoplay loop></video>
+                        <img src="../assets/images/Echokammer/Echokammer_03.jpg" alt="">
                     </div>
                 </div>
                 <div class="full-size">
                     <video src="../assets/images/Echokammer/Mac-Echo-02.mp4" alt="Horizontal Website" autoplay loop></video>
+                </div>
+                <div class="half-half">
+                    <div class="half">
+                        <img src="../assets/images/Echokammer/Echokammer_04.jpg" alt="">
+                    </div>
+                    <span></span>
+                    <div class="half">
+                        <img src="../assets/images/Echokammer/Echokammer_05.jpg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,7 +56,7 @@ export default {
                 client: 'schoolproject',
                 credits: 'F4',
                 desc1: "The Echo Chamber effect is an social situation, in which no matter what you say, mean or preferences you have, it will always be reflectet be others in the same social situation. You are constantly under like-minded people.",
-                desc2: ""
+                desc2: "There for I created a website which educates and clears up about the echo chambers effects on society."
             },
             pageLoaded: false
         }
@@ -120,11 +129,11 @@ export default {
 
 .half {
     width: auto;
-    padding: 5rem;
+    padding: 0rem;
     background-color: #adadad;
-    video {
-        max-width: 100%;
-        max-height: 100%;
+    img {
+        width: 100%;
+        height: 100%;
     }
 }
 

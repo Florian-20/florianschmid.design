@@ -51,7 +51,7 @@ export default {
                 desc: 'A campaign against the overuse of packaging',
                 client: 'SCHOOLPROJECT',
                 credits: 'A0',
-                desc1: "Littering is a huge problem, especially in times of climate change. The goal was to show the tremendous amount of packaging used today by overusing space and material.",
+                desc1: "Littering is a huge problem and has grown over the past years. The goal was to show the tremendous amount of packaging used today by overusing space and material.",
                 desc2: "A series of 3 posters were made and an additional 3D Animation."
             },
             pageLoaded: false,

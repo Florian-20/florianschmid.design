@@ -91,7 +91,7 @@ export default {
 }
 
 .full-size {
-    margin-top: 0.1rem;
+    margin-top: 0.2rem;
     width: 100%;
     img {
         max-width: 100%;
