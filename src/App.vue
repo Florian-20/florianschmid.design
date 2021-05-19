@@ -30,7 +30,8 @@ export default {
   created() {
     var timenow = new Date()
     var time = timenow.getHours()
-    console.log(time)
+    console.log("Welcome inspector. It's " + time + " a clock.")
+    console.log("%c 👋 Welcome inspector. It's " + time + " a clock.", "font-size: 15px");
     if (time >= 18 || time <= 8) {
       this.darkmode = true
     }
@@ -115,7 +116,7 @@ h1 {
 h2 {
   font-family: "Neue Machina Regular";
   font-size: 30px;
-  line-height: 31px;
+  line-height: 1.15;
   margin: 0;
   text-align: left;
   text-transform: uppercase;
@@ -133,7 +134,7 @@ h3 {
 p {
   font-family: "Neue Machina Regular";
   font-size: 18px;
-  line-height: 17px;
+  line-height: 1.2;
   margin: 0;
   text-transform: uppercase;
 }
@@ -164,7 +165,7 @@ a {
 
   h2 {
     font-size: 27px;
-    line-height: 26px;
+    line-height: 1.1;
   }
 
   h3 {
@@ -183,11 +184,11 @@ a {
 @media screen and (max-width: 990px) {
   h1 {
     font-size: 100px;
-    line-height: 120px;
+    line-height: 1.15;
   }
   h2 {
     font-size: 27px;
-    line-height: 27px;
+    line-height: 1.15;
   }
 }
 
