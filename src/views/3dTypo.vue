@@ -35,9 +35,8 @@ export default {
         projectfooter
     },
     metaInfo : {
-        title: '3D&Typo',
         Meta: [
-            { name: 'description', content: this.projectdata.desc}
+            { name: 'description', content: 'Liquids poster'}
         ]
     },
     data() {

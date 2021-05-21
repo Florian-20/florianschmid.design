@@ -48,9 +48,8 @@ export default {
         projectfooter
     },
     metaInfo : {
-        title: 'Bildsprache19',
         Meta: [
-            { name: 'description', content: this.projectdata.desc}
+            { name: 'description', content: 'A series of animations and stills'}
         ]
     },
     data() {

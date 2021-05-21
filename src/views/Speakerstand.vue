@@ -50,9 +50,8 @@ export default {
     projectfooter
   },
   metaInfo : {
-      title: 'Speaker Stand Klipsch Rp-600m',
       Meta: [
-          { name: 'description', content: this.projectdata.desc}
+          { name: 'description', content: 'Walnut speaker stands for Klipsch RP-600m'}
       ]
   },
   data() {

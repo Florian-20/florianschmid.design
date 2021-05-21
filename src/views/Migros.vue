@@ -44,9 +44,8 @@ export default {
         projectfooter
     },
     metaInfo : {
-        title: 'Migros bag design',
         Meta: [
-            { name: 'description', content: this.projectdata.desc}
+            { name: 'description', content: 'Won competiton for Migros new bag design'}
         ]
     },
     data() {

@@ -40,9 +40,8 @@ export default {
         projectfooter
     },
     metaInfo : {
-        title: 'Edicion19 bookforum poster',
         Meta: [
-            { name: 'description', content: this.projectdata.desc}
+            { name: 'description', content: 'Identity for a small book forum '}
         ]
     },
     data() {

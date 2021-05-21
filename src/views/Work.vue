@@ -29,7 +29,6 @@ export default {
     topnav
   },
   metaInfo : {
-    title: 'Work',
     Meta: [
       { name: 'description', content: '2021 Work Florian Schmid'}
     ]

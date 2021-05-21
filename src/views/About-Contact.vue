@@ -72,7 +72,6 @@ import { gsap } from 'gsap'
 
 export default {
   metaInfo : {
-    title: 'About Florian Schmid',
     Meta: [
         { name: 'description', content: 'Hi, my name is Florian. I am a Graphic Designer and self-taught front end Web developer based in Switzerland.'}
     ]

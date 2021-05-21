@@ -80,7 +80,6 @@ export default {
     projectfooter
   },
   metaInfo : {
-      title: '3D Surface Scanner',
       Meta: [
           { name: 'description', content: this.projectdata.desc}
       ]

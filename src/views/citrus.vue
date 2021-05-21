@@ -42,9 +42,8 @@ export default {
         projectfooter
     },
     metaInfo : {
-        title: 'Citrus Packus',
         Meta: [
-            { name: 'description', content: this.projectdata.desc}
+            { name: 'description', content: 'A campaign against the overuse of packagin'}
         ]
     },
     data() {
