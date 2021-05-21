@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Work from '../views/Work.vue'
+import Meta from 'vue-meta'
 
+Vue.use(Meta)
 Vue.use(VueRouter)
 
 const routes = [

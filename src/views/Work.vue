@@ -20,10 +20,19 @@ import topnav from '@/components/nav.vue'
 import projects from '@/projects.json'
 import { gsap } from 'gsap'
 
+
+
+
 export default {
   components: {
     projectitem,
     topnav
+  },
+  metaInfo : {
+    title: 'Work',
+    Meta: [
+      { name: 'description', content: '2021 Work Florian Schmid'}
+    ]
   },
   props: ['darkmode', 'loading'],
   data () {

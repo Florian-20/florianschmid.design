@@ -55,7 +55,7 @@ export default {
                 desc: 'a work about the echo chamber-effect',
                 client: 'schoolproject',
                 credits: 'F4',
-                desc1: "The Echo Chamber effect is an social situation, in which no matter what you say, mean or preferences you have, it will always be reflectet be others in the same social situation. You are constantly under like-minded people.",
+                desc1: "The Echo Chamber effect is a social situation, in which no matter what you say, mean or preferences you have, it will always be reflectet be others in the same social situation. You are constantly under like-minded people.",
                 desc2: "There for I created a website which educates and clears up about the echo chambers effects on society."
             },
             pageLoaded: false

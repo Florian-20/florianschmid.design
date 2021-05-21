@@ -39,6 +39,12 @@ export default {
         projecttop,
         projectfooter
     },
+    metaInfo : {
+        title: 'Edicion19 bookforum poster',
+        Meta: [
+            { name: 'description', content: this.projectdata.desc}
+        ]
+    },
     data() {
         return {
             projectdata: {

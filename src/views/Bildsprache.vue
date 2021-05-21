@@ -47,6 +47,12 @@ export default {
         projecttop,
         projectfooter
     },
+    metaInfo : {
+        title: 'Bildsprache19',
+        Meta: [
+            { name: 'description', content: this.projectdata.desc}
+        ]
+    },
     data() {
         return {
             projectdata: {

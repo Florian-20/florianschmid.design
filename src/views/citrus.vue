@@ -41,6 +41,12 @@ export default {
         projecttop,
         projectfooter
     },
+    metaInfo : {
+        title: 'Citrus Packus',
+        Meta: [
+            { name: 'description', content: this.projectdata.desc}
+        ]
+    },
     data() {
         return {
             projectdata: {

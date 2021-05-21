@@ -34,6 +34,12 @@ export default {
         projecttop,
         projectfooter
     },
+    metaInfo : {
+        title: '3D&Typo',
+        Meta: [
+            { name: 'description', content: this.projectdata.desc}
+        ]
+    },
     data() {
         return {
             projectdata: {
