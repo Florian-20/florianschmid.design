@@ -81,7 +81,7 @@ export default {
   },
   metaInfo : {
       Meta: [
-          { name: 'description', content: this.projectdata.desc}
+          { name: 'description', content: 'Surface scanner for 3d materials or textures.'}
       ]
   },
   data() {
@@ -116,7 +116,7 @@ export default {
       });
     },
     substance() {
-      window.open("https://academy.substance3d.com/courses/your-smartphone-is-a-material-scanner", "_blank")
+      window.open("https://substance3d.adobe.com/magazine/your-smartphone-is-a-material-scanner-vol-ii/", "_blank")
     },
     gsapin() {
       var tl = gsap.timeline()
