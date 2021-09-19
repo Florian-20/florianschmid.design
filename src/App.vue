@@ -70,6 +70,11 @@ export default {
   font-display: auto;
 }
 
+strong {
+  font-family: 'Neue Machina Ultrabold';
+  font-weight: 200;
+}
+
 // - Project Fonts -- //
 
 @font-face {

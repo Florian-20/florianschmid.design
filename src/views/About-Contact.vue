@@ -22,12 +22,17 @@
           <span></span>
           <div class="about-child">
             <h2>
+              <strong>"Inspiration is for amateurs. The rest of us just work." Chuck Close</strong> <br><br>
               Hi, my name is Florian. 
               I am a Graphic Designer and self-taught front end Web developer based in Switzerland.
-              I see my work as the ending dot of my thoughts, at the end it's about bringing things to point. 
+              I see my work as the ending dot of my thoughts, at the end it's about bringing things to point.
+              The visual language should always be relative to it's medium, it only can and will 
               That's all you need to know, everything else shows up in my work.
 
             </h2>
+            <!-- Hi, my name is Florian. 
+              I am a Graphic Designer and self-taught front end Web developer based in Switzerland.-->
+            <!-- I like those rare moments when cocept and -->
             <!--"Inspiration is for amateurs. The rest of us just work." Chuck Close-->
           </div>
         </div>
@@ -151,11 +156,13 @@ export default {
 #about-container {
   h2 {
     text-transform: none;
+    margin-bottom: 1rem;
   }
   width: auto;
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .about-flex {
