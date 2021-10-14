@@ -22,18 +22,24 @@
           <span></span>
           <div class="about-child">
             <h2>
-              <strong>"Inspiration is for amateurs. The rest of us just work." Chuck Close</strong> <br><br>
+              <!--<strong>"Inspiration is for amateurs. The rest of us just work." Chuck Close</strong> <br><br>-->
               Hi, my name is Florian. 
               I am a Graphic Designer and self-taught front end Web developer based in Switzerland.
               I see my work as the ending dot of my thoughts, at the end it's about bringing things to point.
-              The visual language should always be relative to it's medium, it only can and will 
               That's all you need to know, everything else shows up in my work.
 
             </h2>
-            <!-- Hi, my name is Florian. 
-              I am a Graphic Designer and self-taught front end Web developer based in Switzerland.-->
-            <!-- I like those rare moments when cocept and -->
-            <!--"Inspiration is for amateurs. The rest of us just work." Chuck Close-->
+            <!-- Good ideas can't be forced, they come whenever they want. However if they are here, the thing you can do, is to be ready with the
+            right skillset.
+            
+            Most times graphic designers are seen as creative people with great ideas, I don't see it this way, many people have great ideas and are creative,
+            what graphic designer are actually good in, is to bring ideas to the real world
+
+            Kreativität scheint in der Grafik als höchstes Kredo genommen zu werden. Ich sehe die Kreativität des Grafikers nicht als sein grösstes können, 
+            was ihn ausmacht ist die Umsetzung dieser. 
+ 
+
+            -->
           </div>
         </div>
         <div id="skills" class="about-flex slide-small">
