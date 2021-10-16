@@ -27,7 +27,6 @@
               I am a Graphic Designer and self-taught front end Web developer based in Switzerland.
               I see my work as the ending dot of my thoughts, at the end it's about bringing things to point.
               That's all you need to know, everything else shows up in my work.
-
             </h2>
             <!-- Good ideas can't be forced, they come whenever they want. However if they are here, the thing you can do, is to be ready with the
             right skillset.

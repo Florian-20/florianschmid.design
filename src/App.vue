@@ -1,11 +1,11 @@
 <template>
   <div id="app">
+    <div class="cursor"></div>
     <router-view  :loading="loading" v-on:switch-mode="onSwitch" :darkmode="darkmode" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'/>
   </div>
 </template>
 
 <script>
-
 
 export default {
   data () {
@@ -20,6 +20,16 @@ export default {
     },
     setloading(value) {
       this.loading = value
+    },
+    circlecursor(){
+      let custommouse = document.querySelector(".cursor")
+
+      window.addEventListener("mousemove", cursor)
+
+      function cursor(p){
+        custommouse.style.top = p.pageY + "px"
+        custommouse.style.left = p.pageX + "px"
+      }
     }
   },
   mounted() {
@@ -199,6 +209,16 @@ a {
 
 // ---- General Style --- //
 
+.cursor {
+  height: 2rem;
+  width: 2rem;
+  background-color: white;
+  mix-blend-mode: difference;
+  z-index: 1000;
+  position: absolute;
+  border-radius: 1rem;
+
+}
 
 .grain {
   position: absolute;
