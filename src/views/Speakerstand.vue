@@ -12,7 +12,7 @@
                 </div>
                 <span></span>
                 <div class="half">
-                  <img src="../assets/images/Speaker/Speakerstand_01.jpg" alt="speaker stand">
+                  <img src="../assets/images/Speaker/Speakerstand_09.jpg" alt="speaker stand">
                 </div>
               </div>
               <div class="half-half">

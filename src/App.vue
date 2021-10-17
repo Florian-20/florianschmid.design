@@ -20,16 +20,6 @@ export default {
     },
     setloading(value) {
       this.loading = value
-    },
-    circlecursor(){
-      let custommouse = document.querySelector(".cursor")
-
-      window.addEventListener("mousemove", cursor)
-
-      function cursor(p){
-        custommouse.style.top = p.pageY + "px"
-        custommouse.style.left = p.pageX + "px"
-      }
     }
   },
   mounted() {
@@ -209,7 +199,8 @@ a {
 
 // ---- General Style --- //
 
-.cursor {
+
+/*.cursor {
   height: 2rem;
   width: 2rem;
   background-color: white;
@@ -219,6 +210,7 @@ a {
   border-radius: 1rem;
 
 }
+*/
 
 .grain {
   position: absolute;
