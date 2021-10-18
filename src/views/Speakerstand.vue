@@ -44,6 +44,7 @@ import projecttop from "@/components/projecttop.vue";
 import projectfooter from "@/components/projectfooter.vue";
 import { gsap } from "gsap";
 
+
 export default {
   components: {
     projecttop,
@@ -56,6 +57,7 @@ export default {
   },
   data() {
     return {
+      //title: "Speaker Stands",
       projectdata: {
         name: "Speaker Stands",
         date: "2021",
@@ -92,7 +94,17 @@ export default {
     })
     this.pageLoaded = true;
     this.gsapin()
-  }
+  }/*,
+  head: {
+    title: function () {
+      return {
+        inner: this.title
+      }
+    },
+    link: [
+      { rel: 'canonical', href: 'https://www.florianschmid.design/Speaker-Stands', id: 'canonical'}
+    ]
+  }*/
 };
 </script>
 

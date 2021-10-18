@@ -2,7 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Work from '../views/Work.vue'
 import Meta from 'vue-meta'
+import VueHead from "vue-head";
 
+Vue.use(VueHead)
 Vue.use(Meta)
 Vue.use(VueRouter)
 
