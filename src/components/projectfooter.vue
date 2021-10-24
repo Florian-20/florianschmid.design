@@ -91,10 +91,4 @@ export default {
     align-items: center;
 }
 
-@media screen and(max-width: 990px) {
-    #p_footer {
-        height: 3rem;
-    }
-}
-
 </style>

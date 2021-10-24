@@ -8,7 +8,7 @@
         <div id="fix">
           <router-link v-if="!mobileView" to="/">Work</router-link>
           <router-link v-if="!mobileView" to="/about&contact">About&<br />Contact</router-link>
-          <svg @click="$router.go(-1)" xmlns="http://www.w3.org/2000/svg" width="39.409" height="39.409" viewBox="0 0 39.409 39.409">
+          <svg @click="$router.push('/')" xmlns="http://www.w3.org/2000/svg" width="39.409" height="39.409" viewBox="0 0 39.409 39.409">
             <g transform="translate(4.7046301 4.7046301)">
               <path fill="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" d="M29.50819672 30V0H0"/>
               <path fill="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" d="M30 0L.98360656 29.5"/>
@@ -25,20 +25,11 @@
               <!--<strong>"Inspiration is for amateurs. The rest of us just work." Chuck Close</strong> <br><br>-->
               Hi, my name is Florian. 
               I am a Graphic Designer and self-taught front end Web developer based in Switzerland.
+              <!--I enjoy combining my variety of skills to bring projects foreward.-->
+              <!--I am pivoting between my skills-->
               I see my work as the ending dot of my thoughts, at the end it's about bringing things to point.
               That's all you need to know, everything else shows up in my work.
             </h2>
-            <!-- Good ideas can't be forced, they come whenever they want. However if they are here, the thing you can do, is to be ready with the
-            right skillset.
-            
-            Most times graphic designers are seen as creative people with great ideas, I don't see it this way, many people have great ideas and are creative,
-            what graphic designer are actually good in, is to bring ideas to the real world
-
-            Kreativität scheint in der Grafik als höchstes Kredo genommen zu werden. Ich sehe die Kreativität des Grafikers nicht als sein grösstes können, 
-            was ihn ausmacht ist die Umsetzung dieser. 
- 
-
-            -->
           </div>
         </div>
         <div id="skills" class="about-flex slide-small">
