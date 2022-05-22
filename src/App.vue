@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <div class="cursor"></div>
     <router-view  :loading="loading" v-on:switch-mode="onSwitch" :darkmode="darkmode" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'/>
   </div>
 </template>
@@ -17,6 +16,7 @@ export default {
   methods: {
     onSwitch() {
       this.darkmode = !this.darkmode
+      //document.getElementsByTagName('body').sytle
     },
     setloading(value) {
       this.loading = value
@@ -30,7 +30,6 @@ export default {
   created() {
     var timenow = new Date()
     var time = timenow.getHours()
-    console.log("Welcome inspector. It's " + time + " a clock.")
     console.log("%c 👋 Welcome inspector. It's " + time + " a clock.", "font-size: 15px");
     if (time >= 18 || time <= 8) {
       this.darkmode = true
@@ -40,6 +39,19 @@ export default {
 </script>
 
 <style lang="scss">
+
+body::-webkit-scrollbar {
+  width: .25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #151515;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #f1f1f1;
+  border-radius: .25rem;
+}
 
 #app {
   margin: 0;
@@ -199,18 +211,6 @@ a {
 
 // ---- General Style --- //
 
-
-/*.cursor {
-  height: 2rem;
-  width: 2rem;
-  background-color: white;
-  mix-blend-mode: difference;
-  z-index: 1000;
-  position: absolute;
-  border-radius: 1rem;
-
-}
-*/
 
 .grain {
   position: absolute;
