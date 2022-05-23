@@ -35,6 +35,7 @@ export default {
     name: "projectfooter",
     created() {
         // Find the current Path in the projects list
+        // If name = null causes error. check if null, if pass
         let finder = projects.find(Element => Element.name === this.$router.currentRoute.path.replace("/",""))
         // Get the index
         const index = projects.indexOf(finder)

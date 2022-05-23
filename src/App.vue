@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view  :loading="loading" v-on:switch-mode="onSwitch" :darkmode="darkmode" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'/>
+    <router-view :loading="loading" v-on:switch-mode="onSwitch" :darkmode="darkmode" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'/>
   </div>
 </template>
 
@@ -16,8 +16,7 @@ export default {
   methods: {
     onSwitch() {
       this.darkmode = !this.darkmode
-      //document.getElementsByTagName('body').sytle
-    },
+    }, 
     setloading(value) {
       this.loading = value
     }
