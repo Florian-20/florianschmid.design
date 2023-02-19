@@ -7,6 +7,7 @@
         <projectitem v-bind:project="project" :darkmode="darkmode"></projectitem>
       </router-link>
     </div>
+    <footer></footer>
     <div id="whois">
       <p>© 2021 Florian Schmid</p>
     </div>
@@ -15,53 +16,56 @@
 
 <script>
 
-import projectitem from '@/components/project_box.vue'
-import topnav from '@/components/nav.vue'
-import projects from '@/projects.json'
-import { gsap } from 'gsap'
+  import projectitem from '@/components/project_box.vue'
+  import topnav from '@/components/nav.vue'
+  import footer from '@/components/footer.vue'
+  import projects from '@/projects.json'
+  import { gsap } from 'gsap'
 
 
 
 
-export default {
-  components: {
-    projectitem,
-    topnav
-  },
-  metaInfo : {
-    Meta: [
-      { name: 'description', content: '2021 Work Florian Schmid'}
-    ]
-  },
-  props: ['darkmode', 'loading'],
-  data () {
-    return {
-      projects
-    }
-  },
-  methods: {
-    onload() {
-      var tl = gsap.timeline()
-      tl.from('#toptitle', {
-        duration: 0.8,
-        y: 100,
-        opacity: 0,
-        ease: "circ.out",
-      }),
-      tl.from('#work', {
-        duration: 0.8,
-        opacity: 0,
-        ease: "circ.out",
-        delay: 0.4
-      })
-    }
-  },
-  mounted() {
-    if (this.loading == true) {
-      this.onload()
+  export default {
+    components: {
+      projectitem,
+      topnav,
+      footer
+    },
+    metaInfo : {
+      Meta: [
+        { name: 'description', content: '2021 Work Florian Schmid'}
+      ]
+    },
+    props: ['darkmode', 'loading'],
+    data () {
+      return {
+        projects
+      }
+    },
+    methods: {
+      onload() {
+        var tl = gsap.timeline()
+        tl.from('#toptitle', {
+          duration: 0.8,
+          y: 100,
+          opacity: 0,
+          ease: "circ.out",
+        }),
+        tl.from('#work', {
+          duration: 0.8,
+          opacity: 0,
+          ease: "circ.out",
+          delay: 0.4
+        })
+      }
+    },
+    mounted() {
+      if (this.loading == true) {
+        this.onload()
+      }
     }
   }
-}
+  
 </script>
 
 <style lang="scss">
@@ -85,9 +89,8 @@ export default {
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  border-left: 1px  var(--dark) solid;
-  border-top: 1px  var(--dark) solid;
   animation: workanim 0.75s 3s forwards;
+  border-radius: 10px;
 }
 
 .workitems {

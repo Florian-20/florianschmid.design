@@ -4,7 +4,7 @@
       <p class="slide-nav" v-if="mobileView">Florian<br>Schmid</p>
       <span v-if="!mobileView"></span>
       <router-link class="slide-nav" v-if="!mobileView" to="/" id="second">Work</router-link>
-      <router-link class="slide-nav" to="/about&contact" id="third">About&<br>Contact</router-link>
+      <router-link class="slide-nav" to="/about&contact" id="third">About & Contact</router-link>
       <div class="slide-nav" id="modeswitch" v-on:click="$emit('switch-mode')">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 57.89">
           <g id="Ebene_2" data-name="Ebene 2">
@@ -23,73 +23,73 @@
 
 <script>
 
-import { gsap } from 'gsap'
+  import { gsap } from 'gsap'
 
-export default {
-  name: 'topnav',
-  props: ['darkmode', 'loading'],
-  data () {
-    return {
-      mobileView: true
-    }
-  },
-  methods: {
-    handleView () {
-      this.mobileView = window.innerWidth <= 990
+  export default {
+    name: 'topnav',
+    props: ['darkmode', 'loading'],
+    data () {
+      return {
+        mobileView: true
+      }
     },
-    checkSwitch() {
-      if (this.darkmode == true) {
-        gsap.set('#State', {
-          x: 40
+    methods: {
+      handleView () {
+        this.mobileView = window.innerWidth <= 990
+      },
+      checkSwitch() {
+        if (this.darkmode == true) {
+          gsap.set('#State', {
+            x: 40
+          })
+        }
+      },
+      switchModeAnim() {
+        var tween = gsap.fromTo('#State', {
+            duration: 0.5,
+            ease: 'power3.inOut',
+            x: '0',
+          },
+          {
+            duration: 0.5,
+            x:'40'
+          })
+        if (this.darkmode == true) {
+          tween.play()
+        }
+        if (this.darkmode == false) {
+          tween.reverse(0)
+        }
+      },
+      onload() {
+        var tl = gsap.timeline()
+        tl.from('.slide-nav', {
+            delay: 0.5,
+            transformOrigin: "Bottom Left",
+            rotateZ: "3deg",
+            duration: 0.8,
+            opacity: 0,
+            y: 30,
+            stagger: 0.1,
+            ease: "power4"
         })
       }
     },
-    switchModeAnim() {
-      var tween = gsap.fromTo('#State', {
-          duration: 0.5,
-          ease: 'power3.inOut',
-          x: '0',
-        },
-        {
-          duration: 0.5,
-          x:'40'
-        })
-      if (this.darkmode == true) {
-         tween.play()
-      }
-      if (this.darkmode == false) {
-        tween.reverse(0)
+    watch: {
+      darkmode() {
+        this.switchModeAnim()
       }
     },
-    onload() {
-      var tl = gsap.timeline()
-      tl.from('.slide-nav', {
-          delay: 0.5,
-          transformOrigin: "Bottom Left",
-          rotateZ: "3deg",
-          duration: 0.8,
-          opacity: 0,
-          y: 30,
-          stagger: 0.1,
-          ease: "power4"
-      })
-    }
-  },
-  watch: {
-    darkmode() {
-      this.switchModeAnim()
-    }
-  },
-  created() {
-    this.handleView()
-  },
-  mounted() {
-    this.checkSwitch()
-    if (this.loading == true) {
-      this.onload()
+    created() {
+      this.handleView()
+    },
+    mounted() {
+      this.checkSwitch()
+      if (this.loading == true) {
+        this.onload()
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>
@@ -125,12 +125,15 @@ export default {
 #first{
   animation-delay: 0.6s;
 }
+
 #second {
   animation-delay: 0.8s;
 }
+
 #third {
   animation-delay: 1s;
 }
+
 #fourth {
   animation-delay: 1.2s;
 }
@@ -139,6 +142,7 @@ export default {
   margin-top: 2rem;
   opacity: 0%;
 }
+
 
 // --- Mobile --- // 
 

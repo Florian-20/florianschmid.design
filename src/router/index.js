@@ -18,6 +18,11 @@ const routes = [
     name: 'About-Contact',
     component: () => import(/* webpackChunkName: "about" */ '../views/About-Contact.vue')
   },
+  { 
+    path: '/panier-bio',
+    name: 'Panier-Bio',
+    component: () => import(/*webpackChunkName: "Panier-Bio" */ '../views/Panier-Bio.vue')
+  },
   {
     path: '/edicion19',
     name: 'Edicion19',

@@ -3,10 +3,7 @@
         <div class="container">
             <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
             <div class="project">
-                <div class="full-size slidein">
-                    <img src="../assets/images/Echokammer/Echokammer_01.jpg" alt="Forum Poster">
-                </div>
-                <div class="half-half">
+                <div class="half-half slidein">
                     <div class="half">
                         <img src="../assets/images/Echokammer/Echokammer_02.jpg" alt="">
                     </div>

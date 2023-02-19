@@ -43,11 +43,13 @@ p {
 .project_item {
     color: var(--dark);
     height: 350px;
-    border-right: 1px solid var(--dark);
-    border-bottom: 1px solid var(--dark);
+    border: 1px solid var(--dark);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: .5rem;
+    margin: .5rem;
     img {
         position: relative;
         height: 70%;
