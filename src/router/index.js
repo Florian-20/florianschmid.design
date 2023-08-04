@@ -18,6 +18,11 @@ const routes = [
     name: 'About-Contact',
     component: () => import(/* webpackChunkName: "about" */ '../views/About-Contact.vue')
   },
+  {
+    path: '/Endless-Engines',
+    name: 'Endless-Engines',
+    component: () => import(/*webpackChunkName: "Endless-Engines" */ '../views/EndlessEngines.vue')
+  },
   { 
     path: '/panier-bio',
     name: 'Panier-Bio',

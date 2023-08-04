@@ -4,11 +4,12 @@
             <div class="back" @click="$router.push(prevproject)" v-bind:style='{"background-color" : (nexthover? "var(--dark)" : "var(--light)" ), "color" : (nexthover? "var(--light" : "var(--dark)")}' @mouseover="nexthover = true" @mouseleave="nexthover = false">
                 <p>Previous</p>
             </div>
+            <span></span>
             <div class="next" @click="$router.push(nextproject)" v-bind:style='{"background-color" : (prevhover? "var(--dark)" : "var(--light)" ), "color" : (prevhover? "var(--light" : "var(--dark)")}' @mouseover="prevhover = true" @mouseleave="prevhover = false">
                 <p>next</p>
             </div>
         </div>
-        <div id="whois"><p>© 2021 Florian Schmid</p></div>
+        <div class="whois"><p>© 2021 Florian Schmid</p></div>
     </div>
 </template>
 
@@ -58,38 +59,51 @@ export default {
 <style lang="scss" scoped>
 
 #p_footer {
-    left: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
+    width: 100%;
     height: auto;
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .footernav {
+    justify-content: space-around;
     height: 2rem;
-    border-top: 1px solid var(--dark);
-    border-bottom: 1px solid var(--dark);
     display: flex;
     left: 0;
     right: 0;
+    span {
+        width: 5vw;
+    }
 }
 
 .back {
-    border-right: 1px solid var(--dark);
-    width: 50%;
+    padding: min(1rem);
+    width: 10vw;    
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid var(--dark);
+    border-radius: 1rem;
+}
+
+.back:hover {
+    cursor: pointer;
 }
 
 .next {
-    width: 50%;
+    padding: min(1rem);
     display: flex;
+    width: 10vw;
     justify-content: center;
     align-items: center;
+    border: 1px solid var(--dark);
+    border-radius: 1rem;
+}
+
+.next:hover {
+    cursor: pointer;
 }
 
 </style>

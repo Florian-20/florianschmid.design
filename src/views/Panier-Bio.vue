@@ -41,8 +41,8 @@ export default {
                 desc: 'An animation for Ferme de la Faye',
                 client: 'Ferme de la Faye',
                 credits: '-',
-                desc1: "Ferme de la Faye is a farm which delivers fresh, regional and organic food to your home. The food is delivered each week to the customer by the swiss post.",
-                desc2: "Therefor a short animation has been created explaining what the product is and how the distribution works. "
+                desc1: "Ferme de la Faye is a farm which delivers fresh, regional and organic food to your home. This spot was shown at the Festival du Film Vert.",
+                desc2: ""
             },
             pageLoaded: false,
             vim1: ''
@@ -74,7 +74,7 @@ export default {
         srcloader() {
             setTimeout(() => {
             this.vim1 = 'https://player.vimeo.com/video/795163876?'
-            }, 2000)
+            }, 500)
         }
     }
 }

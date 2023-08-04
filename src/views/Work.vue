@@ -7,10 +7,6 @@
         <projectitem v-bind:project="project" :darkmode="darkmode"></projectitem>
       </router-link>
     </div>
-    <footer></footer>
-    <div id="whois">
-      <p>© 2021 Florian Schmid</p>
-    </div>
   </div>
 </template>
 
@@ -18,18 +14,14 @@
 
   import projectitem from '@/components/project_box.vue'
   import topnav from '@/components/nav.vue'
-  import footer from '@/components/footer.vue'
   import projects from '@/projects.json'
   import { gsap } from 'gsap'
-
-
 
 
   export default {
     components: {
       projectitem,
       topnav,
-      footer
     },
     metaInfo : {
       Meta: [
@@ -85,6 +77,7 @@
   margin-left: 2vw;
   margin-right: 2vw;
   margin-top: 5vh;
+  margin-bottom: 5rem;
   width: auto;
   height: auto;
   display: flex;
@@ -98,6 +91,7 @@
   flex: 1 1 0px;
   width: auto;
   min-width: 375px;
+  background-color: none;
 }
 
 // --- responsiv --- //

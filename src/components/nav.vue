@@ -4,7 +4,7 @@
       <p class="slide-nav" v-if="mobileView">Florian<br>Schmid</p>
       <span v-if="!mobileView"></span>
       <router-link class="slide-nav" v-if="!mobileView" to="/" id="second">Work</router-link>
-      <router-link class="slide-nav" to="/about&contact" id="third">About & Contact</router-link>
+      <router-link class="slide-nav" to="/about&contact" id="third">About&<br>Contact</router-link>
       <div class="slide-nav" id="modeswitch" v-on:click="$emit('switch-mode')">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 57.89">
           <g id="Ebene_2" data-name="Ebene 2">

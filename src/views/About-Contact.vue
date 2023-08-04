@@ -27,7 +27,7 @@
               I am a Graphic Designer and self-taught front end Web developer based in Switzerland.
               <!--I enjoy combining my variety of skills to bring projects foreward.-->
               <!--I am pivoting between my skills-->
-              I see my work as the ending dot of my thoughts, at the end it's about bringing things to point.
+              I like to craft things and express myself in the language of design.
               That's all you need to know, everything else shows up in my work.
             </h2>
           </div>
@@ -50,7 +50,7 @@
             <div class="skillset">
               <h3>3D&Modelling</h3>
               <p>→Autodesk Maya & Arnold render</p>
-              <p>→Cinema 4D</p>
+              <p>→Blender</p>
               <p>→Substance Designer</p>
             </div>
           </div>
@@ -198,6 +198,10 @@ export default {
 
 #mail-to {
   cursor: pointer;
+}
+
+#mail-to:hover {
+  text-decoration: underline;
 }
 
 @media screen and(max-width: 990px) {

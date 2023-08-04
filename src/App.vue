@@ -149,8 +149,8 @@ h3 {
 
 p {
   font-family: "Neue Machina Regular";
-  font-size: 18px;
-  line-height: 1.2;
+  font-size: 20px;
+  line-height: 1.4;
   margin: 0;
   text-transform: uppercase;
 }
@@ -268,24 +268,11 @@ a {
  }
 }
 
-#whois {
-  height: 4rem;
-  background-color: var(--light);
-  display: flex;
-  left: 0;
-  right: 0;
-  justify-content: center;
-  p {
-    margin-top: 2rem;
-    font-size: 14px;
-  }
-}
-
 // ---- Project rules --- //
 
 .project {
     margin-top: 7rem;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
     margin-left: 7vw;
     margin-right: 7vw;
     height: auto;
@@ -306,11 +293,22 @@ a {
   height: auto;
   width: 100%;
   justify-content: center;
-  margin-top: 12rem;
+  margin-top: 5rem;
   iframe {
     width: calc(1.66 * 640px);
     height: calc(1.66 * 360px);
   }
+}
+
+.whois {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  right: 0;
+  left: 0;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 }
 
 // --- Mobile --- //

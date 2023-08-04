@@ -3,11 +3,6 @@
         <div class="container">
             <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
             <div class="project">
-                <!--<div id="galleryfilter">
-                    <div class="filterbox"><p>Filter</p></div>
-                    <div class="filterbox"><p>Date</p></div>
-                    <div class="filterbox"><p>Type</p></div>
-                </div>-->
                 <div id="arch-gallery" class="slidein">
                     <img src="../assets/images/Archive/Blackrock.jpg" alt="">
                     <img src="../assets/images/Archive/Wolf-Exp.jpg" alt="">
