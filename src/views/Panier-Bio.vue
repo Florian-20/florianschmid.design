@@ -14,8 +14,6 @@
 
 <script>
 
-//https://player.vimeo.com/video/361662647
-//https://player.vimeo.com/video/482303610
 
 import projecttop from '@/components/projecttop.vue'
 import projectfooter from "@/components/projectfooter.vue";
@@ -34,7 +32,7 @@ export default {
     data() {
         return {
             projectdata: {
-                name: 'Panier-Bio',
+                name: 'Test',
                 date: '2023',
                 counter: '❶',
                 type: '3D animation',

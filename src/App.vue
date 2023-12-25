@@ -1,12 +1,18 @@
 <template>
   <div id="app">
-    <router-view :loading="loading" v-on:switch-mode="onSwitch" :darkmode="darkmode" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'/>
+    <topnav :darkmode="darkmode" :loading="loading" @switch-mode="onSwitch" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'></topnav>
+    <router-view :loading="loading" :darkmode="darkmode" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'/>
   </div>
 </template>
 
 <script>
 
+import topnav from '@/components/nav.vue'
+
 export default {
+  components: {
+    topnav
+  },
   data () {
     return {
       darkmode: false,
@@ -16,6 +22,7 @@ export default {
   methods: {
     onSwitch() {
       this.darkmode = !this.darkmode
+      console.log("Switch mode")
     }, 
     setloading(value) {
       this.loading = value
@@ -25,14 +32,6 @@ export default {
     setTimeout(() => {
       this.setloading(false)
     }, 3000)
-  },
-  created() {
-    var timenow = new Date()
-    var time = timenow.getHours()
-    console.log("%c 👋 Welcome inspector. It's " + time + " a clock.", "font-size: 15px");
-    if (time >= 18 || time <= 8) {
-      this.darkmode = true
-    }
   }
 }
 </script>
