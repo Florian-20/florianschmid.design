@@ -146,10 +146,8 @@
 
 @media screen and (max-width: 600px){
   #nav {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
     justify-content: space-between;
+    padding: 1rem;
     a {
       margin-left: unset;
     }

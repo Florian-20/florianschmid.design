@@ -279,14 +279,6 @@ a {
     flex-direction: column;
 }
 
-
-.container {
-  margin-top: 4.5vh;
-  margin-left: 2vw;
-  margin-right: 2vw;
-  height: auto;
-}
-
 .vimeo-container {
   display: flex;
   height: auto;
@@ -322,11 +314,6 @@ a {
 }
 
 @media screen and(max-width: 600px) {
-    .container {
-      margin-top: 1rem;
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
     .vimeo-container {
       margin-top: 0rem;
       margin-bottom: 0rem;
