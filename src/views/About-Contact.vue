@@ -1,6 +1,6 @@
 <template>
   <div id="about" class="grain">
-    <div class="container">
+    <div class="projectPageContainer">
       <div id="about-container">
         <div id="intro" class="about-flex slide-small">
           <p>Intro</p>

@@ -33,7 +33,7 @@ export default {
             }
         }
     },
-    name: "projectfooter",
+    name: "projectFooter",
     created() {
         // Find the current Path in the projects list
         // If name = null causes error. check if null, if pass

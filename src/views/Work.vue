@@ -11,7 +11,7 @@
 
 <script>
 
-  import projectitem from '@/components/project_box.vue'
+  import projectitem from '@/components/projectItem.vue'
   import projects from '@/projects.json'
   import { gsap } from 'gsap'
 
@@ -96,8 +96,12 @@
 @media screen and (max-width: 600px) {
   #toptitle {
     font-size: 100px;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #work {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .workitems {
     min-width: 300px;

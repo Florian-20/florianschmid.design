@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
-        <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
+        <div class="projectPageContainer">
+            <projectTop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projectTop>
             <div class="project">
                 <div class="full-size slidein">
                     <img src="../assets/images/Migros/M03_Tasche.jpg" alt="Migros Tasche">
@@ -26,22 +26,22 @@
                 </div>
             </div>
         </div>
-        <projectfooter v-if="pageLoaded"/>
+        <projectFooter v-if="pageLoaded"/>
     </div>
 </template>
 
 <script>
 
-import projecttop from '@/components/projecttop.vue'
-import projectfooter from '@/components/projectfooter.vue'
+import projectTop from '@/components/projectTop.vue'
+import projectFooter from '@/components/projectFooter.vue'
 
 import { gsap } from 'gsap'
 
 export default {
     name: 'Migros',
     components: {
-        projecttop,
-        projectfooter
+        projectTop,
+        projectFooter
     },
     metaInfo : {
         Meta: [
@@ -54,7 +54,7 @@ export default {
                 name: 'Migros',
                 date: '2019',
                 counter: '❷',
-                type: 'won bag design competition',
+                type: 'concept &    3d visualisation',
                 desc: 'Won competiton for Migros new bag design',
                 client: 'MIGROS',
                 credits: '40x44',

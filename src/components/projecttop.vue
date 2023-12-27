@@ -8,9 +8,9 @@
           <div id="infobox" class="slide-small">
             <h2 id="world">{{ projectdata.counter }}</h2>
             <div class="credits">
-              <p>CLIENT<span/>{{ projectdata.client }}</p>
+              <p>DATE<span/>{{ projectdata.date }}</p>
               <div></div>
-              <p>SIZE<span/>{{ projectdata.credits }}</p>
+              <p>TYPE<span/>{{ projectdata.type }}</p>
             </div>
           </div>
         </div>
@@ -30,7 +30,7 @@
 import { gsap } from "gsap";
 
 export default {
-  name: "projecttop",
+  name: "projectTop",
   props: {
     projectdata: null,
     startAnimation: {
@@ -130,8 +130,6 @@ export default {
 }
 
 .top-page-container {
-  margin-left: 7vw;
-  margin-right: 7vw;
   margin-top: 2.5vh;
   display: flex;
   flex-direction: column;

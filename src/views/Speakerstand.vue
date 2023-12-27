@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
-        <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
+        <div class="projectPageContainer">
+            <projectTop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projectTop>
             <div class="project slidein">
               <div class="full-size">
                 <img src="../assets/images/Speaker/Speakerstand_03.jpg" alt="speaker stand">
@@ -35,20 +35,20 @@
               </div>
             </div>
         </div>
-        <projectfooter v-if="pageLoaded"/>
+        <projectFooter v-if="pageLoaded"/>
     </div>
 </template>
 
 <script>
-import projecttop from "@/components/projecttop.vue";
-import projectfooter from "@/components/projectfooter.vue";
+import projectTop from "@/components/projectTop.vue";
+import projectFooter from "@/components/projectFooter.vue";
 import { gsap } from "gsap";
 
 
 export default {
   components: {
-    projecttop,
-    projectfooter
+    projectTop,
+    projectFooter
   },
   metaInfo : {
       Meta: [

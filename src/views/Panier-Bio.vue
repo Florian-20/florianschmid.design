@@ -1,28 +1,28 @@
 <template>
     <div id="page" class="grain">
-        <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
+        <div class="projectPageContainer">
+            <projectTop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projectTop>
             <div class="project">
                 <div class="vimeo-container">
                     <iframe :src="vim1" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-        <projectfooter v-if="pageLoaded"/>
+        <projectFooter v-if="pageLoaded"/>
     </div>
 </template>
 
 <script>
 
 
-import projecttop from '@/components/projecttop.vue'
-import projectfooter from "@/components/projectfooter.vue";
+import projectTop from '@/components/projectTop.vue'
+import projectFooter from "@/components/projectFooter.vue";
 import { gsap } from 'gsap'
 
 export default {
     components: {
-        projecttop,
-        projectfooter
+        projectTop,
+        projectFooter
     },
     metaInfo : {
         Meta: [
@@ -39,8 +39,8 @@ export default {
                 desc: 'An animation for Ferme de la Faye',
                 client: 'Ferme de la Faye',
                 credits: '-',
-                desc1: "Ferme de la Faye is a farm which delivers fresh, regional and organic food to your home. This spot was shown at the Festival du Film Vert.",
-                desc2: ""
+                desc1: "Ferme de la Faye is a farm located in Fribourg which delivers fresh, regional and organic food to your home. You can choose between many products including bread, fruits, vegetables and others, all produced in the region in a substainable way.",
+                desc2: "To introduce new customors to this concept, I created a spot which was shown on the Festival du Film Vert in Fribourg."
             },
             pageLoaded: false,
             vim1: ''

@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
-        <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
+        <div class="projectPageContainer">
+            <projectTop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projectTop>
             <div class="project slidein">
               <div id="howwork">
                 <h2>Okay, but how does it actually work?</h2>
@@ -65,19 +65,19 @@
               </div>
             </div>
         </div>
-        <projectfooter v-if="pageLoaded"/>
+        <projectFooter v-if="pageLoaded"/>
     </div>
 </template>
 
 <script>
-import projecttop from "@/components/projecttop.vue";
-import projectfooter from "@/components/projectfooter.vue";
+import projectTop from "@/components/projectTop.vue";
+import projectFooter from "@/components/projectFooter.vue";
 import { gsap } from "gsap";
 
 export default {
   components: {
-    projecttop,
-    projectfooter
+    projectTop,
+    projectFooter
   },
   metaInfo : {
       Meta: [

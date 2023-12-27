@@ -3,7 +3,7 @@
       <h3 id="first" class="slide-nav" v-if="!mobileView">Florian Schmid</h3>
       <p class="slide-nav" v-if="mobileView">Florian<br>Schmid</p>
       <span v-if="!mobileView"></span>
-      <router-link class="slide-nav" v-if="!mobileView" to="/" id="second">Work</router-link>
+      <router-link class="slide-nav" to="/" id="second">Work</router-link>
       <router-link class="slide-nav" to="/about&contact" id="third">About&<br>Contact</router-link>
       <div class="slide-nav" id="modeswitch" @click="$emit('switch-mode')">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 57.89">

@@ -269,25 +269,32 @@ a {
 
 // ---- Project rules --- //
 
+.projectPageContainer {
+  margin-left: 7vw;
+  margin-right: 7vw;
+  max-width: 1400px;
+}
+
 .project {
-    margin-top: 7rem;
-    margin-bottom: 5rem;
-    margin-left: 7vw;
-    margin-right: 7vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
+  margin-top: 5rem;
+  margin-bottom: 7rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .vimeo-container {
-  display: flex;
-  height: auto;
-  width: 100%;
-  justify-content: center;
   margin-top: 5rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
   iframe {
-    width: calc(1.66 * 640px);
-    height: calc(1.66 * 360px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -308,8 +315,10 @@ a {
     .project {
         margin-top: 4rem;
         margin-bottom: 4rem;
-        margin-left: unset;
-        margin-right: unset;
+    }
+    .projectPageContainer {
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
 }
 

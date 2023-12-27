@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
-        <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
+        <div class="projectPageContainer">
+            <projectTop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projectTop>
             <div class="project">
                 <div class="full-size slidein">
                     <img src="../assets/images/Citrus/Yellow-Citrus.jpg" alt="Poster littering">
@@ -23,23 +23,21 @@
                 </div>
             </div>
         </div>
-        <projectfooter v-if="pageLoaded"/>
+        <projectFooter v-if="pageLoaded"/>
     </div>
 </template>
 
 <script>
 
-//https://player.vimeo.com/video/361662647
-//https://player.vimeo.com/video/482303610
 
-import projecttop from '@/components/projecttop.vue'
-import projectfooter from "@/components/projectfooter.vue";
+import projectTop from '@/components/projectTop.vue'
+import projectFooter from "@/components/projectFooter.vue";
 import { gsap } from 'gsap'
 
 export default {
     components: {
-        projecttop,
-        projectfooter
+        projectTop,
+        projectFooter
     },
     metaInfo : {
         Meta: [

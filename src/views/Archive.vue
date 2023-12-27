@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
-        <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
+        <div class="projectPageContainer">
+            <projectTop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projectTop>
             <div class="project">
                 <div id="arch-gallery" class="slidein">
                     <img src="../assets/images/Archive/Blackrock.jpg" alt="">
@@ -16,13 +16,13 @@
 
 <script>
 
-import projecttop from '@/components/projecttop.vue'
+import projectTop from '@/components/projectTop.vue'
 import { gsap } from 'gsap'
 
 export default {
     name: 'archive',
     components: {
-        projecttop
+        projectTop
     },
     data() {
         return {
