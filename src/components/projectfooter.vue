@@ -1,5 +1,5 @@
 <template>
-    <div id="p_footer">
+    <div id="pFooter">
         <div class="footernav">
             <div class="back" @click="$router.push(prevproject)" v-bind:style='{"background-color" : (nexthover? "var(--dark)" : "var(--light)" ), "color" : (nexthover? "var(--light" : "var(--dark)")}' @mouseover="nexthover = true" @mouseleave="nexthover = false">
                 <p>Previous</p>
@@ -58,7 +58,7 @@ export default {
 
 <style lang="scss" scoped>
 
-#p_footer {
+#pFooter {
     width: 100%;
     height: auto;
     position: relative;
@@ -80,7 +80,7 @@ export default {
 
 .back {
     padding: min(1rem);
-    width: 10vw;    
+    width: 8rem;    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,7 +95,7 @@ export default {
 .next {
     padding: min(1rem);
     display: flex;
-    width: 10vw;
+    width: 8rem;
     justify-content: center;
     align-items: center;
     border: 1px solid var(--dark);
@@ -104,6 +104,17 @@ export default {
 
 .next:hover {
     cursor: pointer;
+}
+
+// -- Responsiv --- //
+
+@media screen and (max-width: 600px) {
+    .next {
+        width: 5rem;
+    }
+    .back {
+        width: 5rem;
+    }
 }
 
 </style>
