@@ -273,6 +273,7 @@ a {
   margin-left: 7vw;
   margin-right: 7vw;
   max-width: 1400px;
+  align-self: center;
 }
 
 .project {
@@ -317,8 +318,8 @@ a {
         margin-bottom: 4rem;
     }
     .projectPageContainer {
-      margin-left: 1rem;
-      margin-right: 1rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
     }
 }
 
@@ -326,6 +327,10 @@ a {
     .vimeo-container {
       margin-top: 0rem;
       margin-bottom: 0rem;
+    }
+    .projectPageContainer {
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
 }
 </style>

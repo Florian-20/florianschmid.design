@@ -143,6 +143,9 @@ export default {
 
 <style lang="scss" scoped>
 #page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   position: absolute;
   height: auto;
   width: 100%;
@@ -158,6 +161,7 @@ export default {
   background-color: #151515;
   display: flex;
   justify-content: center;
+
   svg {
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -168,6 +172,7 @@ export default {
 .full-size {
   margin-top: 0.2rem;
   width: 100%;
+
   img {
     max-width: 100%;
     max-height: 100%;
@@ -185,6 +190,7 @@ export default {
 .half-half {
   margin-top: 0.2rem;
   display: flex;
+
   span {
     width: 0.4rem;
   }
@@ -192,6 +198,7 @@ export default {
 
 .half {
   width: auto;
+
   img {
     max-width: 100%;
     max-height: 100%;
@@ -206,6 +213,7 @@ export default {
   cursor: pointer;
   margin-top: 1rem;
   margin-bottom: 5rem;
+
   p {
     text-transform: unset;
     margin-top: 1rem;
@@ -215,17 +223,18 @@ export default {
 // --- Media --- //
 
 @media screen and(max-width: 600px) {
-    .half-half {
-        margin-top: 0;
-        flex-direction: column;
+  .half-half {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .half {
+    margin-top: 0.2rem;
+  }
+
+  #svg-back {
+    svg {
+      width: 80%;
     }
-    .half {
-        margin-top: 0.2rem;
-    }
-    #svg-back {
-      svg {
-        width: 80%;
-      }
-    }
-}
-</style>
+  }
+}</style>

@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
         <div class="projectPageContainer">
-            <projectTop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projectTop>
+            <projectTop v-bind:projectdata='projectdata' :start-animation="pageLoaded"></projectTop>
             <div class="project">
                 <div class="half-half slidein">
                     <div class="half">
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <projectFooter v-if="pageLoaded"/>
+        <projectFooter v-if="pageLoaded" />
     </div>
 </template>
 
@@ -58,7 +58,7 @@ export default {
             pageLoaded: false
         }
     },
-    created () {
+    created() {
         window.scroll(0, 0)
     },
     mounted() {
@@ -85,8 +85,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 #page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     position: absolute;
     height: auto;
     width: 100%;
@@ -96,10 +98,12 @@ export default {
 .full-size {
     margin-top: 0.1rem;
     width: 100%;
+
     img {
         max-width: 100%;
         max-height: 100%;
     }
+
     video {
         max-width: 100%;
         max-height: 100%;
@@ -110,6 +114,7 @@ export default {
     margin-top: 0.1rem;
     width: auto;
     padding: 4rem;
+
     img {
         max-width: 100%;
         max-height: 100%;
@@ -119,6 +124,7 @@ export default {
 .half-half {
     margin-top: .1rem;
     display: flex;
+
     span {
         width: .5rem;
     }
@@ -128,6 +134,7 @@ export default {
     width: auto;
     padding: 0rem;
     background-color: #adadad;
+
     img {
         width: 100%;
         height: 100%;
@@ -147,12 +154,13 @@ export default {
         margin-top: 0;
         flex-direction: column;
     }
+
     .half {
         margin-top: 0.1rem;
         padding: 4rem;
     }
+
     .website {
         padding: 2rem;
     }
-}
-</style>
+}</style>

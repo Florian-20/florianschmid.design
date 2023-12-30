@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
         <div class="projectPageContainer">
-            <projectTop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projectTop>
+            <projectTop v-bind:projectdata='projectdata' :start-animation="pageLoaded"></projectTop>
             <div class="project">
                 <div class="full-size slidein">
                     <img src="../assets/images/Citrus/Yellow-Citrus.jpg" alt="Poster littering">
@@ -23,7 +23,7 @@
                 </div>
             </div>
         </div>
-        <projectFooter v-if="pageLoaded"/>
+        <projectFooter v-if="pageLoaded" />
     </div>
 </template>
 
@@ -39,9 +39,9 @@ export default {
         projectTop,
         projectFooter
     },
-    metaInfo : {
+    metaInfo: {
         Meta: [
-            { name: 'description', content: 'A campaign against the overuse of packagin'}
+            { name: 'description', content: 'A campaign against the overuse of packagin' }
         ]
     },
     data() {
@@ -62,7 +62,7 @@ export default {
             vim2: ''
         }
     },
-    created () {
+    created() {
         window.scroll(0, 0)
     },
     mounted() {
@@ -87,8 +87,8 @@ export default {
         },
         srcloader() {
             setTimeout(() => {
-            this.vim1 = 'https://player.vimeo.com/video/361662647'
-            this.vim2 = 'https://player.vimeo.com/video/482303610'
+                this.vim1 = 'https://player.vimeo.com/video/361662647'
+                this.vim2 = 'https://player.vimeo.com/video/482303610'
             }, 2000)
         }
     }
@@ -96,8 +96,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 #page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     position: absolute;
     height: auto;
     width: 100%;
@@ -107,6 +109,7 @@ export default {
 .full-size {
     margin-top: 0.1rem;
     width: 100%;
+
     img {
         max-width: 100%;
         max-height: 100%;
@@ -117,6 +120,7 @@ export default {
     margin-top: 0.1rem;
     width: auto;
     padding: 4rem;
+
     img {
         max-width: 100%;
         max-height: 100%;
@@ -126,6 +130,7 @@ export default {
 .half-half {
     margin-top: .1rem;
     display: flex;
+
     span {
         width: .4rem;
     }
@@ -133,6 +138,7 @@ export default {
 
 .half {
     width: auto;
+
     img {
         max-width: 100%;
         max-height: 100%;
@@ -154,8 +160,8 @@ export default {
         margin-top: 0;
         flex-direction: column;
     }
+
     .half {
         margin-top: 0.1rem;
     }
-}
-</style>
+}</style>
