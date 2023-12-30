@@ -71,7 +71,7 @@ export default {
         name: "Migros",
         date: "2019",
         counter: "❷",
-        type: "concept &    3d visualisation",
+        type: "Concept & design",
         desc: "Won competiton for Migros new bag design",
         client: "MIGROS",
         credits: "40x44",

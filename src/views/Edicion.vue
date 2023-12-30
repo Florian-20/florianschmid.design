@@ -64,7 +64,7 @@ export default {
         name: "edicion 19",
         date: "2019",
         counter: "❹",
-        type: "CD",
+        type: "Corporate Identity",
         desc: "Identity for a small book forum",
         client: "EDICION19",
         credits: "A1",

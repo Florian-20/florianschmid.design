@@ -61,7 +61,7 @@ export default {
         name: "Speaker Stands",
         date: "2021",
         counter: "❻",
-        type: "Woodwork",
+        type: "Design & Woodwork",
         desc: "Walnut speaker stands for Klipsch RP-600m",
         client: "Pers. Project",
         credits: "-",
