@@ -32,6 +32,14 @@ export default {
     setTimeout(() => {
       this.setloading(false)
     }, 3000)
+  },
+  created() {
+    var timenow = new Date()
+    var time = timenow.getHours()
+    console.log("%c 👋 Welcome inspector. It's " + time + " a clock.", "font-size: 15px");
+    if (time >= 18 || time <= 8) {
+      this.darkmode = true
+    }
   }
 }
 </script>

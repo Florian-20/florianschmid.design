@@ -50,7 +50,7 @@ export default {
                 name: 'Citrus Packus',
                 date: '2017',
                 counter: '❶',
-                type: 'poster campaign& animation',
+                type: 'posters & animation',
                 desc: 'A campaign against the overuse of packaging',
                 client: 'SCHOOLPROJECT',
                 credits: 'A0',
