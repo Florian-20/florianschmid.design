@@ -1,6 +1,5 @@
 <template>
   <div class="grain">
-    <topnav :darkmode="darkmode" :loading="loading"  v-on:switch-mode="$emit('switch-mode')"></topnav>
     <h1 id="toptitle">Work</h1>
     <div id="work">
       <router-link class="workitems" :to="project.name" v-for="project in projects" v-bind:key="project.name">
@@ -12,8 +11,7 @@
 
 <script>
 
-  import projectitem from '@/components/project_box.vue'
-  import topnav from '@/components/nav.vue'
+  import projectitem from '@/components/projectItem.vue'
   import projects from '@/projects.json'
   import { gsap } from 'gsap'
 
@@ -21,7 +19,6 @@
   export default {
     components: {
       projectitem,
-      topnav,
     },
     metaInfo : {
       Meta: [
@@ -74,8 +71,8 @@
 }
 
 #work {
-  margin-left: 2vw;
-  margin-right: 2vw;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   margin-top: 5vh;
   margin-bottom: 5rem;
   width: auto;
@@ -99,8 +96,12 @@
 @media screen and (max-width: 600px) {
   #toptitle {
     font-size: 100px;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #work {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .workitems {
     min-width: 300px;

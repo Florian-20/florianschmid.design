@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
-        <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
+        <div class="projectPageContainer">
+            <projectTop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projectTop>
             <div class="project slidein">
               <div id="howwork">
                 <h2>Okay, but how does it actually work?</h2>
@@ -65,19 +65,19 @@
               </div>
             </div>
         </div>
-        <projectfooter v-if="pageLoaded"/>
+        <projectFooter v-if="pageLoaded"/>
     </div>
 </template>
 
 <script>
-import projecttop from "@/components/projecttop.vue";
-import projectfooter from "@/components/projectfooter.vue";
+import projectTop from "@/components/projectTop.vue";
+import projectFooter from "@/components/projectFooter.vue";
 import { gsap } from "gsap";
 
 export default {
   components: {
-    projecttop,
-    projectfooter
+    projectTop,
+    projectFooter
   },
   metaInfo : {
       Meta: [
@@ -143,6 +143,9 @@ export default {
 
 <style lang="scss" scoped>
 #page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   position: absolute;
   height: auto;
   width: 100%;
@@ -158,6 +161,7 @@ export default {
   background-color: #151515;
   display: flex;
   justify-content: center;
+
   svg {
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -168,6 +172,7 @@ export default {
 .full-size {
   margin-top: 0.2rem;
   width: 100%;
+
   img {
     max-width: 100%;
     max-height: 100%;
@@ -185,6 +190,7 @@ export default {
 .half-half {
   margin-top: 0.2rem;
   display: flex;
+
   span {
     width: 0.4rem;
   }
@@ -192,6 +198,7 @@ export default {
 
 .half {
   width: auto;
+
   img {
     max-width: 100%;
     max-height: 100%;
@@ -206,6 +213,7 @@ export default {
   cursor: pointer;
   margin-top: 1rem;
   margin-bottom: 5rem;
+
   p {
     text-transform: unset;
     margin-top: 1rem;
@@ -215,17 +223,18 @@ export default {
 // --- Media --- //
 
 @media screen and(max-width: 600px) {
-    .half-half {
-        margin-top: 0;
-        flex-direction: column;
+  .half-half {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .half {
+    margin-top: 0.2rem;
+  }
+
+  #svg-back {
+    svg {
+      width: 80%;
     }
-    .half {
-        margin-top: 0.2rem;
-    }
-    #svg-back {
-      svg {
-        width: 80%;
-      }
-    }
-}
-</style>
+  }
+}</style>

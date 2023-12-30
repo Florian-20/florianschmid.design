@@ -1,21 +1,6 @@
 <template>
   <div id="about" class="grain">
-    <div class="container">
-      <div id="head">
-        <div class="type">
-          <h3>Florian Schmid</h3>
-        </div>
-        <div id="fix">
-          <router-link v-if="!mobileView" to="/">Work</router-link>
-          <router-link v-if="!mobileView" to="/about&contact">About&<br />Contact</router-link>
-          <svg @click="$router.push('/')" xmlns="http://www.w3.org/2000/svg" width="39.409" height="39.409" viewBox="0 0 39.409 39.409">
-            <g transform="translate(4.7046301 4.7046301)">
-              <path fill="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" d="M29.50819672 30V0H0"/>
-              <path fill="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" d="M30 0L.98360656 29.5"/>
-            </g>
-          </svg>
-        </div>
-      </div>
+    <div class="projectPageContainer">
       <div id="about-container">
         <div id="intro" class="about-flex slide-small">
           <p>Intro</p>
@@ -106,13 +91,6 @@ export default {
 
 <style lang="scss" scoped>
 
-#head {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  right: 2vw;
-  left: 2vw;
-}
 
 .type {
   width: auto;

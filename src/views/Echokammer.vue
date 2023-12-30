@@ -1,7 +1,7 @@
 <template>
     <div id="page" class="grain">
-        <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
+        <div class="projectPageContainer">
+            <projectTop v-bind:projectdata='projectdata' :start-animation="pageLoaded"></projectTop>
             <div class="project">
                 <div class="half-half slidein">
                     <div class="half">
@@ -26,21 +26,21 @@
                 </div>
             </div>
         </div>
-        <projectfooter v-if="pageLoaded"/>
+        <projectFooter v-if="pageLoaded" />
     </div>
 </template>
 
 <script>
 
-import projecttop from '@/components/projecttop.vue'
-import projectfooter from "@/components/projectfooter.vue";
+import projectTop from '@/components/projectTop.vue'
+import projectFooter from "@/components/projectFooter.vue";
 import { gsap } from 'gsap'
 
 export default {
     name: 'edicion',
     components: {
-        projecttop,
-        projectfooter
+        projectTop,
+        projectFooter
     },
     data() {
         return {
@@ -52,13 +52,13 @@ export default {
                 desc: 'a work about the echo chamber-effect',
                 client: 'schoolproject',
                 credits: 'F4',
-                desc1: "The Echo Chamber effect is a social situation, in which no matter what you say, mean or preferences you have, it will always be reflectet be others in the same social situation. You are constantly under like-minded people.",
-                desc2: "There for I created a website which educates and clears up about the echo chambers effects on society."
+                desc1: "The so-called 'Echo Chamber Effect' is a social situation in which your opinions and preferences will always be reflected and reinforced by others. You are surrounded by like-minded people, and you get little to no alternative opinions and perspectives on a subject. As a consequence, this phenomenon can lead to a biased picture of the world and sometimes extreme opinions, resulting in social and political polarization.",
+                desc2: "The Echo Chamber Effect is subtle and it is important to create awareness for this effect to prevent its extreme forms. Therefore I created a website which explains the effect in an understandable and visually appealing way. Starting from the origins of the term 'Echo Chamber', which has its roots in music, and ending with the consequences on society and the individual."
             },
             pageLoaded: false
         }
     },
-    created () {
+    created() {
         window.scroll(0, 0)
     },
     mounted() {
@@ -85,8 +85,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 #page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     position: absolute;
     height: auto;
     width: 100%;
@@ -96,10 +98,12 @@ export default {
 .full-size {
     margin-top: 0.1rem;
     width: 100%;
+
     img {
         max-width: 100%;
         max-height: 100%;
     }
+
     video {
         max-width: 100%;
         max-height: 100%;
@@ -110,6 +114,7 @@ export default {
     margin-top: 0.1rem;
     width: auto;
     padding: 4rem;
+
     img {
         max-width: 100%;
         max-height: 100%;
@@ -119,6 +124,7 @@ export default {
 .half-half {
     margin-top: .1rem;
     display: flex;
+
     span {
         width: .5rem;
     }
@@ -128,6 +134,7 @@ export default {
     width: auto;
     padding: 0rem;
     background-color: #adadad;
+
     img {
         width: 100%;
         height: 100%;
@@ -147,12 +154,13 @@ export default {
         margin-top: 0;
         flex-direction: column;
     }
+
     .half {
         margin-top: 0.1rem;
         padding: 4rem;
     }
+
     .website {
         padding: 2rem;
     }
-}
-</style>
+}</style>

@@ -1,31 +1,31 @@
 <template>
     <div id="page" class="grain">
-        <div class="container">
-            <projecttop v-bind:projectdata = 'projectdata' :start-animation="pageLoaded"></projecttop>
+        <div class="projectPageContainer">
+            <projectTop v-bind:projectdata='projectdata' :start-animation="pageLoaded"></projectTop>
             <div class="project">
                 <div class="vimeo-container">
                     <iframe :src="vim1" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-        <projectfooter v-if="pageLoaded"/>
+        <projectFooter v-if="pageLoaded" />
     </div>
 </template>
 
 <script>
 
-import projecttop from '@/components/projecttop.vue'
-import projectfooter from "@/components/projectfooter.vue";
+import projectTop from '@/components/projectTop.vue'
+import projectFooter from "@/components/projectFooter.vue";
 import { gsap } from 'gsap'
 
 export default {
     components: {
-        projecttop,
-        projectfooter
+        projectTop,
+        projectFooter
     },
-    metaInfo : {
+    metaInfo: {
         Meta: [
-            { name: 'description', content: 'Endless Engines competition entry'}
+            { name: 'description', content: 'Endless Engines competition entry' }
         ]
     },
     data() {
@@ -45,7 +45,7 @@ export default {
             vim1: ''
         }
     },
-    created () {
+    created() {
         window.scroll(0, 0)
     },
     mounted() {
@@ -70,7 +70,7 @@ export default {
         },
         srcloader() {
             setTimeout(() => {
-            this.vim1 = 'https://player.vimeo.com/video/848832287?'
+                this.vim1 = 'https://player.vimeo.com/video/848832287?'
             }, 500)
         }
     }
@@ -78,8 +78,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 #page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     position: absolute;
     height: auto;
     width: 100%;
@@ -89,6 +91,7 @@ export default {
 .full-size {
     margin-top: 0.1rem;
     width: 100%;
+
     img {
         max-width: 100%;
         max-height: 100%;
@@ -99,6 +102,7 @@ export default {
     margin-top: 0.1rem;
     width: auto;
     padding: 4rem;
+
     img {
         max-width: 100%;
         max-height: 100%;
@@ -108,6 +112,7 @@ export default {
 .half-half {
     margin-top: .1rem;
     display: flex;
+
     span {
         width: .4rem;
     }
@@ -115,6 +120,7 @@ export default {
 
 .half {
     width: auto;
+
     img {
         max-width: 100%;
         max-height: 100%;
@@ -136,8 +142,8 @@ export default {
         margin-top: 0;
         flex-direction: column;
     }
+
     .half {
         margin-top: 0.1rem;
     }
-}
-</style>
+}</style>

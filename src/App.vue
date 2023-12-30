@@ -1,12 +1,18 @@
 <template>
   <div id="app">
-    <router-view :loading="loading" v-on:switch-mode="onSwitch" :darkmode="darkmode" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'/>
+    <topnav :darkmode="darkmode" :loading="loading" @switch-mode="onSwitch" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'></topnav>
+    <router-view :loading="loading" :darkmode="darkmode" v-bind:style='{"--light" : (darkmode? "#151515" : "#f5f5f5" ), "--dark" : (darkmode? "#f5f5f5" : "#151515"), "background-color" : "var(--light)", "color" : "var(--dark)"}'/>
   </div>
 </template>
 
 <script>
 
+import topnav from '@/components/nav.vue'
+
 export default {
+  components: {
+    topnav
+  },
   data () {
     return {
       darkmode: false,
@@ -16,6 +22,7 @@ export default {
   methods: {
     onSwitch() {
       this.darkmode = !this.darkmode
+      console.log("Switch mode")
     }, 
     setloading(value) {
       this.loading = value
@@ -25,14 +32,6 @@ export default {
     setTimeout(() => {
       this.setloading(false)
     }, 3000)
-  },
-  created() {
-    var timenow = new Date()
-    var time = timenow.getHours()
-    console.log("%c 👋 Welcome inspector. It's " + time + " a clock.", "font-size: 15px");
-    if (time >= 18 || time <= 8) {
-      this.darkmode = true
-    }
   }
 }
 </script>
@@ -270,33 +269,33 @@ a {
 
 // ---- Project rules --- //
 
-.project {
-    margin-top: 7rem;
-    margin-bottom: 5rem;
-    margin-left: 7vw;
-    margin-right: 7vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
+.projectPageContainer {
+  margin-left: 7vw;
+  margin-right: 7vw;
+  max-width: 1400px;
+  align-self: center;
 }
 
-
-.container {
-  margin-top: 4.5vh;
-  margin-left: 2vw;
-  margin-right: 2vw;
+.project {
+  margin-top: 5rem;
+  margin-bottom: 7rem;
   height: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .vimeo-container {
-  display: flex;
-  height: auto;
-  width: 100%;
-  justify-content: center;
   margin-top: 5rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
   iframe {
-    width: calc(1.66 * 640px);
-    height: calc(1.66 * 360px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -317,20 +316,21 @@ a {
     .project {
         margin-top: 4rem;
         margin-bottom: 4rem;
-        margin-left: unset;
-        margin-right: unset;
+    }
+    .projectPageContainer {
+      margin-left: 2rem;
+      margin-right: 2rem;
     }
 }
 
 @media screen and(max-width: 600px) {
-    .container {
-      margin-top: 1rem;
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
     .vimeo-container {
       margin-top: 0rem;
       margin-bottom: 0rem;
+    }
+    .projectPageContainer {
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
 }
 </style>

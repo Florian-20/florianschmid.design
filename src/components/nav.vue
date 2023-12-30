@@ -3,9 +3,9 @@
       <h3 id="first" class="slide-nav" v-if="!mobileView">Florian Schmid</h3>
       <p class="slide-nav" v-if="mobileView">Florian<br>Schmid</p>
       <span v-if="!mobileView"></span>
-      <router-link class="slide-nav" v-if="!mobileView" to="/" id="second">Work</router-link>
+      <router-link class="slide-nav" to="/" id="second">Work</router-link>
       <router-link class="slide-nav" to="/about&contact" id="third">About&<br>Contact</router-link>
-      <div class="slide-nav" id="modeswitch" v-on:click="$emit('switch-mode')">
+      <div class="slide-nav" id="modeswitch" @click="$emit('switch-mode')">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 57.89">
           <g id="Ebene_2" data-name="Ebene 2">
           <g id="Switch">
@@ -48,7 +48,7 @@
         var tween = gsap.fromTo('#State', {
             duration: 0.5,
             ease: 'power3.inOut',
-            x: '0',
+            x: '0'
           },
           {
             duration: 0.5,
@@ -97,9 +97,7 @@
 
 #nav {
   position: relative;
-  margin-top: 4.5vh;
-  margin-left: 2vw;
-  margin-right: 2vw;
+  padding: 2rem;
   display: flex;
   align-items: flex-start;
   span {
@@ -148,10 +146,8 @@
 
 @media screen and (max-width: 600px){
   #nav {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
     justify-content: space-between;
+    padding: 1rem;
     a {
       margin-left: unset;
     }

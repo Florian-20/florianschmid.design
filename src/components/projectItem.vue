@@ -109,5 +109,9 @@
                 margin-right: 3vw;
             }
         }
+        .project_item {
+            margin: 0rem;
+            margin-bottom: 1rem;
+        }
     }
 </style>
