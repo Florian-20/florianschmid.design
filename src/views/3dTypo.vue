@@ -44,7 +44,7 @@ export default {
       projectdata: {
         name: "3D&Typo",
         date: "2019",
-        counter: "❺",
+        counter: "❽",
         type: "Posters",
         desc: "Expermenting with liquids and typo",
         client: "SCHOOLPROJECT",

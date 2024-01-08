@@ -49,7 +49,7 @@ export default {
             projectdata: {
                 name: 'Citrus Packus',
                 date: '2017',
-                counter: '❶',
+                counter: '❷',
                 type: 'posters & animation',
                 desc: 'A campaign against the overuse of packaging',
                 client: 'SCHOOLPROJECT',
@@ -129,8 +129,8 @@ export default {
 
 .half-half {
     margin-top: .1rem;
+    margin-bottom: 1rem;
     display: flex;
-
     span {
         width: .4rem;
     }

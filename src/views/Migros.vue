@@ -70,7 +70,7 @@ export default {
       projectdata: {
         name: "Migros",
         date: "2019",
-        counter: "❷",
+        counter: "❸",
         type: "Concept & design",
         desc: "Won competiton for Migros new bag design",
         client: "MIGROS",

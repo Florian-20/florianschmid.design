@@ -1,18 +1,24 @@
 <template>
   <div id="page" class="grain">
     <div class="projectPageContainer">
-      <projectTop
-        v-bind:projectdata="projectdata"
-        :start-animation="pageLoaded"
-      ></projectTop>
+      <projectTop v-bind:projectdata="projectdata" :start-animation="pageLoaded"></projectTop>
       <div class="project">
-        <div class="vimeo-container">
+        <div class="vimeo-container slidein">
           <iframe
             :src="vim1"
             frameborder="0"
             allow="fullscreen"
             allowfullscreen
           ></iframe>
+        </div>
+        <div class="half-half">
+          <div class="half">
+            <video src="../assets/images/FermedelaFaye/Ferme-delaFaye_Breakdown_3D-Scans.mp4" alt="Horizontal Website" autoplay loop></video>
+          </div>
+          <span></span>
+          <div class="half">
+            <video src="../assets/images/FermedelaFaye/Ferme-delaFaye_Breakdown_Scene-1.mp4" alt="Horizontal Website" autoplay loop></video>
+          </div>
         </div>
       </div>
     </div>
@@ -40,7 +46,7 @@ export default {
       projectdata: {
         name: "Panier-Bio",
         date: "2023",
-        counter: "❶",
+        counter: "❺",
         type: "3D animation",
         desc: "An animation for Ferme de la Faye",
         client: "Ferme de la Faye",
@@ -119,14 +125,19 @@ export default {
 .half-half {
   margin-top: 0.1rem;
   display: flex;
+  flex-direction: row;
   span {
     width: 0.4rem;
   }
 }
 
 .half {
-  width: auto;
+  width: 50%;
   img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  video {
     max-width: 100%;
     max-height: 100%;
   }

@@ -89,7 +89,7 @@ export default {
       projectdata: {
         name: "Bild sprache",
         date: "2019",
-        counter: "❸",
+        counter: "❻",
         colour: "#ea0e0e",
         colour2: "#151515",
         type: "exhibition",

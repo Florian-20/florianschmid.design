@@ -60,7 +60,7 @@ export default {
       projectdata: {
         name: "Speaker Stands",
         date: "2021",
-        counter: "❻",
+        counter: "❹",
         type: "Design & Woodwork",
         desc: "Walnut speaker stands for Klipsch RP-600m",
         client: "Pers. Project",

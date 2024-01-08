@@ -47,7 +47,7 @@ export default {
             projectdata: {
                 name: 'Die Echokammer',
                 date: '2021',
-                counter: '❻',
+                counter: '❾',
                 type: 'CD',
                 desc: 'a work about the echo chamber-effect',
                 client: 'schoolproject',

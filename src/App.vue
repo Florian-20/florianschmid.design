@@ -293,7 +293,7 @@ a {
 }
 
 .vimeo-container {
-  margin-top: 5rem;
+  margin-bottom: 1rem;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -334,7 +334,7 @@ a {
 @media screen and(max-width: 600px) {
     .vimeo-container {
       margin-top: 0rem;
-      margin-bottom: 0rem;
+      margin-bottom: 1rem;
     }
     .projectPageContainer {
       margin-left: 1rem;

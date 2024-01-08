@@ -14,6 +14,11 @@ const routes = [
     component: Work
   },
   {
+    path: '/Wood-Chair',
+    name: 'Wood Chair',
+    component: () => import(/* webpackChunkName: "Wood-Chair" */ '../views/WoodChair.vue')
+  },
+  {
     path: '/about&contact',
     name: 'About-Contact',
     component: () => import(/* webpackChunkName: "about" */ '../views/About-Contact.vue')
