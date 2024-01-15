@@ -10,8 +10,6 @@
               <!--<strong>"Inspiration is for amateurs. The rest of us just work." Chuck Close</strong> <br><br>-->
               Hi, my name is Florian. 
               I am a Graphic Designer and self-taught front end Web developer based in Switzerland.
-              <!--I enjoy combining my variety of skills to bring projects foreward.-->
-              <!--I am pivoting between my skills-->
               I like to craft things and express myself in the language of design.
               That's all you need to know, everything else shows up in my work.
             </h2>
@@ -23,20 +21,17 @@
           <div class="about-child-b">
             <div class="skillset">
               <h3>Graphics</h3>
-              <p>→Adobe programs</p>
-              <p>→Invision</p>
+              <p>→Photoshop, InDesign, <br/>After Effects, Illustrator</p>
             </div>
             <div class="skillset">
               <h3>Coding</h3>
               <p>→Html5, Css3, Scss</p>
               <p>→Vuejs</p>
-              <p>→Python3</p>
             </div>
             <div class="skillset">
-              <h3>3D&Modelling</h3>
-              <p>→Autodesk Maya & Arnold render</p>
+              <h3>CGI & CAD</h3>
               <p>→Blender</p>
-              <p>→Substance Designer</p>
+              <p>→Fusion 360</p>
             </div>
           </div>
         </div>

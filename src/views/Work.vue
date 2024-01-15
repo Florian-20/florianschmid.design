@@ -6,6 +6,9 @@
         <projectitem v-bind:project="project" :darkmode="darkmode"></projectitem>
       </router-link>
     </div>
+    <div id="MainFooter">
+      <p>© 2021 Florian Schmid</p>
+    </div>
   </div>
 </template>
 
@@ -74,7 +77,7 @@
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-top: 5vh;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   width: auto;
   height: auto;
   display: flex;
@@ -91,6 +94,13 @@
   background-color: none;
 }
 
+#MainFooter {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  padding: 1rem;
+}
+
 // --- responsiv --- //
 
 @media screen and (max-width: 600px) {
@@ -102,6 +112,7 @@
   #work {
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-bottom: 1rem;
   }
   .workitems {
     min-width: 300px;
