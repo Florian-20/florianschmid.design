@@ -12,27 +12,18 @@
             alt="Forum Poster"
           />
         </div>
-        <div class="half-half">
-          <div class="half">
-            <img
-              src="../assets/images/Edicion/E01_Plakat.jpg"
-              alt="Forum Poster"
-            />
-          </div>
-          <span></span>
-          <div class="half">
-            <img
-              src="../assets/images/Edicion/E03_Plakat.jpg"
-              alt="Forum Poster"
-            />
-          </div>
-        </div>
         <div class="full-size">
           <img src="../assets/images/Edicion/E04_Bag.jpg" alt="Bag design" />
         </div>
+        <div class="full-size slidein">
+          <img
+            src="../assets/images/Edicion/E05_Stickers.jpg"
+            alt="Edicion Stickers"
+          />
+        </div>
         <div class="website">
           <img
-            src="../assets/images/Edicion/E01_Website.jpg"
+            src="../assets/images/Edicion/E06_Stickers.jpg"
             alt="Website design"
           />
         </div>
