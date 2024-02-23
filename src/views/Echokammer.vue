@@ -45,7 +45,7 @@ export default {
     data() {
         return {
             projectdata: {
-                name: 'Die Echokammer',
+                name: 'Echo Chamber',
                 date: '2021',
                 counter: '❾',
                 type: 'CD',
@@ -83,84 +83,3 @@ export default {
     }
 }
 </script>
-
-<style lang="scss" scoped>
-#page {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    position: absolute;
-    height: auto;
-    width: 100%;
-    background-position: center;
-}
-
-.full-size {
-    margin-top: 0.1rem;
-    width: 100%;
-
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    video {
-        max-width: 100%;
-        max-height: 100%;
-    }
-}
-
-.website {
-    margin-top: 0.1rem;
-    width: auto;
-    padding: 4rem;
-
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-}
-
-.half-half {
-    margin-top: .1rem;
-    display: flex;
-
-    span {
-        width: .5rem;
-    }
-}
-
-.half {
-    width: auto;
-    padding: 0rem;
-    background-color: #adadad;
-
-    img {
-        width: 100%;
-        height: 100%;
-    }
-}
-
-// --- Media --- //
-
-@media screen and (max-width: 990px) {
-    .half {
-        padding: 5rem;
-    }
-}
-
-@media screen and(max-width: 600px) {
-    .half-half {
-        margin-top: 0;
-        flex-direction: column;
-    }
-
-    .half {
-        margin-top: 0.1rem;
-        padding: 4rem;
-    }
-
-    .website {
-        padding: 2rem;
-    }
-}</style>

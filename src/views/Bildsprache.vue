@@ -33,35 +33,11 @@
             alt="Bildsprache Crytal"
           />
         </div>
-        <div class="vimeo-container">
-          <iframe
-            :src="vim1"
-            frameborder="0"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="vimeo-container">
-          <iframe
-            :src="vim2"
-            frameborder="0"
-            allow="fullscreen"
-            allowfullscreen
-          ></iframe>
-        </div>
         <div class="full-size-2">
           <img
             src="../assets/images/Bildsprache/Japan-Street.jpg"
             alt="Bildsprache Touche"
           />
-        </div>
-        <div class="vimeo-container">
-          <iframe
-            :src="vim3"
-            frameborder="0"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-          ></iframe>
         </div>
       </div>
     </div>
@@ -101,10 +77,7 @@ export default {
         desc2:
           "At the end 5 animations and a ton of images were made. A selection was presented in the Bildsprache19 exhibition.",
       },
-      pageLoaded: false,
-      vim1: "",
-      vim2: "",
-      vim3: "",
+      pageLoaded: false
     };
   },
   created() {
@@ -127,59 +100,20 @@ export default {
         opacity: 1,
         delay: 1,
         ease: "circ.out",
-        onComplete: this.srcloader(),
       });
-    },
-    srcloader() {
-      setTimeout(() => {
-        this.vim1 = "https://player.vimeo.com/video/397647989";
-        this.vim2 = "https://player.vimeo.com/video/397648215";
-        this.vim3 = "https://player.vimeo.com/video/476784648";
-      }, 2000);
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-#page {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  position: absolute;
-  height: auto;
-  width: 100%;
-  background-position: center;
-  iframe {
-    margin: 0;
-    padding: 0;
-  }
-}
-
-.full-size {
-  margin-top: 0.1rem;
-  width: 100%;
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
 
 .full-size-2 {
-  margin-top: 12rem;
+  margin-top: .2rem;
   width: 100%;
   img {
     max-width: 100%;
     max-height: 100%;
-  }
-}
-
-.half-half {
-  margin-top: 0.1rem;
-  margin-bottom: 5rem;
-  display: flex;
-  span {
-    width: 0.5rem;
   }
 }
 
@@ -206,31 +140,14 @@ export default {
 // --- Media --- //
 
 @media screen and (max-width: 990px) {
-  .full-size {
-    margin-top: 0.5rem;
-  }
-  .half-half {
-    margin-bottom: 0;
-  }
   .min-image {
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
     width: 100%;
     padding: 0;
   }
   .max-image {
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
     padding: 0;
-  }
-}
-
-@media screen and(max-width: 600px) {
-  .half-half {
-    margin-top: 0;
-    flex-direction: column;
-  }
-  .half {
-    margin-top: 0.1rem;
-    padding: 4rem;
   }
 }
 </style>

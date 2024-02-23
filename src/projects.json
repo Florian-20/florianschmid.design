@@ -87,6 +87,17 @@
         "filename":"Edicion_Black.svg"
     },
     {
+        "name": "Mat-Scanner",
+        "date": "2017",
+        "colour": "#FF8624",
+        "counter": "❸",
+        "type": "won competition& bag design",
+        "credits": "img",
+        "mindesc": "Won Migros competition",
+        "max-desc": "Won competiton for Migros new bag design",
+        "filename":"MatS_Black.svg"
+    },
+    {
         "name": "3d&typo",
         "date": "2018",
         "colour": "#0f47ff",
@@ -98,7 +109,7 @@
         "filename":"3DTypo.svg"
     },
     {
-        "name": "Echokammer",
+        "name": "Echo Chamber",
         "date": "2021",
         "colour": "#7D0DC6",
         "counter": "❾",

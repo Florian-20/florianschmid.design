@@ -6,6 +6,9 @@
         <projectitem v-bind:project="project" :darkmode="darkmode"></projectitem>
       </router-link>
     </div>
+    <div id="homeFooter">
+      <p>© 2024 Florian Schmid</p>
+    </div>
   </div>
 </template>
 
@@ -74,7 +77,6 @@
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-top: 5vh;
-  margin-bottom: 5rem;
   width: auto;
   height: auto;
   display: flex;
@@ -89,6 +91,15 @@
   width: auto;
   min-width: 375px;
   background-color: none;
+}
+
+#homeFooter {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 // --- responsiv --- //

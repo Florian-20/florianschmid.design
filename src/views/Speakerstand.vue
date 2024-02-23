@@ -116,33 +116,4 @@ export default {
     max-height: 100%;
   }
 }
-
-
-.half-half {
-  margin-top: 0.2rem;
-  display: flex;
-  span {
-    width: 1rem;
-  }
-}
-
-.half {
-  width: auto;
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
-
-// --- Media --- //
-
-@media screen and(max-width: 600px) {
-    .half-half {
-        margin-top: 0;
-        flex-direction: column;
-    }
-    .half {
-        margin-top: 0.2rem;
-    }
-}
 </style>

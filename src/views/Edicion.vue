@@ -93,25 +93,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#page {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  position: absolute;
-  height: auto;
-  width: 100%;
-  background-position: center;
-}
-
-.full-size {
-  margin-top: 0.2rem;
-  width: 100%;
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
 
 .website {
   margin-top: 0.1rem;
@@ -124,45 +105,9 @@ export default {
   }
 }
 
-.half-half {
-  margin-top: 0.1rem;
-  display: flex;
-
-  span {
-    width: 0.5rem;
-  }
-}
-
-.half {
-  width: auto;
-  padding: 5rem;
-  background-color: #adadad;
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
-
 // --- Media --- //
 
-@media screen and (max-width: 990px) {
-  .half {
-    padding: 5rem;
-  }
-}
-
 @media screen and(max-width: 600px) {
-  .half-half {
-    margin-top: 0;
-    flex-direction: column;
-  }
-
-  .half {
-    margin-top: 0.1rem;
-    padding: 4rem;
-  }
-
   .website {
     padding: 2rem;
   }

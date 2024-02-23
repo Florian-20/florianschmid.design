@@ -94,8 +94,8 @@ export default {
         desc: "Texture scanner for 3d materials",
         client: "ME",
         credits: "-",
-        desc1: "A key factor to create realistic materials in 3D is a high quality normal map. A normal map is a texture type used in 3D to represent height and depth of a surface.",
-        desc2: "This scanner automates parts of the otherwise manual scanning process, which leads to faster and more precise scan results, who again lead to a more accurate representation of the real world. ",
+        desc1: "A key factor to create realistic renderings in 3D are good replications of the real world materials. One of the major components to achieve this, is to use a normal map. A normal map is a texture type used in 3D to represent height and depth of a surface.",
+        desc2: "This Material Scanner makes it possible to create accurate normal maps based on images.",
       },
       pageLoaded: false
     };
@@ -142,20 +142,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#page {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  position: absolute;
-  height: auto;
-  width: 100%;
-  background-position: center;
-}
 
 .Lamp {
   opacity: 0;
 }
-
 
 #svg-back {
   background-color: #151515;
@@ -169,40 +159,12 @@ export default {
   }
 }
 
-.full-size {
-  margin-top: 0.2rem;
-  width: 100%;
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
-
 #matdesc {
   display: flex;
   width: 100%;
   height: auto;
   justify-content: space-around;
   margin-bottom: 4rem;
-}
-
-.half-half {
-  margin-top: 0.2rem;
-  display: flex;
-
-  span {
-    width: 0.4rem;
-  }
-}
-
-.half {
-  width: auto;
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
 }
 
 #howwork {
@@ -223,15 +185,6 @@ export default {
 // --- Media --- //
 
 @media screen and(max-width: 600px) {
-  .half-half {
-    margin-top: 0;
-    flex-direction: column;
-  }
-
-  .half {
-    margin-top: 0.2rem;
-  }
-
   #svg-back {
     svg {
       width: 80%;

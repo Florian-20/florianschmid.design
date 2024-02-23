@@ -277,6 +277,16 @@ a {
 
 // ---- Project rules --- //
 
+#page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  background-position: center;
+}
+
 .projectPageContainer {
   margin-left: 7vw;
   margin-right: 7vw;
@@ -293,7 +303,7 @@ a {
 }
 
 .vimeo-container {
-  margin-bottom: 1rem;
+  margin-top: .2rem;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -304,6 +314,39 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+.full-size {
+  margin-top: 0.2rem;
+  width: 100%;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  video {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.half-half {
+  margin-top: .2rem;
+  display: flex;
+  span {
+      width: .6rem;
+  }
+}
+
+.half {
+  width: auto;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  video {
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 
@@ -321,24 +364,32 @@ a {
 // --- Mobile --- //
 
 @media screen and (max-width: 990px) {
-    .project {
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-    }
-    .projectPageContainer {
-      margin-left: 2rem;
-      margin-right: 2rem;
-    }
+  .project {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-left: unset;
+    margin-right: unset;
+  }
+  .projectPageContainer {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
 
 @media screen and(max-width: 600px) {
-    .vimeo-container {
-      margin-top: 0rem;
-      margin-bottom: 1rem;
-    }
-    .projectPageContainer {
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
+  .vimeo-container {
+    margin-top: .2rem;
+  }
+  .projectPageContainer {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .half-half {
+    margin-top: 0;
+    flex-direction: column;
+  }
+  .half {
+    margin-top: 0.1rem;
+  }
 }
 </style>

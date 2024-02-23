@@ -4,36 +4,36 @@
             <projectTop v-bind:projectdata='projectdata' :start-animation="pageLoaded"></projectTop>
             <div class="project">
                 <div class="full-size slidein">
-                    <img src="../assets/images/DAC-1/DAC-1_Render_Green_Persp_3.jpg" alt="Poster littering">
+                    <img src="../assets/images/DAC-1/DAC-1_Render_Green_Persp_3.jpg" alt="DAC Raspberry Pi">
                 </div>
                 <div class="full-size slidein">
-                    <img src="../assets/images/DAC-1/DAC-1_Render_Green_Persp_2.jpg" alt="Poster littering">
+                    <img src="../assets/images/DAC-1/DAC-1_Render_Green_Persp_2.jpg" alt="DAC Raspberry Pi">
                 </div>
                 <div class="full-size slidein">
-                    <img src="../assets/images/DAC-1/DAC-1_Render_Green_Layout.jpg" alt="Poster littering">
+                    <img src="../assets/images/DAC-1/DAC-1_Render_Green_Layout.jpg" alt="DAC Raspberry Pi">
                 </div>
                 <div class="vimeo-container">
                     <iframe :src="vim1" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
                 </div>
                 <div class="full-size slidein">
-                    <img src="../assets/images/DAC-1/DAC-1_Drawings.jpg" alt="Poster littering">
+                    <img src="../assets/images/DAC-1/DAC-1_Drawings.jpg" alt="DAC Raspberry Pi">
                 </div>
                 <div class="half-half">
                     <div class="half">
-                        <img src="../assets/images/DAC-1/Dac-1_01.jpg" alt="Poster littering">
+                        <img src="../assets/images/DAC-1/Dac-1_01.jpg" alt="DAC Raspberry Pi">
                     </div>
                     <span></span>
                     <div class="half">
-                        <img src="../assets/images/DAC-1/Dac-1_04.jpg" alt="Poster littering">
+                        <img src="../assets/images/DAC-1/Dac-1_04.jpg" alt="DAC Raspberry Pi">
                     </div>
                 </div>
                 <div class="half-half">
                     <div class="half">
-                        <img src="../assets/images/DAC-1/Dac-1_02.jpg" alt="Poster littering">
+                        <img src="../assets/images/DAC-1/Dac-1_02.jpg" alt="DAC Raspberry Pi">
                     </div>
                     <span></span>
                     <div class="half">
-                        <img src="../assets/images/DAC-1/Dac-1_03.jpg" alt="Poster littering">
+                        <img src="../assets/images/DAC-1/Dac-1_03.jpg" alt="DAC Raspberry Pi">
                     </div>
                 </div>
             </div>
@@ -108,74 +108,3 @@ export default {
     }
 }
 </script>
-
-<style lang="scss" scoped>
-#page {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    position: absolute;
-    height: auto;
-    width: 100%;
-    background-position: center;
-}
-
-.full-size {
-    margin-top: 0.1rem;
-    width: 100%;
-
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-}
-
-.website {
-    margin-top: 0.1rem;
-    width: auto;
-    padding: 4rem;
-
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-}
-
-.half-half {
-    margin-top: .1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    span {
-        width: .4rem;
-    }
-}
-
-.half {
-    width: auto;
-
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-}
-
-// --- Media --- //
-
-@media screen and (max-width: 990px) {
-    .project {
-        margin-top: 4rem;
-        margin-left: unset;
-        margin-right: unset;
-    }
-}
-
-@media screen and(max-width: 600px) {
-    .half-half {
-        margin-top: 0;
-        flex-direction: column;
-    }
-
-    .half {
-        margin-top: 0.1rem;
-    }
-}</style>
