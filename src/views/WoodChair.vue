@@ -3,18 +3,42 @@
     <div class="projectPageContainer">
       <projectTop v-bind:projectdata="projectdata" :start-animation="pageLoaded"></projectTop>
       <div class="project">
-        <div class="full-size slidein">
-                    <img src="../assets/images/WoodChair/P1010228.jpg" alt="Poster littering">
-                </div>
-        <!--<div class="half-half">
+        <div class="half-half">
           <div class="half">
-            <video src="../assets/images/FermedelaFaye/Ferme-delaFaye_Breakdown_3D-Scans.mp4" alt="Horizontal Website" autoplay loop></video>
+              <img src="../assets/images/WoodChair/Wood-Chair_01.jpg" alt="Poster littering">
           </div>
           <span></span>
           <div class="half">
-            <img src="" alt="">
+              <img src="../assets/images/WoodChair/Wood-Chair_02.jpg" alt="Poster littering">
           </div>
-        </div>-->
+        </div>
+        <div class="half-half">
+          <div class="half">
+              <img src="../assets/images/WoodChair/Wood-Chair_04.jpg" alt="Poster littering">
+          </div>
+          <span></span>
+          <div class="half">
+              <img src="../assets/images/WoodChair/Wood-Chair_05.jpg" alt="Poster littering">
+          </div>
+        </div>
+        <div class="half-half">
+          <div class="half">
+              <img src="../assets/images/WoodChair/Wood-Chair_09.jpg" alt="Poster littering">
+          </div>
+          <span></span>
+          <div class="half">
+              <img src="../assets/images/WoodChair/Wood-Chair_11.jpg" alt="Poster littering">
+          </div>
+        </div>
+        <div class="half-half">
+          <div class="half">
+              <img src="../assets/images/WoodChair/Wood-Chair_10.jpg" alt="Poster littering">
+          </div>
+          <span></span>
+          <div class="half">
+              <img src="../assets/images/WoodChair/Wood-Chair_13.jpg" alt="Poster littering">
+          </div>
+        </div>
       </div>
     </div>
     <projectFooter v-if="pageLoaded" />

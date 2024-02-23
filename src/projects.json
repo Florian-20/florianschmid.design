@@ -54,6 +54,17 @@
         "filename":"Panier-Bio_Black.svg"
     },
     {
+        "name": "DAC",
+        "date": "2024",
+        "colour": "#A3E038",
+        "counter": "❶",
+        "type": "Product desgn",
+        "credits": "-",
+        "mindesc": "A minimalistic and functional case",
+        "max-desc": "A minimalistic and functional case",
+        "filename":"Citrus_Black.svg"
+    },
+    {
         "name": "Bildsprache",
         "date": "2019",
         "colour": "#00BBE6",

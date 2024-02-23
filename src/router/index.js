@@ -19,6 +19,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "Wood-Chair" */ '../views/WoodChair.vue')
   },
   {
+    path: '/DAC',
+    name: 'DAC',
+    component: () => import(/* webpackChunkName: "DAC" */ '../views/DAC.vue')
+  },
+  {
     path: '/about&contact',
     name: 'About-Contact',
     component: () => import(/* webpackChunkName: "about" */ '../views/About-Contact.vue')
