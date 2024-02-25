@@ -64,9 +64,9 @@ const routes = [
     component: () => import(/*webpackChunkName: "3d&typo" */ '../views/3dTypo.vue')
   },
   {
-    path: '/echokammer',
-    name: 'Echokammer',
-    component: () => import(/*webpackChunkName: "echokammer" */ '../views/Echokammer.vue')
+    path: '/echo-chamber',
+    name: 'EchoChamber',
+    component: () => import(/*webpackChunkName: "echo-chamber" */ '../views/EchoChamber.vue')
   },
   {
     path: '/speaker-Stands',

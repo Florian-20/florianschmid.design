@@ -37,7 +37,7 @@ import projectFooter from "@/components/projectFooter.vue";
 import { gsap } from 'gsap'
 
 export default {
-    name: 'edicion',
+    name: 'EchoChamber',
     components: {
         projectTop,
         projectFooter
