@@ -54,7 +54,7 @@ export default {
       projectdata: {
         name: "edicion 19",
         date: "2019",
-        counter: "❼",
+        counter: "❽",
         type: "Corporate Identity",
         desc: "Identity for a small book forum",
         client: "EDICION19",

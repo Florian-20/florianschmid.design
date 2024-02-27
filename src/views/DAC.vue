@@ -64,17 +64,16 @@ export default {
             projectdata: {
                 name: 'DAC-1',
                 date: '2024',
-                counter: '❷',
-                type: 'product design',
+                counter: '❻',
+                type: 'Product design',
                 desc: 'A minimalistic and functional case',
                 client: 'SCHOOLPROJECT',
                 credits: 'A0',
-                desc1: "DAC-1 is a small case for the Raspberry Pi combined with a DAC board. It is designed to be 3D printed and assembled at home. ",
+                desc1: "DAC-1 is a small case for the Raspberry Pi combined with a DAC board. This Audiodevice transforms digital signals to analogue signals. It is designed to be 3D printed and assembled at home. ",
                 desc2: ""
             },
             pageLoaded: false,
-            vim1: '',
-            vim2: ''
+            vim1: ''
         }
     },
     created() {

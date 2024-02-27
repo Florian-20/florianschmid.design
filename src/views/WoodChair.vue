@@ -67,7 +67,7 @@ export default {
         date: "2024",
         counter: "❶",
         type: "Woodwork",
-        desc: "This site is under construction!!",
+        desc: "Elegant wood chair",
         client: "-",
         credits: "-",
         desc1:

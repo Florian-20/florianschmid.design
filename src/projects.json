@@ -4,9 +4,7 @@
         "colour": "#A3E038",
         "counter": "❶",
         "type": "Woodwork",
-        "credits": "-",
-        "mindesc": "A wooden lounge chair",
-        "max-desc": "A wooden lounge chair",
+        "mindesc": "Wood chair design & realisation",
         "filename":"Wood-Chair.svg"
     },
     {
@@ -15,9 +13,7 @@
         "colour": "#FFCC2E",
         "counter": "❷",
         "type": "poster campaign& animation",
-        "credits": "-",
         "mindesc": "A campaign against littering",
-        "max-desc": "A campaign against the overuse of packages",
         "filename":"Citrus_Black.svg"
     },
     {
@@ -26,9 +22,7 @@
         "colour": "#FF8624",
         "counter": "❸",
         "type": "won competition& bag design",
-        "credits": "img",
         "mindesc": "Won Migros competition",
-        "max-desc": "Won competiton for Migros new bag design",
         "filename":"Migros_Black.svg"
     },
     {
@@ -37,9 +31,7 @@
         "colour": "#F20C78",
         "counter": "❹",
         "type": "Woodwork",
-        "credits": "-",
         "mindesc": "Speaker Stand for Klipsch RP-600m",
-        "max-desc": "Half automatic texture scanner, to generate 3d materials",
         "filename":"Speaker_Stand.svg"
     },
     {
@@ -48,20 +40,16 @@
         "colour": "#41D16F",
         "counter": "❺",
         "type": "3D animation",
-        "credits": "-",
         "mindesc": "An animation for ferme de la faye",
-        "max-desc": "An animation for ferme de la faye",
         "filename":"Panier-Bio_Black.svg"
     },
     {
         "name": "DAC",
         "date": "2024",
-        "colour": "#A3E038",
+        "colour": "#01a021",
         "counter": "❻",
         "type": "Product desgn",
-        "credits": "-",
         "mindesc": "A minimalistic and functional case",
-        "max-desc": "A minimalistic and functional case",
         "filename":"DAC-1.svg"
     },
     {
@@ -70,9 +58,7 @@
         "colour": "#00BBE6",
         "counter": "❼",
         "type": "exhibition",
-        "credits": "-",
         "mindesc": "A series of animations&stills",
-        "max-desc": "-",
         "filename":"BS19_Black.svg"
     },
     {
@@ -81,20 +67,16 @@
         "colour": "#fc0d05",
         "counter": "❽",
         "type": "corporate design",
-        "credits": "-",
         "mindesc": "Identity for a small book forum",
-        "max-desc": "Corporate design for a small boob forum in biel",
         "filename":"Edicion_Black.svg"
     },
     {
         "name": "mat-scanner",
         "date": "2017",
-        "colour": "#FF8624",
+        "colour": "#ea4b27",
         "counter": "❾",
         "type": "won competition& bag design",
-        "credits": "img",
-        "mindesc": "Won Migros competition",
-        "max-desc": "Won competiton for Migros new bag design",
+        "mindesc": "Texture scanner for 3D",
         "filename":"MatS_Black.svg"
     },
     {
@@ -103,9 +85,7 @@
         "colour": "#0f47ff",
         "counter": "❶⓿",
         "type": "poster creation",
-        "credits": "-",
         "mindesc": "Experimental posters using fluids",
-        "max-desc": "A poster creation with 3d typowork and graphics",
         "filename":"3DTypo.svg"
     },
     {
@@ -114,9 +94,7 @@
         "colour": "#7D0DC6",
         "counter": "❶❶",
         "type": "DIY Project",
-        "credits": "-",
         "mindesc": "Work about the Echo Chamber",
-        "max-desc": "Half automatic texture scanner, to generate 3d materials",
         "filename":"Echo.svg"
     }
 ]

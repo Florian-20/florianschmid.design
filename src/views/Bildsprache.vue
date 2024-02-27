@@ -7,37 +7,26 @@
       ></projectTop>
       <div class="project">
         <div class="full-size slidein">
-          <img
-            src="../assets/images/Bildsprache/Licht-Mensch.jpg"
-            alt="Bildsprache"
-          />
+          <img src="../assets/images/Bildsprache/Bildsprache-19_Licht-Mensch.jpg" alt="Bildsprache">
         </div>
         <div class="half-half">
-          <div class="min-image">
-            <img
-              src="../assets/images/Bildsprache/Manneslicht.jpg"
-              alt="Bildsprache Licht"
-            />
-          </div>
+          <div class="half">
+            <img src="../assets/images/Bildsprache/Bildsprache-19_Spotlight.jpg" alt="Bildsprache"></div>
           <span></span>
-          <div class="max-image">
-            <img
-              src="../assets/images/Bildsprache/Wolke-7.jpg"
-              alt="Bildsprache Burnout"
-            />
-          </div>
+          <div class="half">
+            <img src="../assets/images/Bildsprache/Bildsprache-19_Wolkenmann.jpg" alt="Bildsprache"></div>
         </div>
         <div class="full-size">
-          <img
-            src="../assets/images/Bildsprache/Stone-Man.jpg"
-            alt="Bildsprache Crytal"
-          />
+          <img src="../assets/images/Bildsprache/Bildsprache-19_Crystak.jpg" alt="Bildsprache">
         </div>
-        <div class="full-size-2">
-          <img
-            src="../assets/images/Bildsprache/Japan-Street.jpg"
-            alt="Bildsprache Touche"
-          />
+        <div class="full-size">
+          <img src="../assets/images/Bildsprache/Bildsprache-19_Drawing.jpg" alt="Bildsprache">
+        </div>
+        <div class="full-size">
+          <img src="../assets/images/Bildsprache/Bildsprache-19_Japan-Street.jpg" alt="Bildsprache">
+        </div>
+        <div class="vimeo-container">
+          <iframe :src="vim1" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -65,19 +54,20 @@ export default {
       projectdata: {
         name: "Bild sprache",
         date: "2019",
-        counter: "❻",
+        counter: "❼",
         colour: "#ea0e0e",
         colour2: "#151515",
-        type: "exhibition",
+        type: "Exhibition",
         desc: "A series of animations and stills",
         client: "BILDSPRACHE19",
         credits: "40x40",
         desc1:
-          "Eight weeks of total freedom to create. Things like surveillance, isolation and a bit of questioning of existence inspired me during this time.",
+          "Eight weeks of total freedom to create. This is what came out of it.",
         desc2:
-          "At the end 5 animations and a ton of images were made. A selection was presented in the Bildsprache19 exhibition.",
+          "A selection was presented in the Bildsprache19 exhibition.",
       },
-      pageLoaded: false
+      pageLoaded: false,
+      vim1: ''
     };
   },
   created() {
@@ -100,54 +90,17 @@ export default {
         opacity: 1,
         delay: 1,
         ease: "circ.out",
+        onComplete: this.srcloader()
       });
+    },
+    srcloader() {
+      setTimeout(() => {
+          this.vim1 = 'https://player.vimeo.com/video/917228108?'
+      }, 2000)
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-
-.full-size-2 {
-  margin-top: .2rem;
-  width: 100%;
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
-
-.min-image {
-  width: 25%;
-  padding: 7rem;
-  padding-bottom: 12rem;
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
-
-.max-image {
-  margin-top: 10rem;
-  width: auto;
-  padding: 7rem;
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
-
-// --- Media --- //
-
-@media screen and (max-width: 990px) {
-  .min-image {
-    margin-top: 0.2rem;
-    width: 100%;
-    padding: 0;
-  }
-  .max-image {
-    margin-top: 0.2rem;
-    padding: 0;
-  }
-}
 </style>
