@@ -3,7 +3,7 @@
     <div class="projectPageContainer">
       <projectTop v-bind:projectdata="projectdata" :start-animation="pageLoaded"></projectTop>
       <div class="project">
-        <div class="half-half">
+        <div class="half-half slidein">
           <div class="half">
               <img src="../assets/images/WoodChair/Wood-Chair_blue_02.jpg" alt="Chair">
           </div>
