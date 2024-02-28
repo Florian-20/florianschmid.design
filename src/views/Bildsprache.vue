@@ -62,7 +62,7 @@ export default {
         client: "BILDSPRACHE19",
         credits: "40x40",
         desc1:
-          "Eight weeks of total freedom to create. This is what came out of it.",
+          "Eight weeks of total freedom to create. These images and animations are the results of it.",
         desc2:
           "A selection was presented in the Bildsprache19 exhibition.",
       },

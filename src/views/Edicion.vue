@@ -56,12 +56,12 @@ export default {
         date: "2019",
         counter: "❽",
         type: "Corporate Identity",
-        desc: "Identity for a small book forum",
+        desc: "Corporate design for a small book forum",
         client: "EDICION19",
         credits: "A1",
         desc1:
           "Edicion is a small book forum in Biel which supports local alternative writers. Each year, Edicion makes an exhibiton with a selection of writers presenting their newest books.",
-        desc2: "A corporate identity approach for 2019.",
+        desc2: "A corporate design approach for 2019.",
       },
       pageLoaded: false,
     };

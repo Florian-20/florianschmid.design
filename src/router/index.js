@@ -14,9 +14,9 @@ const routes = [
     component: Work
   },
   {
-    path: '/Wood-Chair',
-    name: 'Wood Chair',
-    component: () => import(/* webpackChunkName: "Wood-Chair" */ '../views/WoodChair.vue')
+    path: '/Idun-Chair',
+    name: 'Idun Chair',
+    component: () => import(/* webpackChunkName: "Idun Chair" */ '../views/IdunChair.vue')
   },
   {
     path: '/DAC',
@@ -27,11 +27,6 @@ const routes = [
     path: '/about&contact',
     name: 'About-Contact',
     component: () => import(/* webpackChunkName: "about" */ '../views/About-Contact.vue')
-  },
-  {
-    path: '/Endless-Engines',
-    name: 'Endless-Engines',
-    component: () => import(/*webpackChunkName: "Endless-Engines" */ '../views/EndlessEngines.vue')
   },
   { 
     path: '/panier-bio',

@@ -11,7 +11,7 @@
                 <img src="../assets/images/MatScanner/Scan_Results.png" alt="">
               </div>
               <div id="matdesc">
-                <p>Wooden breadbord scan result</p>
+                <p>Wooden breadboard scan result</p>
                 <p>Sagex scan result</p>
               </div>
               <div id="svg-back">

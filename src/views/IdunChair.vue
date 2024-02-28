@@ -5,38 +5,56 @@
       <div class="project">
         <div class="half-half">
           <div class="half">
-              <img src="../assets/images/WoodChair/Wood-Chair_01.jpg" alt="Poster littering">
+              <img src="../assets/images/WoodChair/Wood-Chair_blue_02.jpg" alt="Chair">
           </div>
           <span></span>
           <div class="half">
-              <img src="../assets/images/WoodChair/Wood-Chair_02.jpg" alt="Poster littering">
+              <img src="../assets/images/WoodChair/Wood-Chair_blue_01.jpg" alt="Chair">
           </div>
         </div>
         <div class="half-half">
           <div class="half">
-              <img src="../assets/images/WoodChair/Wood-Chair_04.jpg" alt="Poster littering">
+              <img src="../assets/images/WoodChair/Wood-Chair_yellow_01.jpg" alt="Chair">
           </div>
           <span></span>
           <div class="half">
-              <img src="../assets/images/WoodChair/Wood-Chair_05.jpg" alt="Poster littering">
+              <img src="../assets/images/WoodChair/Wood-Chair_yellow_02.jpg" alt="Chair">
           </div>
         </div>
         <div class="half-half">
           <div class="half">
-              <img src="../assets/images/WoodChair/Wood-Chair_09.jpg" alt="Poster littering">
+              <img src="../assets/images/WoodChair/Wood-Chair_01.jpg" alt="Chair">
           </div>
           <span></span>
           <div class="half">
-              <img src="../assets/images/WoodChair/Wood-Chair_11.jpg" alt="Poster littering">
+              <img src="../assets/images/WoodChair/Wood-Chair_02.jpg" alt="Chair">
           </div>
         </div>
         <div class="half-half">
           <div class="half">
-              <img src="../assets/images/WoodChair/Wood-Chair_10.jpg" alt="Poster littering">
+              <img src="../assets/images/WoodChair/Wood-Chair_04.jpg" alt="Chair">
           </div>
           <span></span>
           <div class="half">
-              <img src="../assets/images/WoodChair/Wood-Chair_13.jpg" alt="Poster littering">
+              <img src="../assets/images/WoodChair/Wood-Chair_05.jpg" alt="Chair">
+          </div>
+        </div>
+        <div class="half-half">
+          <div class="half">
+              <img src="../assets/images/WoodChair/Wood-Chair_09.jpg" alt="Chair">
+          </div>
+          <span></span>
+          <div class="half">
+              <img src="../assets/images/WoodChair/Wood-Chair_11.jpg" alt="Chair">
+          </div>
+        </div>
+        <div class="half-half">
+          <div class="half">
+              <img src="../assets/images/WoodChair/Wood-Chair_10.jpg" alt="Chair">
+          </div>
+          <span></span>
+          <div class="half">
+              <img src="../assets/images/WoodChair/Wood-Chair_13.jpg" alt="Chair">
           </div>
         </div>
       </div>
@@ -57,13 +75,13 @@ export default {
   },
   metaInfo: {
     Meta: [
-      { name: "description", content: "A lounge chair" },
+      { name: "description", content: "Wood chair" },
     ],
   },
   data() {
     return {
       projectdata: {
-        name: "Wood Chair",
+        name: "Idun Chair",
         date: "2024",
         counter: "❶",
         type: "Woodwork",
@@ -71,9 +89,9 @@ export default {
         client: "-",
         credits: "-",
         desc1:
-          "TO DO",
+          "Idun Chair is a classic harmonious wood chair with a modernistic accent. Its core is built with white maple wood which works well for steam bending.",
         desc2:
-          "TO DO",
+          "The colorful cushions give the chair a certain playfulness, without loosing its elegance.",
       },
       pageLoaded: false,
       vim1: "",
