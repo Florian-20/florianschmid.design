@@ -89,7 +89,7 @@ export default {
         client: "-",
         credits: "-",
         desc1:
-          "Idun Chair is a classic harmonious wood chair with a modernistic accent. Its core is built with white maple wood which works well for steam bending.",
+          "Idun Chair is a classic harmonious wood chair with a modern touch. Its core is built with white maple wood which works well for steam bending.",
         desc2:
           "The colorful cushions give the chair a certain playfulness, without loosing its elegance.",
       },
