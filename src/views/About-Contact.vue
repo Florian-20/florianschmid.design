@@ -1,10 +1,9 @@
 <template>
-  <div id="about" class="grain">
-    <div class="projectPageContainer">
-      <div id="about-container">
+  <div id="page" class="grain">
+    <div id="aboutPageContainer">
+      <div id="aboutDescription">
         <div id="intro" class="about-flex slide-small">
           <p>Intro</p>
-          <span></span>
           <div class="about-child">
             <h2>
               Hi, my name is Florian. 
@@ -15,7 +14,6 @@
         </div>
         <div id="skills" class="about-flex slide-small">
           <p>Skills</p>
-          <span></span>
           <div class="about-child-b">
             <div class="skillset">
               <h3>Graphics</h3>
@@ -35,12 +33,15 @@
         </div>
         <div id="contact" class="about-flex slide-small">
           <p>Contact</p>
-          <span></span>
           <div class="about-child">
             <a id="mail-to" href="mailto:contact@florianschmid.design">contact@florianschmid.design</a>
           </div>
         </div>
       </div>
+      <div class="slide-small">
+        <img src="../assets/images/About/Florian_Schmid-500x500.jpg" alt="">
+      </div>
+      <div id="grey"></div>
     </div>
   </div>
 </template>
@@ -84,31 +85,18 @@ export default {
 
 <style lang="scss" scoped>
 
-
-.type {
-  width: auto;
-  max-width: 20vw;
+#aboutPageContainer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-left: 7vw;
+  margin-right: 7vw;
   display: flex;
-  h3 {
-    margin-right: 2rem;
-  }
-}
-
-#fix {
-  z-index: 1000;
-  position: fixed;
-  display: flex;
-  right: 2vw;
-  a {
-    margin-left: 3rem;
-    &.router-link-exact-active {
-      text-decoration: underline;
-    }
-  }
-  svg {
-    stroke: var(--dark);
-    margin-left: 5.6rem;
-    cursor: pointer;
+  align-self: center;
+  max-width: 1400px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  img {
+    max-width: fit-content;
   }
 }
 
@@ -120,7 +108,11 @@ export default {
     background-position: center;
 }
 
-#about-container {
+#grey {
+  height: 100vh;
+}
+
+#aboutDescription {
   h2 {
     text-transform: none;
     margin-bottom: 1rem;
@@ -129,20 +121,16 @@ export default {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
-  margin-top: 2rem;
 }
 
 .about-flex {
   width: 100%;
-  display: flex;
-  margin-top: 2rem;
-  span {
-    flex-grow: 1;
-  }
+  margin-top: 1rem;
 }
 
 .about-child {
   width: 66%;
+  margin-top: .5rem;
   a {
     font-size: 30px;
   }
@@ -152,6 +140,7 @@ export default {
   justify-content: space-evenly;
   display: flex;
   width: 66%;
+  margin-top: .5rem;
   border-top: 1px solid var(--dark);
   border-bottom: 1px solid var(--dark);
   border-left: 1px solid var(--dark);
@@ -190,6 +179,17 @@ export default {
   }
 }
 
+@media screen and (max-width: 990px) {
+  #aboutPageContainer {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    flex-direction: column;
+  }
+  #grey {
+    height: 30vh;
+  }
+}
+
 @media screen and(max-width: 600px){
  .about-child-b {
     flex-direction: column;
@@ -201,6 +201,17 @@ export default {
   #mail-to {
     font-size: 18px;
   }
+  #aboutPageContainer {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    img {
+    max-width: 100%;
+  }
+  }
+  #grey {
+    height: auto;
+  }
 }
+
 
 </style>

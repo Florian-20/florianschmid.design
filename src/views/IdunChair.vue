@@ -30,6 +30,9 @@
               <img src="../assets/images/WoodChair/Wood-Chair_02.jpg" alt="Chair">
           </div>
         </div>
+        <div class="vimeo-container">
+                    <iframe :src="vim1" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                </div>
         <div class="half-half">
           <div class="half">
               <img src="../assets/images/WoodChair/Wood-Chair_04.jpg" alt="Chair">
@@ -122,7 +125,7 @@ export default {
     },
     srcloader() {
       setTimeout(() => {
-        this.vim1 = "https://player.vimeo.com/video/795163876?";
+        this.vim1 = "https://player.vimeo.com/video/917972220?";
       }, 500);
     },
   },
