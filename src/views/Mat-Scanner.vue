@@ -94,7 +94,7 @@ export default {
         desc: "Texture scanner for 3d materials",
         client: "ME",
         credits: "-",
-        desc1: "A key factor to create realistic renderings in 3D are good replications of the real world materials. One of the major components to achieve this, is to use a normal map. A normal map is a texture type used in 3D to represent height and depth of a surface.",
+        desc1: "A key factor to create realistic renderings in 3D are good replications of the real-world materials. One of the major components to achieve this, is to use a normal map. A normal map is a texture type used in 3D to represent height and depth of a surface.",
         desc2: "This material scanner makes it possible to create accurate normal maps using lights and a camera. This method is known as photometric stereo.",
       },
       pageLoaded: false

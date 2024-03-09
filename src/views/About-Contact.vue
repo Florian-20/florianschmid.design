@@ -7,8 +7,9 @@
           <div class="about-child">
             <h2>
               Hi, my name is Florian. 
-              I am a Graphic Designer and self-taught front end Web developer based in Switzerland.
+              I am a Graphic Designer and self-taught front-end web developer based in Switzerland.
               I like to craft things and express myself in the language of design.
+              Today, I am mainly interested in industrial design.
             </h2>
           </div>
         </div>
