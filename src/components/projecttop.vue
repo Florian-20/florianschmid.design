@@ -224,7 +224,7 @@ export default {
 }
 
 
-@media screen and(max-width: 990px) {
+@media screen and (max-width: 990px) {
   .top-page-container {
     margin-left: unset;
     margin-right: unset;

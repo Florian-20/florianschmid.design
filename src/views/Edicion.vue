@@ -107,7 +107,7 @@ export default {
 
 // --- Media --- //
 
-@media screen and(max-width: 600px) {
+@media screen and (max-width: 600px) {
   .website {
     padding: 2rem;
   }

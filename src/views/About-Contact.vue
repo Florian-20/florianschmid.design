@@ -114,14 +114,14 @@ export default {
 }
 
 #aboutDescription {
-  h2 {
-    text-transform: none;
-    margin-bottom: 1rem;
-  }
   width: auto;
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
+  h2 {
+    text-transform: none;
+    margin-bottom: 1rem;
+  }
 }
 
 .about-flex {
@@ -165,7 +165,7 @@ export default {
   text-decoration: underline;
 }
 
-@media screen and(max-width: 990px) {
+@media screen and (max-width: 990px) {
   #about-container {
     flex-direction: column;
   }
@@ -191,7 +191,7 @@ export default {
   }
 }
 
-@media screen and(max-width: 600px){
+@media screen and (max-width: 600px){
  .about-child-b {
     flex-direction: column;
   }

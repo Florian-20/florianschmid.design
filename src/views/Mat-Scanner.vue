@@ -184,7 +184,7 @@ export default {
 
 // --- Media --- //
 
-@media screen and(max-width: 600px) {
+@media screen and (max-width: 600px) {
   #svg-back {
     svg {
       width: 80%;

@@ -175,7 +175,7 @@ a {
 
 // --- Responsiv --- //
 
-@media screen and(max-width: 1600px) {
+@media screen and (max-width: 1600px) {
   html,
   body {
     font-size: 16px;
@@ -376,7 +376,7 @@ a {
   }
 }
 
-@media screen and(max-width: 600px) {
+@media screen and (max-width: 600px) {
   .vimeo-container {
     margin-top: .2rem;
   }
