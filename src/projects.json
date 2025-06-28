@@ -8,6 +8,24 @@
         "filename":"Wood-Chair.svg"
     },
     {
+        "name": "ranger",
+        "date": "2024",
+        "colour": "#FF8624",
+        "counter": "❷",
+        "type": "Outdoor bluetooh speaker",
+        "mindesc": "Outdoor bluetooth speaker",
+        "filename":"Ranger.svg"
+    },
+    {
+        "name": "Drop-By-Drop",
+        "date": "2025",
+        "colour": "#cefaff",
+        "counter": "❸",
+        "type": "Outdoor bluetooh speaker",
+        "mindesc": "Outdoor bluetooth speaker",
+        "filename":"Citrus_Black.svg"
+    },
+    {
         "name": "citruspackus",
         "date": "2017",
         "colour": "#FFCC2E",
@@ -71,15 +89,6 @@
         "filename":"Edicion_Black.svg"
     },
     {
-        "name": "mat-scanner",
-        "date": "2017",
-        "colour": "#ea4b27",
-        "counter": "❾",
-        "type": "won competition& bag design",
-        "mindesc": "Texture scanner for 3D",
-        "filename":"MatS_Black.svg"
-    },
-    {
         "name": "3d&typo",
         "date": "2018",
         "colour": "#0f47ff",
@@ -87,14 +96,5 @@
         "type": "poster creation",
         "mindesc": "Experimental posters using fluids",
         "filename":"3DTypo.svg"
-    },
-    {
-        "name": "echo-chamber",
-        "date": "2021",
-        "colour": "#7D0DC6",
-        "counter": "❶❶",
-        "type": "DIY Project",
-        "mindesc": "Work about the Echo Chamber",
-        "filename":"Echo.svg"
     }
 ]

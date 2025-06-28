@@ -59,9 +59,9 @@ const routes = [
     component: () => import(/*webpackChunkName: "3d&typo" */ '../views/3dTypo.vue')
   },
   {
-    path: '/echo-chamber',
-    name: 'EchoChamber',
-    component: () => import(/*webpackChunkName: "echo-chamber" */ '../views/EchoChamber.vue')
+    path: '/Drop-By-Drop',
+    name: 'DropByDrop',
+    component: () => import(/*webpackChunkName: "echo-chamber" */ '../views/DropByDrop.vue')
   },
   {
     path: '/speaker-Stands',
@@ -69,9 +69,9 @@ const routes = [
     component: () => import(/*webpackChunkName: "speaker-stands" */ '../views/Speakerstand.vue')
   },
   {
-    path: '/mat-scanner',
-    name: 'mat-scanner',
-    component: () => import(/*webpackChunkName: "mat-scanner" */ '../views/Mat-Scanner.vue')
+    path: '/ranger',
+    name: 'ranger',
+    component: () => import(/*webpackChunkName: "mat-scanner" */ '../views/Ranger.vue')
   }
 ]
 
