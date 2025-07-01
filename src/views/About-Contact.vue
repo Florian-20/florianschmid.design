@@ -3,33 +3,11 @@
     <div id="aboutPageContainer">
       <div id="aboutDescription">
         <div id="intro" class="about-flex slide-small">
-          <p>Intro</p>
           <div class="about-child">
             <h2>
               Hi, my name is Florian. 
-              I am a Graphic Designer and self-taught front-end web developer based in Switzerland.
-              I like to craft things and express myself in the language of design.
-              Today, I am mainly interested in industrial design.
+              I am a Graphic Designer currently studing Industrial Design at ECAL. 
             </h2>
-          </div>
-        </div>
-        <div id="skills" class="about-flex slide-small">
-          <p>Skills</p>
-          <div class="about-child-b">
-            <div class="skillset">
-              <h3>Graphics</h3>
-              <p>→Photoshop, Indesign, Illustrator, AfterEffects, XD</p>
-            </div>
-            <div class="skillset">
-              <h3>Coding</h3>
-              <p>→Html5, Css3, Scss</p>
-              <p>→Vuejs</p>
-            </div>
-            <div class="skillset">
-              <h3>CGI&CAD</h3>
-              <p>→Fusion 360</p>
-              <p>→Blender</p>
-            </div>
           </div>
         </div>
         <div id="contact" class="about-flex slide-small">

@@ -44,17 +44,23 @@ export default {
     projectTop,
     projectFooter,
   },
-  metaInfo: {
-    Meta: [
-      { name: "description", content: "Identity for a small book forum " },
-    ],
-  },
+  metaInfo() {
+      return{
+        title: 'Edicion19 | Florian Schmid',
+        meta: [
+          {
+            name: 'description',
+            content: 'Corporate Identity'
+          }
+        ]
+      } 
+    },
   data() {
     return {
       projectdata: {
         name: "edicion 19",
         date: "2019",
-        counter: "❽",
+        counter: "❺",
         type: "Corporate Identity",
         desc: "Corporate design for a small book forum",
         client: "EDICION19",

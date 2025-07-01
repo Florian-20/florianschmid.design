@@ -12,7 +12,6 @@
         <div class="half-half">
           <div class="half">
             <img src="../assets/images/Bildsprache/Bildsprache-19_Spotlight.jpg" alt="Bildsprache"></div>
-          <span></span>
           <div class="half">
             <img src="../assets/images/Bildsprache/Bildsprache-19_Wolkenmann.jpg" alt="Bildsprache"></div>
         </div>
@@ -44,17 +43,23 @@ export default {
     projectTop,
     projectFooter,
   },
-  metaInfo: {
-    Meta: [
-      { name: "description", content: "A series of animations and stills" },
-    ],
+  metaInfo() {
+    return{
+      title: 'Bildsprache | Florian Schmid',
+      meta: [
+        {
+          name: 'description',
+          content: '3D renders absract'
+        }
+      ]
+    } 
   },
   data() {
     return {
       projectdata: {
         name: "Bild sprache",
         date: "2019",
-        counter: "❼",
+        counter: "❶⓿",
         colour: "#ea0e0e",
         colour2: "#151515",
         type: "Exhibition",

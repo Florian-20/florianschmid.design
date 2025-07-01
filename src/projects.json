@@ -1,10 +1,10 @@
 [   {
         "name": "Idun-Chair",
         "date": "2023",
-        "colour": "#A3E038",
+        "colour": "#0eceb1",
         "counter": "❶",
         "type": "Woodwork",
-        "mindesc": "Wood chair design & realisation",
+        "mindesc": "Wood chair made out of maple",
         "filename":"Wood-Chair.svg"
     },
     {
@@ -19,44 +19,35 @@
     {
         "name": "Drop-By-Drop",
         "date": "2025",
-        "colour": "#cefaff",
+        "colour": "#00b700",
         "counter": "❸",
-        "type": "Outdoor bluetooh speaker",
-        "mindesc": "Outdoor bluetooth speaker",
-        "filename":"Citrus_Black.svg"
-    },
-    {
-        "name": "citruspackus",
-        "date": "2017",
-        "colour": "#FFCC2E",
-        "counter": "❷",
-        "type": "poster campaign& animation",
-        "mindesc": "A campaign against littering",
-        "filename":"Citrus_Black.svg"
-    },
-    {
-        "name": "migros",
-        "date": "2017",
-        "colour": "#FF8624",
-        "counter": "❸",
-        "type": "won competition& bag design",
-        "mindesc": "Won Migros competition",
-        "filename":"Migros_Black.svg"
+        "type": "Watering bag",
+        "mindesc": "Tree watering bag",
+        "filename":"Drop-By-Drop.svg"
     },
     {
         "name": "speaker-stands",
         "date": "2021",
         "colour": "#F20C78",
         "counter": "❹",
-        "type": "Woodwork",
+        "type": "Industrial Design",
         "mindesc": "Speaker Stand for Klipsch RP-600m",
         "filename":"Speaker_Stand.svg"
+    },
+    {
+        "name": "edicion19",
+        "date": "2019",
+        "colour": "#fc0d05",
+        "counter": "❺",
+        "type": "corporate design",
+        "mindesc": "CD for a small book forum",
+        "filename":"Edicion_Black.svg"
     },
     {
         "name": "panier-bio",
         "date": "2023",
         "colour": "#41D16F",
-        "counter": "❺",
+        "counter": "❻",
         "type": "3D animation",
         "mindesc": "An animation for ferme de la faye",
         "filename":"Panier-Bio_Black.svg"
@@ -65,34 +56,43 @@
         "name": "DAC",
         "date": "2024",
         "colour": "#01a021",
-        "counter": "❻",
+        "counter": "❼",
         "type": "Product desgn",
-        "mindesc": "A minimalistic and functional case",
+        "mindesc": "DIY audio device",
         "filename":"DAC-1.svg"
+    },
+    {
+        "name": "citruspackus",
+        "date": "2017",
+        "colour": "#FFCC2E",
+        "counter": "❽",
+        "type": "poster campaign& animation",
+        "mindesc": "A campaign against littering",
+        "filename":"Citrus_Black.svg"
+    },
+    {
+        "name": "migros",
+        "date": "2017",
+        "colour": "#FF8624",
+        "counter": "❾",
+        "type": "won competition& bag design",
+        "mindesc": "Won Migros competition",
+        "filename":"Migros_Black.svg"
     },
     {
         "name": "bildsprache",
         "date": "2019",
         "colour": "#00BBE6",
-        "counter": "❼",
+        "counter": "❶⓿",
         "type": "exhibition",
         "mindesc": "A series of animations&stills",
         "filename":"BS19_Black.svg"
     },
     {
-        "name": "edicion19",
-        "date": "2019",
-        "colour": "#fc0d05",
-        "counter": "❽",
-        "type": "corporate design",
-        "mindesc": "CD for a small book forum",
-        "filename":"Edicion_Black.svg"
-    },
-    {
         "name": "3d&typo",
         "date": "2018",
         "colour": "#0f47ff",
-        "counter": "❶⓿",
+        "counter": "❶❶",
         "type": "poster creation",
         "mindesc": "Experimental posters using fluids",
         "filename":"3DTypo.svg"

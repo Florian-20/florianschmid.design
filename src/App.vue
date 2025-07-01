@@ -13,6 +13,17 @@ export default {
   components: {
     topnav
   },
+  metaInfo() {
+    return {
+      title: 'Florian Schmid',
+      meta: [
+        {
+          name: 'description',
+          content: 'Florian Schmid Portfolio'
+        }
+      ]
+      }
+    },
   data () {
     return {
       darkmode: false,
@@ -67,6 +78,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 // ---- Fonts ---- //
+// ⓿❶❷❸❹❺❻❼❽❾//
 
 @font-face {
     font-family: 'Neue Machina Regular';
@@ -206,7 +218,7 @@ a {
 
 @media screen and (max-width: 990px) {
   h1 {
-    font-size: 100px;
+    font-size: 90px;
     line-height: 1.15;
   }
   h2 {
@@ -333,9 +345,7 @@ a {
 .half-half {
   margin-top: .2rem;
   display: flex;
-  span {
-      width: .6rem;
-  }
+  gap: 8px;
 }
 
 .half {

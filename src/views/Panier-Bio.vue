@@ -15,7 +15,6 @@
           <div class="half">
             <video src="../assets/images/FermedelaFaye/Ferme-delaFaye_Breakdown_3D-Scans.mp4" alt="Horizontal Website" autoplay loop></video>
           </div>
-          <span></span>
           <div class="half">
             <video src="../assets/images/FermedelaFaye/Ferme-delaFaye_Breakdown_Scene-1.mp4" alt="Horizontal Website" autoplay loop></video>
           </div>
@@ -36,17 +35,23 @@ export default {
     projectTop,
     projectFooter,
   },
-  metaInfo: {
-    Meta: [
-      { name: "description", content: "An animation for Ferme de la Faye" },
-    ],
+  metaInfo() {
+    return{
+      title: 'Panier Bio | Florian Schmid',
+      meta: [
+        {
+          name: 'description',
+          content: '3D Animation panier bio'
+        }
+      ]
+    } 
   },
   data() {
     return {
       projectdata: {
         name: "Panier-Bio",
         date: "2023",
-        counter: "❺",
+        counter: "❻",
         type: "3D animation",
         desc: "An animation for Ferme de la Faye",
         client: "Ferme de la Faye",

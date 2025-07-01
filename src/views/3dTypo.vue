@@ -13,7 +13,6 @@
           <div class="half">
             <img src="../assets/images/3D&Typo/3dtypo-2.jpg" alt="" />
           </div>
-          <span></span>
           <div class="half">
             <img src="../assets/images/3D&Typo/3dtypo-3.jpg" alt="" />
           </div>
@@ -36,15 +35,23 @@ export default {
     projectTop,
     projectFooter,
   },
-  metaInfo: {
-    Meta: [{ name: "description", content: "Liquids poster" }],
+  metaInfo() {
+    return{
+      title: '3D & Typo | Florian Schmid',
+      meta: [
+        {
+          name: 'description',
+          content: 'Experimental posters'
+        }
+      ]
+    } 
   },
   data() {
     return {
       projectdata: {
         name: "3D&Typo",
         date: "2019",
-        counter: "❶⓿",
+        counter: "❶❶",
         type: "Posters",
         desc: "Expermenting with liquids and typo",
         client: "SCHOOLPROJECT",

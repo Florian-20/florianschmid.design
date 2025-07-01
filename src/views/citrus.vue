@@ -10,7 +10,6 @@
                     <div class="half">
                         <img src="../assets/images/Citrus/Violett-Patato.jpg" alt="Poster littering">
                     </div>
-                    <span></span>
                     <div class="half">
                         <img src="../assets/images/Citrus/Grey-Banana.jpg" alt="Poster littering">
                     </div>
@@ -39,18 +38,24 @@ export default {
         projectTop,
         projectFooter
     },
-    metaInfo: {
-        Meta: [
-            { name: 'description', content: 'A campaign against the overuse of packagin' }
-        ]
-    },
+    metaInfo() {
+    return{
+      title: 'Citrus & Packus | Florian Schmid',
+      meta: [
+        {
+          name: 'description',
+          content: '3D animation and poster series'
+        }
+      ]
+    } 
+  },
     data() {
         return {
             projectdata: {
                 name: 'Citrus Packus',
                 date: '2017',
-                counter: '❷',
-                type: 'posters & animation',
+                counter: '❽',
+                type: 'Graphic Design & CGI',
                 desc: 'A campaign against the overuse of packaging',
                 client: 'SCHOOLPROJECT',
                 credits: 'A0',

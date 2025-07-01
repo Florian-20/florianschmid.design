@@ -6,24 +6,22 @@
         <div class="full-size slidein">
           <img
             src="../assets/images/Drop-By-Drop/DROP-BY-DROP_Tree.jpg"
-            alt="Rager Speaker"/>
+            alt="Drop by Drop"/>
         </div>
         <div class="half-half">
           <div class="half">
-              <img src="../assets/images/Drop-By-Drop/DROP-BY-DROP_Hand.jpg" alt="Chair">
+              <img src="../assets/images/Drop-By-Drop/DROP-BY-DROP_Hand.jpg">
           </div>
-          <span></span>
           <div class="half">
-              <img src="../assets/images/Drop-By-Drop/DROP-BY-DROP_Tube.jpg" alt="Chair">
+              <img src="../assets/images/Drop-By-Drop/DROP-BY-DROP_Tube.jpg">
           </div>
         </div>
         <div class="half-half">
           <div class="half">
-              <img src="../assets/images/WoodChair/Wood-Chair_yellow_01.jpg" alt="Chair">
+              <img src="../assets/images/Drop-By-Drop/DROP-BY-DROP_Zip.jpg">
           </div>
-          <span></span>
           <div class="half">
-              <img src="../assets/images/WoodChair/Wood-Chair_yellow_02.jpg" alt="Chair">
+              <img src="../assets/images/Drop-By-Drop/DROP-BY-DROP_Full.jpg">
           </div>
         </div>
         <div class="vimeo-container">
@@ -45,19 +43,25 @@ export default {
     projectTop,
     projectFooter,
   },
-  metaInfo: {
-    Meta: [
-      { name: "description", content: "Outdoor bluetooth speaker" },
-    ],
-  },
+  metaInfo() {
+      return{
+        title: 'Drop by Drop | Florian Schmid',
+        meta: [
+          {
+            name: 'description',
+            content: 'Watering bag for trees'
+          }
+        ]
+      }
+    },
   data() {
     return {
       projectdata: {
-        name: "Ranger",
-        date: "2024",
-        counter: "❶",
+        name: "Drop by Drop",
+        date: "2025",
+        counter: "❸",
         type: "Industrial Design",
-        desc: "Outdoor bluetooth speaker",
+        desc: "Watering bag",
         client: "-",
         credits: "-",
         desc1:

@@ -25,7 +25,6 @@
               alt="Migros Tasche"
             />
           </div>
-          <span></span>
           <div class="half">
             <img
               src="../assets/images/Migros/M05_Skizze.jpg"
@@ -57,21 +56,24 @@ export default {
     projectTop,
     projectFooter,
   },
-  metaInfo: {
-    Meta: [
-      {
-        name: "description",
-        content: "Won competiton for Migros new bag design",
-      },
-    ],
+  metaInfo() {
+    return{
+      title: 'Migros Bag | Florian Schmid',
+      meta: [
+        {
+          name: 'description',
+          content: 'Migros bag design'
+        }
+      ]
+    } 
   },
   data() {
     return {
       projectdata: {
         name: "Migros",
         date: "2019",
-        counter: "❸",
-        type: "Concept & design",
+        counter: "❾",
+        type: "Graphic Design",
         desc: "Won competiton for Migros new bag design",
         client: "MIGROS",
         credits: "40x44",

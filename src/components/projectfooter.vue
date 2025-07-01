@@ -9,7 +9,7 @@
                 <p>next</p>
             </div>
         </div>
-        <div class="whois"><p>© 2024 Florian Schmid</p></div>
+        <div class="whois"><p>© 2025 Florian Schmid</p></div>
     </div>
 </template>
 

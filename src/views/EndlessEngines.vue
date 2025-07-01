@@ -23,11 +23,17 @@ export default {
         projectTop,
         projectFooter
     },
-    metaInfo: {
-        Meta: [
-            { name: 'description', content: 'Endless Engines competition entry' }
-        ]
-    },
+    metaInfo() {
+    return{
+      title: 'EndlessEngines | Florian Schmid',
+      meta: [
+        {
+          name: 'description',
+          content: 'TODO'
+        }
+      ]
+    } 
+  },
     data() {
         return {
             projectdata: {

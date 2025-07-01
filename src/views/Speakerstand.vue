@@ -10,7 +10,6 @@
                 <div class="half">
                   <img src="../assets/images/Speaker/Speakerstand_02.jpg" alt="speaker stand">
                 </div>
-                <span></span>
                 <div class="half">
                   <img src="../assets/images/Speaker/Speakerstand_09.jpg" alt="speaker stand">
                 </div>
@@ -19,7 +18,6 @@
                 <div class="half">
                   <img src="../assets/images/Speaker/Speakerstand_04.jpg" alt="speaker stand">
                 </div>
-                <span></span>
                 <div class="half">
                   <img src="../assets/images/Speaker/Speakerstand_08.jpg" alt="speaker stand">
                 </div>
@@ -28,7 +26,6 @@
                 <div class="half">
                   <img src="../assets/images/Speaker/Speakerstand_07.jpg" alt="speaker stand">
                 </div>
-                <span></span>
                 <div class="half">
                   <img src="../assets/images/Speaker/Speakerstand_06.jpg" alt="speaker stand">
                 </div>
@@ -50,10 +47,16 @@ export default {
     projectTop,
     projectFooter
   },
-  metaInfo : {
-      Meta: [
-          { name: 'description', content: 'Walnut speaker stands for Klipsch RP-600m'}
+  metaInfo() {
+    return{
+      title: 'Speakerstands | Florian Schmid',
+      meta: [
+        {
+          name: 'description',
+          content: 'Speakerstands for Klipsch RP-600M '
+        }
       ]
+    } 
   },
   data() {
     return {
@@ -61,7 +64,7 @@ export default {
         name: "Speaker Stands",
         date: "2021",
         counter: "❹",
-        type: "Design & Woodwork",
+        type: "Industrial Design",
         desc: "Walnut speaker stands for Klipsch RP-600m",
         client: "Pers. Project",
         credits: "-",

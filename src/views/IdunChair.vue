@@ -7,7 +7,6 @@
           <div class="half">
               <img src="../assets/images/WoodChair/Wood-Chair_blue_02.jpg" alt="Chair">
           </div>
-          <span></span>
           <div class="half">
               <img src="../assets/images/WoodChair/Wood-Chair_blue_01.jpg" alt="Chair">
           </div>
@@ -16,7 +15,6 @@
           <div class="half">
               <img src="../assets/images/WoodChair/Wood-Chair_yellow_01.jpg" alt="Chair">
           </div>
-          <span></span>
           <div class="half">
               <img src="../assets/images/WoodChair/Wood-Chair_yellow_02.jpg" alt="Chair">
           </div>
@@ -25,7 +23,6 @@
           <div class="half">
               <img src="../assets/images/WoodChair/Wood-Chair_01.jpg" alt="Chair">
           </div>
-          <span></span>
           <div class="half">
               <img src="../assets/images/WoodChair/Wood-Chair_02.jpg" alt="Chair">
           </div>
@@ -37,7 +34,6 @@
           <div class="half">
               <img src="../assets/images/WoodChair/Wood-Chair_04.jpg" alt="Chair">
           </div>
-          <span></span>
           <div class="half">
               <img src="../assets/images/WoodChair/Wood-Chair_05.jpg" alt="Chair">
           </div>
@@ -46,7 +42,6 @@
           <div class="half">
               <img src="../assets/images/WoodChair/Wood-Chair_09.jpg" alt="Chair">
           </div>
-          <span></span>
           <div class="half">
               <img src="../assets/images/WoodChair/Wood-Chair_11.jpg" alt="Chair">
           </div>
@@ -55,7 +50,6 @@
           <div class="half">
               <img src="../assets/images/WoodChair/Wood-Chair_10.jpg" alt="Chair">
           </div>
-          <span></span>
           <div class="half">
               <img src="../assets/images/WoodChair/Wood-Chair_13.jpg" alt="Chair">
           </div>
@@ -87,7 +81,7 @@ export default {
         name: "Idun Chair",
         date: "2024",
         counter: "❶",
-        type: "Woodwork",
+        type: "Industrial Design",
         desc: "Elegant wood chair",
         client: "-",
         credits: "-",
