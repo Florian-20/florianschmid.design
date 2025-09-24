@@ -345,7 +345,7 @@ a {
 .half-half {
   margin-top: .2rem;
   display: flex;
-  gap: 8px;
+  //gap: 8px;//
 }
 
 .half {
@@ -395,11 +395,14 @@ a {
     margin-right: 1rem;
   }
   .half-half {
-    margin-top: 0;
+    margin-top: 0rem;
     flex-direction: column;
   }
   .half {
-    margin-top: 0.1rem;
+    margin-top: .3rem;
+  }
+  .full-size {
+    margin-top: .3rem;
   }
 }
 </style>
