@@ -53,10 +53,19 @@
         "filename":"Panier-Bio_Black.svg"
     },
     {
+        "name": "Roulesk",
+        "date": "2023",
+        "colour": "#01a021",
+        "counter": "❼",
+        "type": "Product desgn",
+        "mindesc": "DIY audio device",
+        "filename":"DAC-1.svg"
+    },
+    {
         "name": "DAC",
         "date": "2024",
         "colour": "#01a021",
-        "counter": "❼",
+        "counter": "❽",
         "type": "Product desgn",
         "mindesc": "DIY audio device",
         "filename":"DAC-1.svg"
@@ -65,7 +74,7 @@
         "name": "citruspackus",
         "date": "2017",
         "colour": "#FFCC2E",
-        "counter": "❽",
+        "counter": "❾",
         "type": "poster campaign& animation",
         "mindesc": "A campaign against littering",
         "filename":"Citrus_Black.svg"
@@ -74,7 +83,7 @@
         "name": "migros",
         "date": "2017",
         "colour": "#FF8624",
-        "counter": "❾",
+        "counter": "❶⓿",
         "type": "won competition& bag design",
         "mindesc": "Won Migros competition",
         "filename":"Migros_Black.svg"
@@ -83,18 +92,9 @@
         "name": "bildsprache",
         "date": "2019",
         "colour": "#00BBE6",
-        "counter": "❶⓿",
+        "counter": "❶❶",
         "type": "exhibition",
         "mindesc": "A series of animations&stills",
         "filename":"BS19_Black.svg"
-    },
-    {
-        "name": "3d&typo",
-        "date": "2018",
-        "colour": "#0f47ff",
-        "counter": "❶❶",
-        "type": "poster creation",
-        "mindesc": "Experimental posters using fluids",
-        "filename":"3DTypo.svg"
     }
 ]

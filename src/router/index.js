@@ -72,6 +72,11 @@ const routes = [
     path: '/ranger',
     name: 'ranger',
     component: () => import(/*webpackChunkName: "mat-scanner" */ '../views/Ranger.vue')
+  },
+  {
+    path: '/roulesk',
+    name: 'roulesk',
+    component: () => import(/*webpackChunkName: "mat-scanner" */ '../views/Roulesk.vue')
   }
 ]
 
