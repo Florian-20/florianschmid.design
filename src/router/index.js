@@ -77,6 +77,11 @@ const routes = [
     path: '/roulesk',
     name: 'roulesk',
     component: () => import(/*webpackChunkName: "mat-scanner" */ '../views/Roulesk.vue')
+  },
+  {
+    path: '/TofuRond',
+    name: 'TofuRond',
+    component: () => import(/*webpackChunkName: "TofuRond" */ '../views/TofuRond.vue')
   }
 ]
 

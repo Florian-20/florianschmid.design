@@ -35,10 +35,19 @@
         "filename":"Speaker_Stand.svg"
     },
     {
+         "name": "tofu–rond",
+        "date": "2025",
+        "colour": "#fc0d05",
+        "counter": "❺",
+        "type": "corporate design",
+        "mindesc": "CD for a small book forum",
+        "filename":"Edicion_Black.svg"
+    },
+    {
         "name": "edicion19",
         "date": "2019",
         "colour": "#fc0d05",
-        "counter": "❺",
+        "counter": "❻",
         "type": "corporate design",
         "mindesc": "CD for a small book forum",
         "filename":"Edicion_Black.svg"
@@ -47,7 +56,7 @@
         "name": "panier-bio",
         "date": "2023",
         "colour": "#41D16F",
-        "counter": "❻",
+        "counter": "❼",
         "type": "3D animation",
         "mindesc": "An animation for ferme de la faye",
         "filename":"Panier-Bio_Black.svg"
@@ -56,7 +65,7 @@
         "name": "Roulesk",
         "date": "2023",
         "colour": "#01a021",
-        "counter": "❼",
+        "counter": "❽",
         "type": "Product desgn",
         "mindesc": "DIY audio device",
         "filename":"DAC-1.svg"
@@ -65,7 +74,7 @@
         "name": "DAC",
         "date": "2024",
         "colour": "#01a021",
-        "counter": "❽",
+        "counter": "❾",
         "type": "Product desgn",
         "mindesc": "DIY audio device",
         "filename":"DAC-1.svg"
@@ -74,7 +83,7 @@
         "name": "citruspackus",
         "date": "2017",
         "colour": "#FFCC2E",
-        "counter": "❾",
+        "counter": "❶⓿",
         "type": "poster campaign& animation",
         "mindesc": "A campaign against littering",
         "filename":"Citrus_Black.svg"
@@ -83,7 +92,7 @@
         "name": "migros",
         "date": "2017",
         "colour": "#FF8624",
-        "counter": "❶⓿",
+        "counter": "❶❶",
         "type": "won competition& bag design",
         "mindesc": "Won Migros competition",
         "filename":"Migros_Black.svg"
@@ -92,7 +101,7 @@
         "name": "bildsprache",
         "date": "2019",
         "colour": "#00BBE6",
-        "counter": "❶❶",
+        "counter": "❶❷",
         "type": "exhibition",
         "mindesc": "A series of animations&stills",
         "filename":"BS19_Black.svg"
